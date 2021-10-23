@@ -17,16 +17,11 @@ public class PlayerGrab : MonoBehaviour
     void Update()
     {
 
-        if(Physics.RaycastAll(playerAim.position, playerAim.forward, interactDistance,  playerGrabLayer, QueryTriggerInteraction.Collide).Length > 0)
-        {
-            print(Physics.RaycastAll(playerAim.position, playerAim.forward, interactDistance, playerGrabLayer, QueryTriggerInteraction.Collide)[0].collider.gameObject);
-        }
-
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Physics.RaycastAll(playerAim.position, playerAim.forward, interactDistance, playerGrabLayer, QueryTriggerInteraction.Collide).Length > 0)
+            if (Physics.Raycast(playerAim.position, playerAim.forward, out hit, interactDistance, playerGrabLayer))
             {
-                hitObject = Physics.RaycastAll(playerAim.position, playerAim.forward, interactDistance, playerGrabLayer, QueryTriggerInteraction.Collide)[0].collider.gameObject;
+                hitObject = hit.collider.gameObject;
                 print(hitObject.name);
 
                 if (hitObject.GetComponent<ICanbeGrabbed>() != null)

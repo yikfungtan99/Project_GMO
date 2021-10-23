@@ -1,12 +1,12 @@
 using UnityEngine;
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using UnityEngine.AI;
+using Pathfinding;
 
 public class Wander : Action
 {
 
-	[SerializeField] private NavMeshAgent agent;
+	[SerializeField] private AIPath agent;
 
 	[SerializeField] private float wanderIntervalMin;
 	[SerializeField] private float wanderIntervalMax;
@@ -14,8 +14,9 @@ public class Wander : Action
 	[SerializeField] private float wanderDistance;
 	[SerializeField] private LayerMask wanderLayer;
 
-	private bool haveDest = false;
 	private float currentWanderTime = 0;
+
+	private bool haveDest = false;
 
 	public override void OnStart()
 	{
@@ -24,61 +25,43 @@ public class Wander : Action
 
 	public override TaskStatus OnUpdate()
 	{
-        if (!haveDest)
-        {
-			if (currentWanderTime > 0)
-			{
-				currentWanderTime -= Time.deltaTime;
-			}
-			else
-			{
-				haveDest = true;
-				agent.SetDestination(RandomNavSphere(transform.position, wanderDistance, wanderLayer));
-			}
-        }
-        else
-        {
-			if (Reached())
+		if (currentWanderTime > 0)
+		{
+			currentWanderTime -= Time.deltaTime;
+		}
+		else
+		{
+
+			if (!haveDest)
             {
-				haveDest = false;
-				currentWanderTime = Random.Range(wanderIntervalMin, wanderIntervalMax);
+				if (!agent.pathPending && (agent.reachedEndOfPath || !agent.hasPath))
+                {
+					agent.destination = PickRandomPoint();
+					agent.SearchPath();
+					haveDest = true;
+				}
 			}
-        }
+            else
+            {
+                if (agent.reachedDestination)
+                {
+					currentWanderTime = Random.Range(wanderIntervalMin, wanderIntervalMax);
+					haveDest = false;
+				}
+            }
+		}
+
+		Debug.Log(currentWanderTime);
 
 		return TaskStatus.Running;
 	}
 
-	public bool Reached()
-    {
-        bool reach = false;
-
-        if (agent.isOnNavMesh)
-        {
-            if (!agent.pathPending)
-            {
-                if (agent.remainingDistance <= agent.stoppingDistance)
-                {
-                    if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
-                    {
-                        reach = true;
-                    }
-                }
-            }
-        }
-
-        return reach;
-    }
-
-	public Vector3 RandomNavSphere(Vector3 origin, float distance, int layermask)
+	Vector3 PickRandomPoint()
 	{
-		Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * distance;
+		var point = Random.insideUnitSphere * wanderDistance;
 
-		randomDirection += origin;
-
-		NavMeshHit navHit;
-
-		NavMesh.SamplePosition(randomDirection, out navHit, distance, layermask);
-
-		return navHit.position;
+		point.y = transform.position.y;
+		point += transform.position;
+		return point;
 	}
 }

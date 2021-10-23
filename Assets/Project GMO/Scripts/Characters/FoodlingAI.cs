@@ -1,13 +1,13 @@
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class FoodlingAI : MonoBehaviour, ICanbeGrabbed
 {
     private bool grabbed;
 
-    [SerializeField] private NavMeshAgent agent;
+    [SerializeField] private AIPath agent;
 
     [SerializeField] private float nauseaMeter = 0;
     [SerializeField] private float nauseaThreshold;
@@ -41,7 +41,7 @@ public class FoodlingAI : MonoBehaviour, ICanbeGrabbed
     {
         grabbed = true;
         prevPosY = transform.position.y;
-        agent.enabled = false;
+        agent.canMove = false;
         rb.isKinematic = true;
         grabbedPos = grabPos;
     }
@@ -50,7 +50,7 @@ public class FoodlingAI : MonoBehaviour, ICanbeGrabbed
     {
         grabbed = false;
         prevPosY = 0;
-        agent.enabled = true;
+        agent.canMove = true;
         rb.isKinematic = false;
         grabbedPos = null;
     }
