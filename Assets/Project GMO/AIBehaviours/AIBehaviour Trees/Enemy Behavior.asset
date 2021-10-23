@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23f08d2ae4cba14087c1ed36193d82b, type: 3}
+  m_Name: Enemy Behavior
+  m_EditorClassIdentifier: 
+  mBehaviorSource:
+    behaviorName: Enemy Behavior
+    behaviorDescription: 
+    mTaskData:
+      types: []
+      parentIndex: 
+      startIndex: 
+      variableStartIndex: 
+      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(591.124634,-1207.39685)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(4.151581,132.063873)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(-0.000202178955,131.833008)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"Self","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(-909.99884,125.789856)"},"ID":3,"Name":"Selector","Instant":true,"AbortTypeabortType":"Both","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-899.999939,133.333481)"},"ID":4,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"IsWithinAttackRange","NodeData":{"Offset":"(-179.493073,152.271011)"},"ID":5,"Name":"Is
+        Within Attack Range","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true},"SingleattackRange":7,"LayerMaskobstacleLayer":64},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(155.3847,147.692474)"},"ID":6,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.UnityNavMeshAgent.Stop","NodeData":{"Offset":"(-206.45166,152.258057)"},"ID":7,"Name":"Stop","Instant":true,"SharedGameObjecttargetGameObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null}},{"Type":"Shoot","NodeData":{"Offset":"(-66.89779,147.640457)"},"ID":8,"Name":"Shoot","Instant":true,"GameObjectprojectilePrefab":0,"TransformprojectileFireLocation":1,"SingleprojectileHorizontalForce":1000,"SingleprojectileVerticalForce":0},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(60.64514,152.258057)"},"ID":9,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.UnityNavMeshAgent.Resume","NodeData":{"Offset":"(178.387085,152.258057)"},"ID":10,"Name":"Resume","Instant":true,"SharedGameObjecttargetGameObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null}}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(664.444458,117.778)"},"ID":11,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-600.708,140.147751)"},"ID":12,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"TargetPosBelow","NodeData":{"Offset":"(-206.8485,214.210434)"},"ID":13,"Name":"Target
+        Pos Below","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true}},{"Type":"MoveToDropPoint","NodeData":{"Offset":"(-51.6939278,212.035583)"},"ID":14,"Name":"Move
+        To Drop Point","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true}},{"Type":"FaceTarget","NodeData":{"Offset":"(103.152863,214.626938)"},"ID":15,"Name":"Face
+        Target","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true}},{"Type":"Drop","NodeData":{"Offset":"(228.110138,217.713058)"},"ID":16,"Name":"Drop","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(0.141124725,153.333054)"},"ID":17,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"TargetPosAbove","NodeData":{"Offset":"(-210.627991,138.123322)"},"ID":18,"Name":"Target
+        Pos Above","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-2.002472,138.146179)"},"ID":19,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"IsLadderNearby","NodeData":{"Offset":"(-167.692276,212.307724)"},"ID":20,"Name":"Is
+        Ladder Nearby","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true}},{"Type":"GotoLadder","NodeData":{"Offset":"(-2.564066,212.307724)"},"ID":21,"Name":"Goto
+        Ladder","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true}},{"Type":"UseLadder","NodeData":{"Offset":"(177.0979,214.404892)"},"ID":22,"Name":"Use
+        Ladder","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true}}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(524.3474,188.461517)"},"ID":23,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"HaveTarget","NodeData":{"Offset":"(-130,120)"},"ID":24,"Name":"Have
+        Target","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(0,120)"},"ID":25,"Name":"Inverter","Instant":true,"Children":[{"Type":"NotOnNavMesh","NodeData":{"Offset":"(0,140)"},"ID":26,"Name":"Not
+        On Nav Mesh","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true}}]},{"Type":"ChaseTarget","NodeData":{"Offset":"(130,120)"},"ID":27,"Name":"Chase
+        Target","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true}}]}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(560.433533,116.470566)"},"ID":28,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Self","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(-4.33105469,123.409607)"},"ID":29,"Name":"Inverter","Instant":true,"Children":[{"Type":"NotOnNavMesh","NodeData":{"Offset":"(3.37731075,111.742859)"},"ID":30,"Name":"Not
+        On Nav Mesh","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true}}]},{"Type":"Wander","NodeData":{"Offset":"(246.6665,132.499954)"},"ID":31,"Name":"Wander","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true}}]}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"AttackAI","IsShared":true}]}'
+      fieldSerializationData:
+        typeName: []
+        fieldNameHash: 
+        startIndex: 
+        dataPosition: 
+        unityObjects:
+        - {fileID: 2594971765388330729, guid: 04fc582952b545449bea153588c49130, type: 3}
+        - {fileID: 0}
+        byteData: 
+        byteDataArray: 
+      Version: 1.7.1

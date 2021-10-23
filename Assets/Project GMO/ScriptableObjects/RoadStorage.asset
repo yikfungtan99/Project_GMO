@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aea0b76ba825714aa3f9b7011347b5e, type: 3}
+  m_Name: RoadStorage
+  m_EditorClassIdentifier: 
+  road: {fileID: 2755561854133958092, guid: e12cbc2ec21d4de4ea0dcfd9128ddc7d, type: 3}
+  LRoad: {fileID: 7955875126310539326, guid: 79e91482ae5b89147936efd6cab32dbe, type: 3}
+  TRoad: {fileID: 8278153288636058893, guid: 57be7014015f26a428ccd1043066d963, type: 3}
+  CrossRoad: {fileID: 4807074654192430599, guid: a2cfdadd55d1b34489644150e8b4a8a9, type: 3}

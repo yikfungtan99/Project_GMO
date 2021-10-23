@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acae11c770104b0468e449ebeb98f2bb, type: 3}
+  m_Name: BuildingStorage
+  m_EditorClassIdentifier: 
+  tier1Buildings:
+  - {fileID: 88007650199247622, guid: f20cc53667fdf164093644aaa509849b, type: 3}
+  - {fileID: -8460878927757372953, guid: 31e6390e6303e08409030975cfe2b7f3, type: 3}
+  - {fileID: -3166237877138119450, guid: 2a31fc937c7d28247a6cc0718488b054, type: 3}
+  - {fileID: 785841627993785525, guid: bf1b0d2f7bf00424ea8f80c57a9a7932, type: 3}
+  - {fileID: -5640035769430709622, guid: 4e92113d3a993844b86df40cbb8d8dae, type: 3}
+  - {fileID: -7100813314061962428, guid: 449375aaa0a07da4dae9c9b44c8f3a66, type: 3}
+  - {fileID: 3052602231302192885, guid: 353889d6dd7abdc47bbc794f4191f52e, type: 3}
+  tier2Buildings:
+  - {fileID: -7100813314061962428, guid: a72824c7b3db485418148a0a78a2478c, type: 3}
+  - {fileID: -7100813314061962428, guid: 7ca6ab10119946a4093d361cc8f97b62, type: 3}
+  tier3Buildings:
+  - {fileID: -7100813314061962428, guid: 926e49ec8c92a5140944f6c63ac23cd3, type: 3}
+  - {fileID: -7100813314061962428, guid: 75a7ab460d39c8d48a32047adcfb3624, type: 3}
