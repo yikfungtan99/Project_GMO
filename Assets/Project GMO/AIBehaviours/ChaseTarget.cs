@@ -1,7 +1,7 @@
 
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using UnityEngine.AI;
+using Pathfinding;
 
 [TaskCategory("BadChefAI")]
 [TaskIcon("Assets/Behavior Designer Tutorials/Tasks/Editor/{SkinColor}SeekIcon.png")]
@@ -9,7 +9,7 @@ public class ChaseTarget : Action
 {
 	public SharedBehaviour sharedMovementAI;
 	private EnemyMovementAI ai { get => (EnemyMovementAI) sharedMovementAI.Value; }
-	private NavMeshAgent agent;
+	private AIPath agent;
 
 	public override void OnStart()
 	{
@@ -18,9 +18,9 @@ public class ChaseTarget : Action
 
 	public override TaskStatus OnUpdate()
 	{
-		agent.SetDestination(ai.targetPos);
+		agent.destination = ai.targetPos;
 
-        if (ai.Reached())
+        if (agent.reachedDestination)
         {
 			return TaskStatus.Success;
         }

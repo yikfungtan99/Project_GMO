@@ -29,6 +29,9 @@ public class IsWithinAttackRange : Conditional
         {
             if (Vector3.Distance(transform.position, movementAI.target.position) < attackRange)
             {
+
+                Debug.Log("adadad");
+
                 float dstToTarget = Vector3.Distance(transform.position, movementAI.target.position);
                 Vector3 dirToTarget = (movementAI.target.position - transform.position).normalized;
 

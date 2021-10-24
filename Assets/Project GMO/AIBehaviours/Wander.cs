@@ -51,8 +51,6 @@ public class Wander : Action
             }
 		}
 
-		Debug.Log(currentWanderTime);
-
 		return TaskStatus.Running;
 	}
 

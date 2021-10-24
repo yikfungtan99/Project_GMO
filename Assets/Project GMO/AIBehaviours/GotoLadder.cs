@@ -1,13 +1,13 @@
 using UnityEngine;
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using UnityEngine.AI;
+using Pathfinding;
 
 public class GotoLadder : Action
 {
 	public SharedBehaviour sharedMovementAI;
 	private EnemyMovementAI ai { get => (EnemyMovementAI)sharedMovementAI.Value; }
-	private NavMeshAgent agent;
+	private AIPath agent;
 
 	public override void OnStart()
 	{
@@ -25,14 +25,9 @@ public class GotoLadder : Action
 				agent.enabled = true;
             }
 
-    //        if (agent.isStopped)
-    //        {
-				//agent.isStopped = false;
-    //        }
+			agent.destination = ladderXZpos;
 
-			agent.SetDestination(ladderXZpos);
-
-			if (ai.Reached())
+			if (agent.reachedDestination)
             {
 				return TaskStatus.Success;
 			}

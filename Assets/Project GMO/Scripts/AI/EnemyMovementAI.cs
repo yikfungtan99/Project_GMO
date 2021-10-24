@@ -1,15 +1,14 @@
 using DG.Tweening;
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
 public class EnemyMovementAI : MonoBehaviour, ILadderUser<Vector3>
 {
     public Camera cam { get; protected set; }
-    public NavMeshAgent agent { get; protected set; }
+    public AIPath agent { get; protected set; }
     public Rigidbody rb { get; protected set; }
 
     public bool useMouseDebug = false;
@@ -98,7 +97,7 @@ public class EnemyMovementAI : MonoBehaviour, ILadderUser<Vector3>
     protected void Start()
     {
         cam = Camera.main;
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<AIPath>();
         rb = GetComponent<Rigidbody>();
         targetPos = transform.position;
 
@@ -231,43 +230,6 @@ public class EnemyMovementAI : MonoBehaviour, ILadderUser<Vector3>
         }
 
         return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), 0, Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
-    }
-
-    public bool DestinationReachable()
-    {
-        bool reachable = false;
-
-        Vector3 finalPath = new Vector3(agent.path.corners[agent.path.corners.Length - 1].x, 0, agent.path.corners[agent.path.corners.Length - 1].z);
-
-        Vector3 target = new Vector3(targetPos.x, 0, targetPos.z);
-
-        if(finalPath == target)
-        {
-            reachable = true;
-        }
-
-        return reachable;
-    }
-
-    public bool Reached()
-    {
-        bool reach = false;
-
-        if (agent.isOnNavMesh)
-        {
-            if (!agent.pathPending)
-            {
-                if (agent.remainingDistance <= agent.stoppingDistance)
-                {
-                    if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
-                    {
-                        reach = true;
-                    }
-                }
-            }
-        }
-
-        return reach;
     }
 
     //protected void OnDrawGizmosSelected()

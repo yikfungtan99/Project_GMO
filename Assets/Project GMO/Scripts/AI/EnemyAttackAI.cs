@@ -1,8 +1,8 @@
+using Pathfinding;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public enum AttackRangeType
 {
@@ -14,7 +14,7 @@ public enum AttackRangeType
 public class EnemyAttackAI : MonoBehaviour
 {
     private EnemyMovementAI movementAI;
-    public NavMeshAgent agent { get => movementAI.agent; private set { } }
+    public AIPath agent { get => movementAI.agent; private set { } }
 
     public Transform target { get; private set; }
 

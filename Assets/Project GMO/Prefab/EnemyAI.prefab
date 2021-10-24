@@ -169,8 +169,9 @@ GameObject:
   - component: {fileID: 3001145932690722646}
   - component: {fileID: 2919948992192086677}
   - component: {fileID: 4775081643930278362}
-  - component: {fileID: 426968698831664547}
   - component: {fileID: 426968698831664546}
+  - component: {fileID: 6396868136497396091}
+  - component: {fileID: 5864871580739667262}
   m_Layer: 8
   m_Name: EnemyAI
   m_TagString: Untagged
@@ -213,6 +214,7 @@ MonoBehaviour:
   health: 30
   armor: 0
   speed: 0
+  drops: {fileID: 0}
 --- !u!114 &3001145932690722646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,15 +314,16 @@ MonoBehaviour:
         Projectile","Instant":true,"GameObjectprojectilePrefab":1,"TransformprojectileFireLocation":2,"SingleprojectileHorizontalForce":500,"SingleprojectileVerticalForce":0,"SingleattackInterval":0.8,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":3}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(411.4931,155.595734)"},"ID":7,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-648.443,146.953247)"},"ID":8,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"TargetPosBelow","NodeData":{"Offset":"(-224.596924,223.107056)"},"ID":9,"Name":"Target
         Pos Below","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":4}},{"Type":"MoveToDropPoint","NodeData":{"Offset":"(-52.2890625,223.107056)"},"ID":10,"Name":"Move
         To Drop Point","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":5}},{"Type":"FaceTarget","NodeData":{"Offset":"(109.24939,223.107056)"},"ID":11,"Name":"Face
-        Target","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":6}},{"Type":"Drop","NodeData":{"Offset":"(249.249268,233.876343)"},"ID":12,"Name":"Drop","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":7}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-2.28918457,157.722534)"},"ID":13,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"TargetPosAbove","NodeData":{"Offset":"(-228.443,148.49176)"},"ID":14,"Name":"Target
-        Pos Above","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":8}},{"Type":"IsLadderNearby","NodeData":{"Offset":"(-70.00011,150.000275)"},"ID":15,"Name":"Is
-        Ladder Nearby","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":9}},{"Type":"GotoLadder","NodeData":{"Offset":"(119.999878,150.000275)"},"ID":16,"Name":"Goto
-        Ladder","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":10}},{"Type":"UseLadder","NodeData":{"Offset":"(309.999939,150.000275)"},"ID":17,"Name":"Use
-        Ladder","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":11}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(657.710938,200.799438)"},"ID":18,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"HaveTarget","NodeData":{"Offset":"(-142.289063,130.030212)"},"ID":19,"Name":"Have
-        Target","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":12}},{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(-2.2890625,130.030212)"},"ID":20,"Name":"Inverter","Instant":true,"Children":[{"Type":"NotOnNavMesh","NodeData":{"Offset":"(-2.2890625,150.799438)"},"ID":21,"Name":"Not
-        On Nav Mesh","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":13}}]},{"Type":"ChaseTarget","NodeData":{"Offset":"(137.7107,130.030212)"},"ID":22,"Name":"Chase
-        Target","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":14}}]}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Idle","NodeData":{"Offset":"(613.6747,166.491516)"},"ID":23,"Name":"Idle","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(775.0184,126.184021)"},"ID":24,"Name":"Sequence","Instant":true,"Disabled":true,"AbortTypeabortType":"Both","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(0.0187988281,125.414795)"},"ID":25,"Name":"Inverter","Instant":true,"Children":[{"Type":"NotOnNavMesh","NodeData":{"Offset":"(0.0187988281,113.876343)"},"ID":26,"Name":"Not
-        On Nav Mesh","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":15}}]},{"Type":"Wander","NodeData":{"Offset":"(269.2495,136.184021)"},"ID":27,"Name":"Wander","Instant":true,"SinglewanderIntervalMin":0,"SinglewanderIntervalMax":0,"SinglewanderDistance":0,"LayerMaskwanderLayer":0}]}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":16}]}'
+        Target","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":6}},{"Type":"Drop","NodeData":{"Offset":"(249.249268,233.876343)"},"ID":12,"Name":"Drop","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":7}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-2.28918457,157.722534)"},"ID":13,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"TargetPosAbove","NodeData":{"Offset":"(-199.871582,148.49176)"},"ID":14,"Name":"Target
+        Pos Above","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":8}},{"Type":"IsLadderNearby","NodeData":{"Offset":"(-55.7143974,150.000275)"},"ID":15,"Name":"Is
+        Ladder Nearby","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":9}},{"Type":"GotoLadder","NodeData":{"Offset":"(62.85705,150.000275)"},"ID":16,"Name":"Goto
+        Ladder","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":10}},{"Type":"UseLadder","NodeData":{"Offset":"(167.142883,150.000275)"},"ID":17,"Name":"Use
+        Ladder","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":11}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(657.710938,200.799438)"},"ID":18,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"HaveTarget","NodeData":{"Offset":"(-70.8605347,130.030212)"},"ID":19,"Name":"Have
+        Target","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":12}},{"Type":"ChaseTarget","NodeData":{"Offset":"(80.56787,130.030212)"},"ID":20,"Name":"Chase
+        Target","Instant":true,"SharedBehavioursharedMovementAI":{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":13}}]}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Idle","NodeData":{"Offset":"(613.6747,166.491516)"},"ID":21,"Name":"Idle","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(775.0184,126.184021)"},"ID":22,"Name":"Sequence","Instant":true,"Disabled":true,"AbortTypeabortType":"Both","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(0.0187988281,125.414795)"},"ID":23,"Name":"Inverter","Instant":true,"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.UnknownTask","NodeData":{"Offset":"(0.0187988281,113.876343)","Comment":"Unknown
+        Task. Right click and Replace to locate new task."},"ID":24,"Name":"Unknown
+        Not On Nav Mesh","Instant":true,"StringJSONSerialization":"{\"Type\":\"NotOnNavMesh\",\"NodeData\":{\"Offset\":\"(0.0187988281,113.876343)\"},\"ID\":26,\"Name\":\"Not
+        On Nav Mesh\",\"Instant\":true,\"SharedBehavioursharedMovementAI\":{\"Type\":\"BehaviorDesigner.Runtime.SharedBehaviour\",\"Name\":\"MovementAI\",\"IsShared\":true,\"BehaviourmValue\":15}}","List`1fieldNameHash":[],"List`1startIndex":[],"List`1dataPosition":[],"List`1unityObjects":[],"List`1byteData":[]}]},{"Type":"Wander","NodeData":{"Offset":"(269.2495,136.184021)"},"ID":25,"Name":"Wander","Instant":true,"SinglewanderIntervalMin":0,"SinglewanderIntervalMax":0,"SinglewanderDistance":0,"LayerMaskwanderLayer":0}]}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":14}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
@@ -342,35 +345,11 @@ MonoBehaviour:
         - {fileID: 3001145932690722646}
         - {fileID: 3001145932690722646}
         - {fileID: 3001145932690722646}
-        - {fileID: 3001145932690722646}
-        - {fileID: 3001145932690722646}
         byteData: 
         byteDataArray: 
       Version: 1.7.1
   gizmoViewMode: 2
   showBehaviorDesignerGizmo: 1
---- !u!195 &426968698831664547
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 426968698831664548}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 4
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 240
-  m_StoppingDistance: 1.5
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!54 &426968698831664546
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -387,6 +366,70 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 3
+--- !u!114 &6396868136497396091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426968698831664548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!114 &5864871580739667262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426968698831664548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+  radius: 0.5
+  height: 2
+  repathRate: 0.5
+  canSearch: 1
+  canMove: 1
+  maxSpeed: 1
+  gravity: {x: NaN, y: NaN, z: NaN}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  centerOffsetCompatibility: NaN
+  orientation: 0
+  enableRotation: 1
+  targetCompatibility: {fileID: 0}
+  maxAcceleration: -2.5
+  rotationSpeed: 360
+  slowdownDistance: 0.6
+  pickNextWaypointDist: 2
+  endReachedDistance: 0.2
+  alwaysDrawGizmos: 0
+  slowWhenNotFacingTarget: 1
+  whenCloseToDestination: 0
+  constrainInsideGraph: 0
 --- !u!1 &4063120498812220825
 GameObject:
   m_ObjectHideFlags: 0

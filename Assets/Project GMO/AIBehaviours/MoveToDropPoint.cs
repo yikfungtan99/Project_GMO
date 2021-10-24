@@ -14,9 +14,9 @@ public class MoveToDropPoint : Action
 	{
         if (ai.agent.isActiveAndEnabled)
         {
-            ai.agent.SetDestination(new Vector3(ai.targetPos.x, transform.position.y, ai.targetPos.z));
+            ai.agent.destination = new Vector3(ai.targetPos.x, transform.position.y, ai.targetPos.z);
 
-            if (!ai.Reached())
+            if (!ai.agent.reachedDestination)
             {
                 return TaskStatus.Running;
             }
