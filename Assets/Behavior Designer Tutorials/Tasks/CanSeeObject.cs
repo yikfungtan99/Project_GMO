@@ -6,14 +6,22 @@ namespace BehaviorDesigner.Runtime.Tasks.Tutorials
     [TaskIcon("Assets/Behavior Designer Tutorials/Tasks/Editor/{SkinColor}CanSeeObjectIcon.png")]
     public class CanSeeObject : Conditional
     {
+        [Tooltip("The location of the vision cone origin")]
+        [SerializeField] private Transform eyeTransform;
+
         [Tooltip("The object that we are searching for")]
-        public SharedGameObject targetObject;
+        [SerializeField] private GameObject targetObject;
+
         [Tooltip("The field of view angle of the agent (in degrees)")]
-        public SharedFloat fieldOfViewAngle = 90;
+        [SerializeField] private float fieldOfViewAngle = 90;
+
         [Tooltip("The distance that the agent can see")]
-        public SharedFloat viewDistance = 1000;
+        [SerializeField] private float viewDistance = 1000;
+
         [Tooltip("The object that is within sight")]
         public SharedGameObject returnedObject;
+
+        private GameObject returnedTarget;
 
         /// <summary>
         /// Returns success if an object was found otherwise failure
@@ -21,12 +29,13 @@ namespace BehaviorDesigner.Runtime.Tasks.Tutorials
         /// <returns></returns>
         public override TaskStatus OnUpdate()
         {
-            returnedObject.Value = WithinSight(targetObject.Value, fieldOfViewAngle.Value, viewDistance.Value);
-            if (returnedObject.Value != null) {
+            returnedTarget = WithinSight(targetObject, fieldOfViewAngle, viewDistance);
+            if (returnedTarget != null) {
                 // Return success if an object was found
+                returnedObject.Value = returnedTarget;
                 return TaskStatus.Success;
             }
-            // An object is not within sight so return failure
+            // An object is not within sight so return failure 
             return TaskStatus.Failure;
         }
 
@@ -76,11 +85,14 @@ namespace BehaviorDesigner.Runtime.Tasks.Tutorials
             color.a = 0.1f;
             UnityEditor.Handles.color = color;
 
-            var halfFOV = fieldOfViewAngle.Value * 0.5f;
-            var beginDirection = Quaternion.AngleAxis(-halfFOV, Vector3.up) * Owner.transform.forward;
-            UnityEditor.Handles.DrawSolidArc(Owner.transform.position, Owner.transform.up, beginDirection, fieldOfViewAngle.Value, viewDistance.Value);
+            if (eyeTransform)
+            {
+                var halfFOV = fieldOfViewAngle * 0.5f;
+                var beginDirection = Quaternion.AngleAxis(-halfFOV, Vector3.up) * eyeTransform.forward;
+                UnityEditor.Handles.DrawSolidArc(eyeTransform.position, eyeTransform.up, beginDirection, fieldOfViewAngle, viewDistance);
 
-            UnityEditor.Handles.color = oldColor;
+                UnityEditor.Handles.color = oldColor;
+            }
 #endif
         }
     }

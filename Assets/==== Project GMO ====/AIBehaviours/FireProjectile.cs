@@ -1,10 +1,16 @@
 using UnityEngine;
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
+using Pathfinding;
 
 [TaskCategory("BadChefAI")]
 public class FireProjectile : Action
 {
+	public SharedGameObject target;
+	[SerializeField] private AIPath agent;
+
+	[SerializeField] private float angleThreshold;
+
 	[SerializeField] private GameObject projectilePrefab;
 	[SerializeField] private Transform projectileFireLocation;
 
@@ -14,8 +20,7 @@ public class FireProjectile : Action
 	[SerializeField] private float attackInterval;
 	private float attackTime;
 
-	public SharedBehaviour sharedMovementAI;
-	private EnemyMovementAI ai { get => (EnemyMovementAI)sharedMovementAI.Value; }
+	private Transform targetTransform;
 
     public override void OnAwake()
     {
@@ -23,12 +28,22 @@ public class FireProjectile : Action
 		attackTime = 0;
 	}
 
-	public override TaskStatus OnUpdate()
-	{
-		ai.agent.enabled = false;
+    public override void OnStart()
+    {
+        base.OnStart();
 
+        if (target.Value != null)
+        {
+			targetTransform = target.Value.transform;
+		}
+
+		agent.canMove = false;
+    }
+
+    public override TaskStatus OnUpdate()
+	{
 		Vector3 selfXZpos = new Vector3(transform.position.x, 0, transform.position.z);
-		Vector3 targetPos = new Vector3(ai.targetPos.x, 0, ai.targetPos.z);
+		Vector3 targetPos = new Vector3(targetTransform.position.x, 0, targetTransform.position.z);
 
 		Vector3 targetDir = targetPos - selfXZpos;
 
@@ -44,7 +59,7 @@ public class FireProjectile : Action
 		}
 		else
 		{
-			if (angle < ai.AngleThreshold)
+			if (angle < angleThreshold)
 			{
 				GameObject projectile = GameObject.Instantiate(projectilePrefab, projectileFireLocation.position, Quaternion.identity);
 				projectile.GetComponent<Projectile>().SetDamage(new Damage(1, null));
@@ -61,6 +76,7 @@ public class FireProjectile : Action
 
     public override void OnEnd()
     {
-		ai.agent.enabled = true;
+        base.OnEnd();
+		agent.canMove = true;
     }
 }

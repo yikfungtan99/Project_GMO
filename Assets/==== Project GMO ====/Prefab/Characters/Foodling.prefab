@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1275279244
+--- !u!1 &3138982618081675576
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,16 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1275279245}
-  m_Layer: 0
-  m_Name: DropPos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1275279245
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1275279244}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.301}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8408179966583107592}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8408179966583107596
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8408179966583107592}
-  - component: {fileID: 8408179966583107593}
-  - component: {fileID: 8408179966583107594}
-  - component: {fileID: 8408179966583107595}
-  - component: {fileID: 8408179966583107591}
-  - component: {fileID: 917240948}
-  - component: {fileID: 8408179966583107588}
-  - component: {fileID: 8408179966583107590}
-  - component: {fileID: 8408179966583107589}
+  - component: {fileID: 3138982618081675580}
+  - component: {fileID: 3138982618081675581}
+  - component: {fileID: 3138982618081675582}
+  - component: {fileID: 3138982618081675583}
+  - component: {fileID: 3138982618081675571}
+  - component: {fileID: 6854534908874081600}
+  - component: {fileID: 3138982618081675568}
+  - component: {fileID: 3138982618081675570}
+  - component: {fileID: 3138982618081675553}
+  - component: {fileID: 3138982618081675578}
   m_Layer: 15
   m_Name: Foodling
   m_TagString: Untagged
@@ -54,36 +25,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8408179966583107592
+--- !u!4 &3138982618081675580
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8408179966583107596}
+  m_GameObject: {fileID: 3138982618081675576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.082, z: -1.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1275279245}
+  - {fileID: 6854534908696366777}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8408179966583107593
+--- !u!33 &3138982618081675581
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8408179966583107596}
+  m_GameObject: {fileID: 3138982618081675576}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8408179966583107594
+--- !u!23 &3138982618081675582
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8408179966583107596}
+  m_GameObject: {fileID: 3138982618081675576}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -96,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b8b256623f0ff96448b6db5b332502d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,32 +89,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8408179966583107595
+--- !u!65 &3138982618081675583
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8408179966583107596}
+  m_GameObject: {fileID: 3138982618081675576}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8408179966583107591
+--- !u!114 &3138982618081675571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8408179966583107596}
+  m_GameObject: {fileID: 3138982618081675576}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2f2c48fd90b0ff4aa67a839b37a0e2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 8408179966583107589}
+  agent: {fileID: 3138982618081675578}
   nauseaMeter: 0
   nauseaThreshold: 3
   nauseaRecoverSpeed: 0.5
@@ -151,31 +122,31 @@ MonoBehaviour:
   dropIntervalMax: 4
   dropTime: 0
   dropItem: {fileID: 11400000, guid: a56dd554985834144959613b2277f2fb, type: 2}
-  dispenser: {fileID: 917240948}
+  dispenser: {fileID: 6854534908874081600}
   grabSpeed: 15
---- !u!114 &917240948
+--- !u!114 &6854534908874081600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8408179966583107596}
+  m_GameObject: {fileID: 3138982618081675576}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93dcb3791b9a58e409c4db760f8477a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pickupPrefab: {fileID: 6600426806675296181, guid: 171efc09ad4e87d4c898eee6f6bfdf71, type: 3}
-  dispensePosition: {fileID: 1275279245}
+  dispensePosition: {fileID: 6854534908696366777}
   dispenserForceVariationMin: 100
   dispenserForceVariationMax: 250
---- !u!114 &8408179966583107588
+--- !u!114 &3138982618081675568
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8408179966583107596}
+  m_GameObject: {fileID: 3138982618081675576}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d7b55c7ecdb49a4a89fa5e6f9022861, type: 3}
@@ -198,34 +169,30 @@ MonoBehaviour:
       startIndex: 
       variableStartIndex: 
       JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(466.344269,-1310.589)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(3.07501221,133.583252)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(-1.4335022,113.855469)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-456.988953,154.41098)"},"ID":3,"Name":"Nausea","Instant":true,"AbortTypeabortType":"Both","Children":[{"Type":"boolIsTrue","NodeData":{"Offset":"(-179.052185,166.0188)"},"ID":4,"Name":"Bool
-        Is True","Instant":true,"SharedBoolboolToCheck":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"isNausea","IsShared":true,"PropertyMapping":"FoodlingAI/IsNausea","PropertyMappingOwner":0,"BooleanmValue":false}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.UnityBehaviour.IsEnabled","NodeData":{"Offset":"(1.21205044,170)"},"ID":5,"Name":"Is
-        Enabled","Instant":true,"SharedObjectspecifiedObject":{"Type":"BehaviorDesigner.Runtime.SharedObject","Name":null,"ObjectmValue":1}},{"Type":"Wander","NodeData":{"Offset":"(188.687164,169.5957)"},"ID":6,"Name":"NauseaWander","Instant":true,"NavMeshAgentagent":2,"SinglewanderIntervalMin":0.01,"SinglewanderIntervalMax":0.05,"SinglewanderDistance":1,"LayerMaskwanderLayer":55}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-4.181885,155.3753)"},"ID":7,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Both","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.UnityBehaviour.IsEnabled","NodeData":{"Offset":"(-90.293,153.7085)"},"ID":8,"Name":"Is
-        Enabled","Instant":true,"SharedObjectspecifiedObject":{"Type":"BehaviorDesigner.Runtime.SharedObject","Name":null,"ObjectmValue":3}},{"Type":"Wander","NodeData":{"Offset":"(100,153.888885)"},"ID":9,"Name":"Wander","Instant":true,"NavMeshAgentagent":4,"SinglewanderIntervalMin":1,"SinglewanderIntervalMax":3,"SinglewanderDistance":10,"LayerMaskwanderLayer":55}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Idle","NodeData":{"Offset":"(434.441254,159.793228)"},"ID":10,"Name":"Idle","Instant":true}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":5},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"isNausea","IsShared":true,"PropertyMapping":"FoodlingAI/IsNausea","PropertyMappingOwner":6,"BooleanmValue":false}]}'
+        Is True","Instant":true,"SharedBoolboolToCheck":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"isNausea","IsShared":true,"PropertyMapping":"FoodlingAI/IsNausea","PropertyMappingOwner":0,"BooleanmValue":false}},{"Type":"Wander","NodeData":{"Offset":"(188.687164,169.5957)"},"ID":5,"Name":"NauseaWander","Instant":true,"AIPathagent":1,"SinglewanderIntervalMin":0.01,"SinglewanderIntervalMax":0.05,"SinglewanderDistance":1,"LayerMaskwanderLayer":55}]},{"Type":"Wander","NodeData":{"Offset":"(0,163.658447)"},"ID":6,"Name":"Wander","Instant":true,"AIPathagent":2,"SinglewanderIntervalMin":0.5,"SinglewanderIntervalMax":2,"SinglewanderDistance":10,"LayerMaskwanderLayer":55},{"Type":"BehaviorDesigner.Runtime.Tasks.Idle","NodeData":{"Offset":"(434.441254,159.793228)"},"ID":7,"Name":"Idle","Instant":true}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBehaviour","Name":"MovementAI","IsShared":true,"BehaviourmValue":3},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"isNausea","IsShared":true,"PropertyMapping":"FoodlingAI/IsNausea","PropertyMappingOwner":4,"BooleanmValue":false}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
         startIndex: 
         dataPosition: 
         unityObjects:
-        - {fileID: 8408179966583107596}
-        - {fileID: 8408179966583107589}
-        - {fileID: 8408179966583107589}
-        - {fileID: 8408179966583107589}
-        - {fileID: 8408179966583107589}
-        - {fileID: 8408179966583107591}
-        - {fileID: 8408179966583107596}
+        - {fileID: 3138982618081675576}
+        - {fileID: 3138982618081675578}
+        - {fileID: 3138982618081675578}
+        - {fileID: 3138982618081675571}
+        - {fileID: 3138982618081675576}
         byteData: 
         byteDataArray: 
       Version: 1.7.1
   gizmoViewMode: 2
   showBehaviorDesignerGizmo: 1
---- !u!54 &8408179966583107590
+--- !u!54 &3138982618081675570
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8408179966583107596}
+  m_GameObject: {fileID: 3138982618081675576}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -235,25 +202,97 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!195 &8408179966583107589
-NavMeshAgent:
+--- !u!114 &3138982618081675553
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8408179966583107596}
+  m_GameObject: {fileID: 3138982618081675576}
   m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!114 &3138982618081675578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138982618081675576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+  radius: 0.5
+  height: 2
+  repathRate: 0.1
+  canSearch: 1
+  canMove: 1
+  maxSpeed: 3
+  gravity: {x: NaN, y: NaN, z: NaN}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  centerOffsetCompatibility: NaN
+  orientation: 0
+  enableRotation: 1
+  targetCompatibility: {fileID: 0}
+  maxAcceleration: -2.5
+  rotationSpeed: 360
+  slowdownDistance: 1.5
+  pickNextWaypointDist: 2
+  endReachedDistance: 1
+  alwaysDrawGizmos: 0
+  slowWhenNotFacingTarget: 1
+  whenCloseToDestination: 0
+  constrainInsideGraph: 0
+--- !u!1 &6854534908696366776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6854534908696366777}
+  m_Layer: 15
+  m_Name: DropPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6854534908696366777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6854534908696366776}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.301}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3138982618081675580}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

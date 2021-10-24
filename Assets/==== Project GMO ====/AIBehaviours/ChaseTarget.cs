@@ -2,23 +2,22 @@
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
 using Pathfinding;
+using UnityEngine;
 
 [TaskCategory("BadChefAI")]
 [TaskIcon("Assets/Behavior Designer Tutorials/Tasks/Editor/{SkinColor}SeekIcon.png")]
 public class ChaseTarget : Action
 {
-	public SharedBehaviour sharedMovementAI;
-	private EnemyMovementAI ai { get => (EnemyMovementAI) sharedMovementAI.Value; }
-	private AIPath agent;
+	[SerializeField] private AIPath agent;
+	public SharedGameObject Target;
 
-	public override void OnStart()
-	{
-		agent = ai.agent;
-	}
+    private Transform target;
 
-	public override TaskStatus OnUpdate()
+    public override TaskStatus OnUpdate()
 	{
-		agent.destination = ai.targetPos;
+        if (Target.Value != null) target = Target.Value.transform;
+
+        if (target) agent.destination = target.position;
 
         if (agent.reachedDestination)
         {
