@@ -19,7 +19,7 @@ public abstract class WeaponComponent : ItemComponent
         this.primaryAttack = weaponSO.primaryAttack;
         this.secondaryAttack = weaponSO.secondaryAttack;
         this.useAmmo = weaponSO.useAmmo;
-        this.currentAmmo = weaponSO.currentAmmo;
+        this.currentAmmo = weaponSO.maxMagAmmo;
         this.maxAmmo = weaponSO.maxAmmo;
     }
 

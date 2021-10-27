@@ -124,6 +124,7 @@ public class PlayerInventory : MonoBehaviour, ICanPickUpItems
             if (items.Count == 1)
             {
                 SelectItem(currentSelectionIndex);
+                OnSelectionChanges?.Invoke(currentSelectionIndex);
             }
         }
     }

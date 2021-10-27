@@ -63,7 +63,7 @@ public class EnemyTarget : MonoBehaviour
     {
         List<GameObject> targets = new List<GameObject>();
 
-        Collider[] targetsInView = Physics.OverlapSphere(transform.position, fieldOfViewAngle, targetLayer);
+        Collider[] targetsInView = Physics.OverlapSphere(transform.position, viewDistance, targetLayer);
 
         for (int i = 0; i < targetsInView.Length; i++)
         {

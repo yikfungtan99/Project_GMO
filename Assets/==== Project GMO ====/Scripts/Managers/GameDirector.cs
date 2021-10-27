@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class GameDirector : MonoBehaviour
@@ -14,20 +15,28 @@ public class GameDirector : MonoBehaviour
     [Tooltip("Location to spawn units")]
     [SerializeField] private List<SpawnLocation> spawnLocations = new List<SpawnLocation>();
 
-    [SerializeField] private GameObject enemy;
+    [SerializeField] private GameObject enemy; //Change to enemy storage
 
-    [SerializeField] private float spawnPace;
-    [SerializeField] private int spawnPack;
+    [Header("Wave")]
+    [SerializeField] private int wavePrepTime;
+    [SerializeField] private int maxWaveCount;
+
+    [Header("Wave Spawning")]
+    [SerializeField] private int spawnCountGrowth;
+    [SerializeField] private float spawnPaceGrowth;
+    [SerializeField] private int spawnPackGrowth;
+    
     private float spawnTime;
 
-    [SerializeField] private int waveCount;
-    [SerializeField] private int spawnCount;
+    private int currentWave = 1;
     private int currentSpawn = 0;
+    private float currentSpawnPace = 0;
+    private int currentSpawnPack = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentSpawn = spawnCount;
+        SetCurrentWave();
     }
 
     // Update is called once per frame
@@ -38,7 +47,7 @@ public class GameDirector : MonoBehaviour
 
     private void SpawnWave()
     {
-        bool enemyAwaitSpawn = currentSpawn > 0 && spawnTime > 0;
+        bool enemyAwaitSpawn = currentSpawn > 0 && spawnTime > 0 && currentWave < maxWaveCount;
 
         if (enemyAwaitSpawn)
         {
@@ -47,17 +56,14 @@ public class GameDirector : MonoBehaviour
         else
         {
             SpawnEnemy();
-            spawnTime = spawnPace;
+            spawnTime = currentSpawnPace;
         }
     }
 
     public void SpawnEnemy()
     {
-        int maxPackCount = currentSpawn > spawnPack ? spawnPack : currentSpawn;
+        int maxPackCount = currentSpawn > currentSpawnPack ? currentSpawnPack : currentSpawn;
         int minPackCount = currentSpawn <= 0 ? 0 : 1;
-
-        Debug.Log(minPackCount);
-        Debug.Log(maxPackCount);
 
         int randomPackCount = Random.Range(minPackCount, maxPackCount);
 
@@ -86,13 +92,32 @@ public class GameDirector : MonoBehaviour
         Enemy enemy = sender as Enemy;
         enemy.OnDeath -= WaveComplete;
 
+        WaitingForNextWave();
+    }
+
+    private async void WaitingForNextWave()
+    {
+        float waitTime = Time.time + wavePrepTime;
+
+        while(Time.time < waitTime)
+        {
+            await Task.Yield();
+        }
+
         ResetWave();
     }
 
     private void ResetWave()
     {
-        waveCount += 1;
-        currentSpawn = waveCount * spawnCount;
-        spawnTime = spawnPace;
+        currentWave += 1;
+        SetCurrentWave();
+        spawnTime = currentSpawnPace;
+    }
+
+    private void SetCurrentWave()
+    {
+        currentSpawn = spawnCountGrowth * currentWave;
+        currentSpawnPace = 1/(spawnPaceGrowth * currentWave);
+        currentSpawnPack = spawnPackGrowth * currentWave;
     }
 }

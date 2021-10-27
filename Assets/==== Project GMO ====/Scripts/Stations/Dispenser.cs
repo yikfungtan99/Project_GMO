@@ -25,6 +25,13 @@ public class Dispenser : MonoBehaviour
             return new DishData(castDish);
         }
 
+        EggsenceObject castEgg = item as EggsenceObject;
+
+        if(castEgg != null)
+        {
+            return new EggsenceData(castEgg);
+        }
+
         return new ItemData(item);
     }
 

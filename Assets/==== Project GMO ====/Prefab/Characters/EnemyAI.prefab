@@ -87,11 +87,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23e72841a04463478627c8be589e19b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: 
+  characterName: Carroto
   health: 1
   armor: 0
   speed: 0
-  drops: {fileID: 0}
+  drops: {fileID: 11400000, guid: 25bc78d2fdae55c40b815545991d9d40, type: 2}
 --- !u!114 &2532590186090827238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   eyeTransform: {fileID: 2794893273404579846}
   targetLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 262208
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 196663
@@ -299,7 +299,7 @@ MonoBehaviour:
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 258039
   centerOffsetCompatibility: NaN
   orientation: 0
   enableRotation: 1

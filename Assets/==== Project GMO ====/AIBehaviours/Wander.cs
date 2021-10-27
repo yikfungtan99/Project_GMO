@@ -21,6 +21,9 @@ public class Wander : Action
 	public override void OnStart()
 	{
 		currentWanderTime = Random.Range(wanderIntervalMin, wanderIntervalMax);
+
+		GoToRandomPoint();
+		haveDest = true;
 	}
 
 	public override TaskStatus OnUpdate()
@@ -31,30 +34,43 @@ public class Wander : Action
 		}
 		else
 		{
-
 			if (!haveDest)
             {
-				if (!agent.pathPending && (agent.reachedEndOfPath || !agent.hasPath))
+                bool isAlreadyOnPath = !agent.pathPending && (agent.reachedEndOfPath || !agent.hasPath);
+
+                if (isAlreadyOnPath)
                 {
-					agent.destination = PickRandomPoint();
-					agent.SearchPath();
-					haveDest = true;
-				}
-			}
+                    GoToRandomPoint();
+                }
+            }
             else
             {
                 if (agent.reachedDestination)
                 {
 					currentWanderTime = Random.Range(wanderIntervalMin, wanderIntervalMax);
 					haveDest = false;
-				}
+                }
             }
 		}
 
 		return TaskStatus.Running;
 	}
 
-	Vector3 PickRandomPoint()
+    private void GoToRandomPoint()
+    {
+        Vector3 randomPoint = PickRandomPoint();
+
+        GraphNode currentNode = AstarPath.active.GetNearest(transform.position).node;
+        GraphNode destNode = AstarPath.active.GetNearest(randomPoint).node;
+
+        if (PathUtilities.IsPathPossible(currentNode, destNode))
+        {
+            agent.destination = (Vector3)destNode.position;
+            haveDest = true;
+        }
+    }
+
+    Vector3 PickRandomPoint()
 	{
 		var point = Random.insideUnitSphere * wanderDistance;
 

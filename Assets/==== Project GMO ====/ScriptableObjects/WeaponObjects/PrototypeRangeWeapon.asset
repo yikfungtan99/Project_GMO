@@ -16,8 +16,12 @@ MonoBehaviour:
   itemRarity: 0
   itemPrice: 1
   stackable: 0
-  currentStack: 0
   stackMaxSize: 0
+  itemImage: {fileID: 0}
+  weaponGameObject: {fileID: 1489930330615564960, guid: f75f108fc7c93f14fb3754de31b812ec, type: 3}
+  useAmmo: 1
+  maxMagAmmo: 30
+  maxAmmo: 300
   primaryAttack:
     damage:
       damageAmount: 1
@@ -28,7 +32,7 @@ MonoBehaviour:
       m_Bits: 0
     fireMode: 0
     projectile: {fileID: 2594971765388330729, guid: 04fc582952b545449bea153588c49130, type: 3}
-    projectileSpeed: 2000
+    projectileSpeed: 4000
   secondaryAttack:
     damage:
       damageAmount: 0
@@ -40,6 +44,3 @@ MonoBehaviour:
     fireMode: 0
     projectile: {fileID: 0}
     projectileSpeed: 0
-  useAmmo: 0
-  currentAmmo: 0
-  maxAmmo: 0
