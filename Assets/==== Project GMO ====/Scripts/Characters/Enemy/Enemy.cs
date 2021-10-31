@@ -10,8 +10,9 @@ public class DeathEventArgs : EventArgs
 
 public class Enemy : Character, ICanBeDamage
 {
-
     [SerializeField] private ItemObject drops;
+
+    private GameDirector director;
 
     public event EventHandler OnDeath;
 
@@ -35,5 +36,10 @@ public class Enemy : Character, ICanBeDamage
     private void DeathEvent(DeathEventArgs e)
     {
         OnDeath?.Invoke(this, e);
+    }
+
+    public void SetDirector(GameDirector dir)
+    {
+        director = dir;
     }
 }

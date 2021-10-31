@@ -29,7 +29,7 @@ public class PlayerInteract : MonoBehaviour
                 if (hitObject.GetComponent<ICanBeInteracted>() != null)
                 {
                     print(hitObject.gameObject.name + " interacted.");
-                    hitObject.GetComponent<ICanBeInteracted>().ReceiveInteract();
+                    hitObject.GetComponent<ICanBeInteracted>().ReceiveInteract(this);
                 }
             }
         }

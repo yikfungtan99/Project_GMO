@@ -2,28 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Station : MonoBehaviour, ICanBeAttack, ICanBeDamage
+public abstract class Station : MonoBehaviour, IHaveInfoName, IHaveHealth, ICanBeAttack, ICanBeDamage
 {
-    [SerializeField] private int health = 10;
+    [SerializeField] protected string stationName;
+    [SerializeField] protected int health = 10;
 
-    // Start is called before the first frame update
-    void Start()
+    protected int currentHealth;
+    protected int maxHealth;
+    protected virtual void Awake()
     {
-        
+        currentHealth = health;
+        maxHealth = health;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    public int Health { get => currentHealth; set => currentHealth = value; }
+    public int MaxHealth { get => maxHealth; set => maxHealth = value; }
+    public string InfoName { get => stationName; set => stationName = value; }
 
-    }
     public void ReceiveAttack()
     {
         
     }
 
-    public void ReceiveDamage(Damage damage)
+    public virtual void ReceiveDamage(Damage damage)
     {
-        health -= damage.DamageAmount;
+        Health -= damage.DamageAmount;
     }
 }

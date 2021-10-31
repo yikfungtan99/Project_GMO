@@ -15,13 +15,13 @@ MonoBehaviour:
   _startInterval: 0
   _tag: 
   reverse: 0
-  loopCount: 0
+  loopCount: 3
   loopInterval: 0
   loopBackInterval: 0
   pingpongLoop: 0
   continuousLoop: 0
   interval: 0.5
-  singleTime: 1
+  singleTime: 0.8
   sortType: 0
   startScale: {x: 1, y: 1}
   scale: {x: 0, y: 0}

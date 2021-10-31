@@ -20,7 +20,7 @@ public class VendingMachine : MonoBehaviour, ICanBeInteracted
         
     }
 
-    public void ReceiveInteract()
+    public void ReceiveInteract(PlayerInteract interactor = null)
     {
         dispenser.Dispense(itemInside, 3);
     }

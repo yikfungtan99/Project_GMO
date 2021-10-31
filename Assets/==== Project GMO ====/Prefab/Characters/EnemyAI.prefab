@@ -227,7 +227,7 @@ MonoBehaviour:
       variableStartIndex: 
       JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(149.677917,-1001.14514)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(-4.60483742,134.270844)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(0.6899719,117.58606)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.SelectorEvaluator","NodeData":{"Offset":"(-304.152222,124.309143)"},"ID":3,"Name":"Selector
         Evaluator","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-158.695648,129.130432)"},"ID":4,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Both","Children":[{"Type":"IsWithinAttackRange","NodeData":{"Offset":"(-99.9244461,145.950211)"},"ID":5,"Name":"Is
-        Within Attack Range","Instant":true,"SharedGameObjectTarget":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"currentTarget","IsShared":true,"PropertyMapping":"EnemyTarget/target","PropertyMappingOwner":0},"SingleattackRange":10},{"Type":"FireProjectile","NodeData":{"Offset":"(97.7426453,147.032211)"},"ID":6,"Name":"Fire
+        Within Attack Range","Instant":true,"SharedGameObjectTarget":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"currentTarget","IsShared":true,"PropertyMapping":"EnemyTarget/target","PropertyMappingOwner":0},"SingleattackRange":10},{"Type":"FireProjectile","NodeData":{"Offset":"(97.7426453,147.032211)","WatchedFields":["target"]},"ID":6,"Name":"Fire
         Projectile","Instant":true,"SharedGameObjecttarget":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"currentTarget","IsShared":true,"PropertyMapping":"EnemyTarget/target","PropertyMappingOwner":1},"AIPathagent":2,"SingleangleThreshold":15,"GameObjectprojectilePrefab":3,"TransformprojectileFireLocation":4,"SingleprojectileHorizontalForce":1000,"SingleprojectileVerticalForce":0,"SingleattackInterval":1}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(138.695618,150)"},"ID":7,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ChaseTarget","NodeData":{"Offset":"(-7.62939453E-06,131.739136)"},"ID":8,"Name":"Chase
         Target","Instant":true,"AIPathagent":5,"SharedGameObjectTarget":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"currentTarget","IsShared":true,"PropertyMapping":"EnemyTarget/target","PropertyMappingOwner":6}}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Idle","NodeData":{"Offset":"(214.0109,140.875885)"},"ID":9,"Name":"Idle","Instant":true}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"currentTarget","IsShared":true,"PropertyMapping":"EnemyTarget/target","PropertyMappingOwner":7}]}'
       fieldSerializationData:
@@ -517,7 +517,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.68
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

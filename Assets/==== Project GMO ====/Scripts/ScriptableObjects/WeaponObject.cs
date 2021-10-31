@@ -11,6 +11,9 @@ public class WeaponObject : ItemObject
     public int maxMagAmmo;
     public int maxAmmo;
 
+    [Header("Weapon Reload")]
+    public float reloadTime;
+
     [Header("Weapon Attack")]
     public Attack primaryAttack;
     public Attack secondaryAttack;

@@ -21,7 +21,8 @@ MonoBehaviour:
   weaponGameObject: {fileID: 1489930330615564960, guid: f75f108fc7c93f14fb3754de31b812ec, type: 3}
   useAmmo: 1
   maxMagAmmo: 30
-  maxAmmo: 300
+  maxAmmo: 150
+  reloadTime: 1.5
   primaryAttack:
     damage:
       damageAmount: 1

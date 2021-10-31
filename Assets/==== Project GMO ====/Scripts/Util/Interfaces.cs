@@ -18,7 +18,7 @@ public interface ICanPickUpItems
 
 public interface ICanBeInteracted
 {
-    void ReceiveInteract();
+    void ReceiveInteract(PlayerInteract interactor);
 }
 
 public interface ICanbeGrabbed

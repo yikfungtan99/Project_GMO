@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -5,7 +6,6 @@ using UnityEngine;
 
 public class GameDirector : MonoBehaviour
 {
-
     [Header("Gameplay")]
     [SerializeField] private GameObject objectiveTarget;
 
@@ -25,18 +25,32 @@ public class GameDirector : MonoBehaviour
     [SerializeField] private int spawnCountGrowth;
     [SerializeField] private float spawnPaceGrowth;
     [SerializeField] private int spawnPackGrowth;
-    
+
     private float spawnTime;
 
-    private int currentWave = 1;
-    private int currentSpawn = 0;
+    public int currentWave { get; private set; }
+    private int currentWaveEnemyCount = 0;
     private float currentSpawnPace = 0;
     private int currentSpawnPack = 0;
+
+    private List<Enemy> currentEnemy = new List<Enemy>();
+    private int enemyToSpawn;
+    private int killCount = 0;
+
+    public bool gameStarted { get; private set; }
+    public float waitTime { get; private set; }
+    public bool isPrepPhase { get; private set; }
+
+    //====================Events================
+    public event EventHandler OnStartGame;
+    public event EventHandler OnEnterPrepPhase;
+    public event EventHandler OnEnterRoundPhase;
 
     // Start is called before the first frame update
     void Start()
     {
-        SetCurrentWave();
+        isPrepPhase = true;
+        killCount = 0;
     }
 
     // Update is called once per frame
@@ -45,9 +59,16 @@ public class GameDirector : MonoBehaviour
         SpawnWave();
     }
 
+    public void StartGame()
+    {
+        gameStarted = true;
+        ResetWave();
+        StartGameEvent(new EventArgs { });
+    }
+
     private void SpawnWave()
     {
-        bool enemyAwaitSpawn = currentSpawn > 0 && spawnTime > 0 && currentWave < maxWaveCount;
+        bool enemyAwaitSpawn = currentWaveEnemyCount > 0 && spawnTime > 0 && currentWave < maxWaveCount;
 
         if (enemyAwaitSpawn)
         {
@@ -62,44 +83,63 @@ public class GameDirector : MonoBehaviour
 
     public void SpawnEnemy()
     {
-        int maxPackCount = currentSpawn > currentSpawnPack ? currentSpawnPack : currentSpawn;
-        int minPackCount = currentSpawn <= 0 ? 0 : 1;
+        int maxPackCount = enemyToSpawn > currentSpawnPack ? currentSpawnPack : enemyToSpawn;
+        int minPackCount = enemyToSpawn <= 0 ? 0 : 1;
 
-        int randomPackCount = Random.Range(minPackCount, maxPackCount);
-
-        bool lastPack = currentSpawn - randomPackCount == 0;
+        int randomPackCount = UnityEngine.Random.Range(minPackCount, maxPackCount);
 
         for (int i = 0; i < randomPackCount; i++)
         {
-            bool lastEnemy = i == randomPackCount - 1;
-
             GameObject enemyInstance = Instantiate(enemy);
-            enemyInstance.GetComponent<EnemyTarget>().SetObjective(objectiveTarget); 
+            AddCurrentEnemy(enemyInstance.GetComponent<Enemy>());
+            enemyInstance.GetComponent<EnemyTarget>().SetObjective(objectiveTarget);
+            spawnLocations[UnityEngine.Random.Range(0, spawnLocations.Count)].Spawn(enemyInstance);
 
-            if (lastPack && lastEnemy) 
-            {
-                enemyInstance.GetComponent<Enemy>().OnDeath += WaveComplete;
-            }
-
-            spawnLocations[Random.Range(0, spawnLocations.Count)].Spawn(enemyInstance);
-
-            currentSpawn -= 1;
+            enemyToSpawn -= 1;
         }
     }
 
-    private void WaveComplete(object sender, System.EventArgs e)
+    public void AddCurrentEnemy(Enemy enemy)
+    {
+        enemy.SetDirector(this);
+        currentEnemy.Add(enemy);
+        enemy.OnDeath += OnEnemyDeath;
+    }
+
+    private void OnEnemyDeath(object sender, EventArgs e)
     {
         Enemy enemy = sender as Enemy;
-        enemy.OnDeath -= WaveComplete;
 
-        WaitingForNextWave();
+        if (enemy != null)
+        {
+            enemy.OnDeath -= OnEnemyDeath;
+            currentEnemy.Remove(sender as Enemy);
+            killCount += 1;
+            CheckWaveComplete();
+        }
+        else
+        {
+            Debug.LogError("Non Enemy Found!");
+        }
+    }
+
+    private void CheckWaveComplete()
+    {
+        if(currentEnemy.Count == 0 && currentWaveEnemyCount == killCount)
+        {
+            WaitingForNextWave();
+        }
     }
 
     private async void WaitingForNextWave()
     {
-        float waitTime = Time.time + wavePrepTime;
+        EnterPrepPhaseEvent(new EventArgs { });
 
-        while(Time.time < waitTime)
+        waitTime = Time.time + wavePrepTime;
+
+        isPrepPhase = true;
+
+        while (Time.time < waitTime)
         {
             await Task.Yield();
         }
@@ -112,12 +152,33 @@ public class GameDirector : MonoBehaviour
         currentWave += 1;
         SetCurrentWave();
         spawnTime = currentSpawnPace;
+        isPrepPhase = false;
+        EnterRoundPhase(new EventArgs { });
+
+        enemyToSpawn = currentWaveEnemyCount;
+        killCount = 0;
+        currentEnemy.Clear();
     }
 
     private void SetCurrentWave()
     {
-        currentSpawn = spawnCountGrowth * currentWave;
-        currentSpawnPace = 1/(spawnPaceGrowth * currentWave);
+        currentWaveEnemyCount = spawnCountGrowth * currentWave;
+        currentSpawnPace = 1 / (spawnPaceGrowth * currentWave);
         currentSpawnPack = spawnPackGrowth * currentWave;
+    }
+
+    private void StartGameEvent(EventArgs e)
+    {
+        OnStartGame?.Invoke(this, e);
+    }
+
+    private void EnterPrepPhaseEvent(EventArgs e)
+    {
+        OnEnterPrepPhase?.Invoke(this, e);
+    }
+
+    private void EnterRoundPhase(EventArgs e)
+    {
+        OnEnterRoundPhase?.Invoke(this, e);
     }
 }

@@ -1,30 +1,52 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HUDManager : MonoBehaviour
 {
-    [SerializeField] private PlayerInventory playerInventory;
+    [SerializeField] private Player player;
+    [SerializeField] private TextMeshProUGUI currentHealthText;
+    [SerializeField] private TextMeshProUGUI currentMaxHealthText;
+
+    private PlayerInventory playerInventory;
+    private PlayerWeapon playerWeapon;
+
     [SerializeField] private Transform holsterPanel;
 
+    [SerializeField] private TextMeshProUGUI weaponMagText;
+    [SerializeField] private TextMeshProUGUI weaponAmmoText;
+
     [SerializeField] private GameObject itemSlotPrefab;
+    [SerializeField] private TextMeshProUGUI selectedItemText;
     private Image prevImage;
 
-    private void OnEnable()
+    private void Start()
     {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        this.player = player.GetComponent<Player>();
+        playerInventory = player.GetComponent<PlayerInventory>();
+        playerWeapon = player.GetComponent<PlayerWeapon>();
+
         playerInventory.OnInventoryChanges += HolsterUpdateInventory;
         playerInventory.OnSelectionChanges += HolsterUpdateSelected;
         playerInventory.OnGainItemSlot += GainInventorySlot;
+
+        playerWeapon.OnWeaponInformationChange += WeaponUpdateMagAmmo;
+        playerWeapon.OnWeaponInformationChange += WeaponUpdateAmmo;
     }
 
-    private void HolsterUpdateSelected(int selectedIndex)
+    private void HolsterUpdateSelected(int selectedIndex, string itemName)
     {
         if (prevImage != null) prevImage.color = new Color(1, 1, 1, 0.25f);
         Image slotImage = holsterPanel.GetChild(selectedIndex).GetComponentInChildren<Image>();
 
         slotImage.color = Color.yellow;
         prevImage = slotImage;
+
+        selectedItemText.text = itemName;
     }
 
     private void HolsterUpdateInventory(List<ItemData> items)
@@ -43,13 +65,26 @@ public class HUDManager : MonoBehaviour
                 slotImage.enabled = false;
                 slotImage.sprite = null;
             }
-            
         }
+    }
+    private void WeaponUpdateAmmo(int mag, int ammo)
+    {
+        weaponMagText.text = mag.ToString();
+    }
+
+    private void WeaponUpdateMagAmmo(int mag, int ammo)
+    {
+        weaponAmmoText.text = ammo.ToString();
     }
 
     private void GainInventorySlot()
     {
-        Instantiate(itemSlotPrefab, holsterPanel);
+        GameObject slotInstance = Instantiate(itemSlotPrefab, holsterPanel);
+
+        if(holsterPanel.childCount == 1)
+        {
+            slotInstance.GetComponent<Image>().color = Color.yellow;
+        }
     }
 
     private void OnDisable()
@@ -57,5 +92,8 @@ public class HUDManager : MonoBehaviour
         playerInventory.OnInventoryChanges -= HolsterUpdateInventory;
         playerInventory.OnSelectionChanges -= HolsterUpdateSelected;
         playerInventory.OnGainItemSlot -= GainInventorySlot;
+
+        playerWeapon.OnWeaponInformationChange -= WeaponUpdateMagAmmo;
+        playerWeapon.OnWeaponInformationChange -= WeaponUpdateAmmo;
     }
 }

@@ -6,6 +6,8 @@ public class Projectile : MonoBehaviour
 {
     private Damage damage = null;
 
+    private bool expent;
+
     public void SetDamage(Damage dmg)
     {
         damage = dmg;
@@ -22,9 +24,10 @@ public class Projectile : MonoBehaviour
 
         if (damage == null) return;
 
-        if (other.GetComponentInParent<ICanBeDamage>() != null)
+        if (other.GetComponentInParent<ICanBeDamage>() != null && !expent)
         {
             other.GetComponentInParent<ICanBeDamage>().ReceiveDamage(damage);
+            expent = true;
         }
     }
 }

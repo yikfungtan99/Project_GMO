@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour, ICanPickUpItems
 {
+    [SerializeField] private PlayerWeapon playerWeapon;
+
     [SerializeField] private List<ItemData> items = new List<ItemData>();
     [SerializeField] private int maxInventorySlot = 5;
     [SerializeField] private int currentInventorySlot = 3;
@@ -16,7 +18,7 @@ public class PlayerInventory : MonoBehaviour, ICanPickUpItems
     private int prevSelectionIndex = 0;
 
     public delegate void PlayerInventoryItemChangesCallback(List<ItemData> items);
-    public delegate void PlayerInventorySelectionChangesCallback(int selectionIndex);
+    public delegate void PlayerInventorySelectionChangesCallback(int selectionIndex, string name);
     public delegate void PlayerInventoryItemSlotChangesCallback();
 
     public event PlayerInventoryItemChangesCallback OnInventoryChanges;
@@ -64,7 +66,7 @@ public class PlayerInventory : MonoBehaviour, ICanPickUpItems
 
             if (prevSelectionIndex != currentSelectionIndex)
             {
-                OnSelectionChanges?.Invoke(currentSelectionIndex);
+                OnSelectionChanges?.Invoke(currentSelectionIndex, items[currentSelectionIndex].itemName);
                 prevSelectionIndex = currentSelectionIndex;
             }
 
@@ -83,10 +85,13 @@ public class PlayerInventory : MonoBehaviour, ICanPickUpItems
 
     public void GetItem(ItemData item)
     {
+
+
         if(items.Count < currentInventorySlot)
         {
             items.Add(item);
             OnInventoryChanges?.Invoke(items);
+            OnSelectionChanges?.Invoke(currentSelectionIndex, items[currentSelectionIndex].itemName);
         }
     }
 
@@ -112,6 +117,8 @@ public class PlayerInventory : MonoBehaviour, ICanPickUpItems
         {
             currentSelectionIndex -= 1;
         }
+
+        OnSelectionChanges?.Invoke(currentSelectionIndex, items.Count != 0 ? items[currentSelectionIndex].itemName : "");
     }
 
     public void PickUpItem(Pickups pickup)
@@ -124,7 +131,6 @@ public class PlayerInventory : MonoBehaviour, ICanPickUpItems
             if (items.Count == 1)
             {
                 SelectItem(currentSelectionIndex);
-                OnSelectionChanges?.Invoke(currentSelectionIndex);
             }
         }
     }

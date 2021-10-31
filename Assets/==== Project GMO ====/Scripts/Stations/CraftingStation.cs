@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(Dispenser))]
-public class CraftingStation : MonoBehaviour, ICanPickUpItems
+public class CraftingStation : Station, ICanPickUpItems
 {
     [SerializeField] private List<RecipeObject> availableRecipes = new List<RecipeObject>();
     [SerializeField] private List<IngredientObject> items = new List<IngredientObject>();
@@ -83,7 +83,6 @@ public class CraftingStation : MonoBehaviour, ICanPickUpItems
         {
             currentCraftingRecipe = possibleRecipes.First();
             currentCraftingDuration += currentCraftingRecipe.craftDuration;
-            print(currentCraftingDuration);
         }
         else
         {

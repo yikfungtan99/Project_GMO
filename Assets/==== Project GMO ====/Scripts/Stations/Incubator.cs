@@ -8,14 +8,16 @@ public class FinishedIncubate : EventArgs
 
 }
 
-public class Incubator : MonoBehaviour, ICanPickUpItems, ICanBeDamage
+public class Incubator : Station, ICanPickUpItems
 {
-    [SerializeField] private int health;
     [SerializeField] private EggsenceData egg;
     [SerializeField] private float incubationTime;
     [SerializeField] private Transform incubateSpawnPosition;
 
     private bool isIncubating = false;
+
+    public delegate void AttackedCallback();
+    public event AttackedCallback OnAttackEvent;
 
     public event EventHandler OnFinishedIncubate;
 
@@ -50,14 +52,10 @@ public class Incubator : MonoBehaviour, ICanPickUpItems, ICanBeDamage
         }
     }
 
-    public void ReceiveDamage(Damage damage)
+    public override void ReceiveDamage(Damage damage)
     {
-        health -= damage.DamageAmount;
-
-        if(health <= 0)
-        {
-            Death();
-        }
+        OnAttackEvent?.Invoke();
+        base.ReceiveDamage(damage);
     }
 
     private void Death()

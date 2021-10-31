@@ -12,12 +12,9 @@ EditorBuildSettings:
     path: Assets/==== Project GMO ====/Scene/MapGenTest.unity
     guid: b4f311aa3bdf24b46b8a3992f26907ca
   - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
     path: Assets/==== Project GMO ====/Scene/PathFindAITest.unity
     guid: a21a6104e8905c24b98ec42612fb7108
+  - enabled: 1
+    path: Assets/==== Project GMO ====/Scene/Main/mainLevel.unity
+    guid: c0bda6ac5c8236d4889fdffd5cc3c51c
   m_configObjects: {}
