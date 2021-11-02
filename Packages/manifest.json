@@ -1,4 +1,13 @@
 {
+  "scopedRegistries": [
+    {
+      "name": "A* Pathfinding Project",
+      "url": "https://arongranberg.com/packages/fc51008018fd930fa61786a08e90fdca61810dfc0a3dd/",
+      "scopes": [
+        "com.arongranberg.astar"
+      ]
+    }
+  ],
   "dependencies": {
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.cinemachine": "2.6.10",
