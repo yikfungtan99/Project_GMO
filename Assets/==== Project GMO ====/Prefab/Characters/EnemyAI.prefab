@@ -41,14 +41,15 @@ GameObject:
   - component: {fileID: 2532590186090827232}
   - component: {fileID: 8848461548311082897}
   - component: {fileID: 2532590186090827238}
+  - component: {fileID: 2506349033703258027}
   - component: {fileID: 1112181080928319254}
   - component: {fileID: 1030421326019001045}
   - component: {fileID: 2532590186090827234}
   - component: {fileID: 2532590186090827237}
-  - component: {fileID: 1500865049}
-  - component: {fileID: 1500865048}
-  - component: {fileID: 2545750386708809021}
   - component: {fileID: -5558686902384841667}
+  - component: {fileID: 1500865049}
+  - component: {fileID: 2545750386708809021}
+  - component: {fileID: 6099141308323331363}
   m_Layer: 8
   m_Name: EnemyAI
   m_TagString: Untagged
@@ -116,6 +117,25 @@ MonoBehaviour:
   viewDistance: 10
   objectiveTarget: {fileID: 0}
   forgetTargetDuration: 5
+--- !u!114 &2506349033703258027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2532590186090827236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7384b4f2108ebb48991e1b7d8aebd1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomItemDrops:
+  - itemDrops: {fileID: 0}
+    chance: 80
+  - itemDrops: {fileID: 11400000, guid: a56dd554985834144959613b2277f2fb, type: 2}
+    chance: 20
+  dispenser: {fileID: 0}
+  times: 10
 --- !u!114 &1112181080928319254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,10 +259,10 @@ MonoBehaviour:
         unityObjects:
         - {fileID: 2532590186090827236}
         - {fileID: 2532590186090827236}
-        - {fileID: 1500865048}
+        - {fileID: 6099141308323331363}
         - {fileID: 2594971765388330729, guid: cbee58fcccdb5e040b29ee8721e7db52, type: 3}
         - {fileID: 2794893273416512415}
-        - {fileID: 1500865048}
+        - {fileID: 6099141308323331363}
         - {fileID: 2532590186090827236}
         - {fileID: 2532590186090827236}
         byteData: 
@@ -250,6 +270,33 @@ MonoBehaviour:
       Version: 1.7.1
   gizmoViewMode: 2
   showBehaviorDesignerGizmo: 1
+--- !u!114 &-5558686902384841667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2532590186090827236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 560112f876f5746c780eca0d404e7139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+  radiusBackingField: 0.5
+  heightBackingField: 2
+  centerBackingField: 1
+  locked: 0
+  lockWhenNotMoving: 1
+  agentTimeHorizon: 3
+  obstacleTimeHorizon: 5
+  maxNeighbours: 20
+  layer: 1
+  collidesWith: -1
+  wallAvoidForce: 1
+  wallAvoidFalloff: 1
+  priority: 0.5
+  debug: 0
 --- !u!114 &1500865049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,48 +325,6 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &1500865048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2532590186090827236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 5
-  radius: 1
-  height: 2
-  canMove: 1
-  maxSpeed: 5
-  gravity: {x: NaN, y: NaN, z: NaN}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 258039
-  centerOffsetCompatibility: NaN
-  repathRateCompatibility: 0.1
-  canSearchCompability: 1
-  orientation: 0
-  enableRotation: 1
-  autoRepath:
-    mode: 2
-    interval: 0.1
-    sensitivity: 10
-    maximumInterval: 2
-    visualizeSensitivity: 0
-  targetCompatibility: {fileID: 0}
-  maxAcceleration: -2.5
-  rotationSpeed: 360
-  slowdownDistance: 2.5
-  pickNextWaypointDist: 2
-  endReachedDistance: 2
-  alwaysDrawGizmos: 0
-  slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 0
-  constrainInsideGraph: 0
 --- !u!114 &2545750386708809021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,7 +347,7 @@ MonoBehaviour:
   bezierTangentLength: 0.4
   offset: 0.2
   factor: 0.1
---- !u!114 &-5558686902384841667
+--- !u!114 &6099141308323331363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -351,24 +356,46 @@ MonoBehaviour:
   m_GameObject: {fileID: 2532590186090827236}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 560112f876f5746c780eca0d404e7139, type: 3}
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 2
-  radiusBackingField: 0.5
-  heightBackingField: 2
-  centerBackingField: 1
-  locked: 0
-  lockWhenNotMoving: 1
-  agentTimeHorizon: 3
-  obstacleTimeHorizon: 5
-  maxNeighbours: 20
-  layer: 1
-  collidesWith: -1
-  wallAvoidForce: 1
-  wallAvoidFalloff: 1
-  priority: 0.624
-  debug: 0
+  version: 4
+  radius: 1
+  height: 2
+  canMove: 1
+  maxSpeed: 5
+  gravity: {x: NaN, y: NaN, z: NaN}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 258039
+  endReachedDistance: 2
+  whenCloseToDestination: 0
+  rvoDensityBehavior:
+    enabled: 1
+    densityThreshold: 0.5
+    returnAfterBeingPushedAway: 0
+    progressAverage: 0
+    lastJobDensityResult: 0
+  centerOffsetCompatibility: NaN
+  repathRateCompatibility: 0.1
+  canSearchCompability: 1
+  orientation: 0
+  enableRotation: 1
+  autoRepath:
+    mode: 2
+    interval: 0.1
+    sensitivity: 10
+    maximumInterval: 0.3
+    visualizeSensitivity: 0
+  targetCompatibility: {fileID: 0}
+  maxAcceleration: -2.5
+  rotationSpeed: 360
+  slowdownDistance: 2.5
+  pickNextWaypointDist: 2
+  alwaysDrawGizmos: 0
+  slowWhenNotFacingTarget: 1
+  preventMovingBackwards: 0
+  constrainInsideGraph: 0
 --- !u!1 &2794893273404579845
 GameObject:
   m_ObjectHideFlags: 0

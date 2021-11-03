@@ -3,18 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathEventArgs : EventArgs
-{
-    public bool isLastEnemy = false;
-}
-
 public class Enemy : Character, ICanBeDamage
 {
     [SerializeField] private ItemObject drops;
 
     private GameDirector director;
 
-    public event EventHandler OnDeath;
+    public delegate void DeathCallback(Enemy enemy = null);
+    public DeathCallback OnDeath;
 
     public override void ReceiveDamage(Damage damage)
     {
@@ -27,15 +23,9 @@ public class Enemy : Character, ICanBeDamage
     {
         if(Health <= 0)
         {
-            GetComponent<Dispenser>().Dispense(drops);
-            DeathEvent(new DeathEventArgs {});
+            OnDeath?.Invoke(this);
             Destroy(gameObject);
         }
-    }
-
-    private void DeathEvent(DeathEventArgs e)
-    {
-        OnDeath?.Invoke(this, e);
     }
 
     public void SetDirector(GameDirector dir)

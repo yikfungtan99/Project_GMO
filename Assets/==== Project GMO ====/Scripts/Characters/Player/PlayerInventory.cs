@@ -73,7 +73,17 @@ public class PlayerInventory : MonoBehaviour, ICanPickUpItems
         }
     }
 
-    private ItemData SelectItem(int index)
+    public ItemData GetSelectedItem()
+    {
+        if (currentSelectionIndex >= 0 && currentSelectionIndex < items.Count)
+        {
+            return items[currentSelectionIndex];
+        }
+
+        return null;
+    }
+
+    private ItemData GetSelectedItem(int index)
     {
         if(index >= 0 && index < items.Count)
         {
@@ -83,10 +93,14 @@ public class PlayerInventory : MonoBehaviour, ICanPickUpItems
         return null;
     }
 
-    public void GetItem(ItemData item)
+    public void RemoveSelectedItem()
     {
+        ItemData selected = GetSelectedItem();
+        if (selected != null) RemoveItem(selected);
+    }
 
-
+    public void GainItem(ItemData item)
+    {
         if(items.Count < currentInventorySlot)
         {
             items.Add(item);
@@ -97,7 +111,7 @@ public class PlayerInventory : MonoBehaviour, ICanPickUpItems
 
     public void TossItem()
     {
-        ItemData selected = SelectItem(currentSelectionIndex);
+        ItemData selected = GetSelectedItem(currentSelectionIndex);
         if (selected == null) return;
 
         GameObject droppedItem = Instantiate(pickupPrefab, tossPosition.position, Quaternion.identity);
@@ -125,12 +139,12 @@ public class PlayerInventory : MonoBehaviour, ICanPickUpItems
     {
         if (items.Count < currentInventorySlot)
         {
-            GetItem(pickup.GetPickupItem());
+            GainItem(pickup.GetPickupItem());
             Destroy(pickup.gameObject);
 
             if (items.Count == 1)
             {
-                SelectItem(currentSelectionIndex);
+                GetSelectedItem(currentSelectionIndex);
             }
         }
     }

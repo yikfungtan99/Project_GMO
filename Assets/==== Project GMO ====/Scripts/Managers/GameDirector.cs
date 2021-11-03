@@ -106,14 +106,11 @@ public class GameDirector : MonoBehaviour
         enemy.OnDeath += OnEnemyDeath;
     }
 
-    private void OnEnemyDeath(object sender, EventArgs e)
+    private void OnEnemyDeath(Enemy enemy)
     {
-        Enemy enemy = sender as Enemy;
-
         if (enemy != null)
         {
-            enemy.OnDeath -= OnEnemyDeath;
-            currentEnemy.Remove(sender as Enemy);
+            currentEnemy.Remove(enemy);
             killCount += 1;
             CheckWaveComplete();
         }
