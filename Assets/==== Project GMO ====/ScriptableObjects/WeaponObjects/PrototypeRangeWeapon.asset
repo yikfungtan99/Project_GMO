@@ -22,7 +22,7 @@ MonoBehaviour:
   useAmmo: 1
   maxMagAmmo: 30
   maxAmmo: 150
-  reloadTime: 1.5
+  reloadTime: 0.5
   primaryAttack:
     damage:
       damageAmount: 1

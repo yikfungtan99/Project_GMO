@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour, ICanPickUpItems
 {
-    [SerializeField] private PlayerWeapon playerWeapon;
+    [SerializeField] private PlayerCombat playerWeapon;
 
     [SerializeField] private List<ItemData> items = new List<ItemData>();
     [SerializeField] private int maxInventorySlot = 5;

@@ -22,8 +22,8 @@ public class Wander : Action
 	{
 		currentWanderTime = Random.Range(wanderIntervalMin, wanderIntervalMax);
 
-		GoToRandomPoint();
-		haveDest = true;
+		//GoToRandomPoint();
+		//haveDest = true;
 	}
 
 	public override TaskStatus OnUpdate()

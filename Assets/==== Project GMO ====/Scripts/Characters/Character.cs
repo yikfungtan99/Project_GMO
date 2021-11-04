@@ -15,20 +15,36 @@ public abstract class Character : MonoBehaviour, IHaveInfoName, IHaveHealth, ICa
     [SerializeField] private float speed;
 
     private int currentHealth = 0;
-    private int maxHealth = 0;
+    private int currentMaxHealth = 0;
+
     protected void Awake()
     {
         currentHealth = health;
-        maxHealth = health;
+        currentMaxHealth = health;
     }
 
     public string CharacterName { get => characterName; set => characterName = value; }
-    public int Health { get => currentHealth; set => currentHealth = value; }
-    public int MaxHealth { get => maxHealth; set => maxHealth = value; }
+    public int Health { get => currentHealth; set => SetHealth(value); }
+
+    private void SetHealth(int health)
+    {
+        currentHealth = health;
+        OnHealthChanged?.Invoke(currentHealth, currentMaxHealth);
+    }
+
+    public int MaxHealth { get => currentMaxHealth; set => SetMaxHealth(value); }
+    private void SetMaxHealth(int maxHealth)
+    {
+        currentMaxHealth = maxHealth;
+        OnHealthChanged?.Invoke(currentHealth, currentMaxHealth);
+    }
+
     public int Armor { get => armor; set => armor = value; }
     public float Speed { get => speed; set => speed = value; }
     public string InfoName { get => characterName; set => characterName = value; }
     
-
     public abstract void ReceiveDamage(Damage damage);
+    public virtual event ICanBeDamage.DamageCallback OnReceivedDamage;
+
+    public event IHaveHealth.HealthChangeCallback OnHealthChanged;
 }

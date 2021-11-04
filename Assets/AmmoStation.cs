@@ -19,7 +19,7 @@ public class AmmoStation : Station, ICanBeInteracted
     {
         if (moneyManager.CanAfford(price))
         {
-            interactor.GetComponent<PlayerWeapon>().GetAmmo(ammo);
+            interactor.GetComponent<PlayerCombat>().GainAmmo(ammo);
             moneyManager.SpendMoney(price);
         }
     }

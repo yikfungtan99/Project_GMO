@@ -5,18 +5,39 @@ using UnityEngine;
 public abstract class Station : MonoBehaviour, IHaveInfoName, IHaveHealth, ICanBeAttack, ICanBeDamage
 {
     [SerializeField] protected string stationName;
+    public int StationPrice;
+
     [SerializeField] protected int health = 10;
 
     protected int currentHealth;
-    protected int maxHealth;
+    protected int currentMaxHealth;
+
+    public event ICanBeDamage.DamageCallback OnReceivedDamage;
+    public event IHaveHealth.HealthChangeCallback OnHealthChanged;
+
+    public delegate void DestroyCallback();
+    public event DestroyCallback OnDestroyed;
+
     protected virtual void Awake()
     {
         currentHealth = health;
-        maxHealth = health;
+        currentMaxHealth = health;
     }
 
-    public int Health { get => currentHealth; set => currentHealth = value; }
-    public int MaxHealth { get => maxHealth; set => maxHealth = value; }
+    public int Health { get => currentHealth; set => SetHealth(value); }
+    private void SetHealth(int health)
+    {
+        currentHealth = health;
+        OnHealthChanged?.Invoke(currentHealth, currentMaxHealth);
+    }
+
+    public int MaxHealth { get => currentMaxHealth; set => SetMaxHealth(value); }
+    private void SetMaxHealth(int maxHealth)
+    {
+        currentMaxHealth = maxHealth;
+        OnHealthChanged?.Invoke(currentHealth, currentMaxHealth);
+    }
+
     public string InfoName { get => stationName; set => stationName = value; }
 
     public void ReceiveAttack()
@@ -26,6 +47,12 @@ public abstract class Station : MonoBehaviour, IHaveInfoName, IHaveHealth, ICanB
 
     public virtual void ReceiveDamage(Damage damage)
     {
-        Health -= damage.DamageAmount;
+        currentHealth -= damage.DamageAmount;
+
+        if(currentHealth <= 0)
+        {
+            OnDestroyed?.Invoke();
+            Destroy(gameObject);
+        }
     }
 }

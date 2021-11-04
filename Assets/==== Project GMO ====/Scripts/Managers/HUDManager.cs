@@ -12,7 +12,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI currentMaxHealthText;
 
     private PlayerInventory playerInventory;
-    private PlayerWeapon playerWeapon;
+    private PlayerCombat playerWeapon;
 
     [SerializeField] private Transform holsterPanel;
 
@@ -25,10 +25,12 @@ public class HUDManager : MonoBehaviour
 
     private void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        this.player = player.GetComponent<Player>();
-        playerInventory = player.GetComponent<PlayerInventory>();
-        playerWeapon = player.GetComponent<PlayerWeapon>();
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        player = playerObject.GetComponent<Player>();
+        playerInventory = playerObject.GetComponent<PlayerInventory>();
+        playerWeapon = playerObject.GetComponent<PlayerCombat>();
+
+        player.OnHealthChanged += UpdateHealth;
 
         playerInventory.OnInventoryChanges += HolsterUpdateInventory;
         playerInventory.OnSelectionChanges += HolsterUpdateSelected;
@@ -36,6 +38,12 @@ public class HUDManager : MonoBehaviour
 
         playerWeapon.OnWeaponInformationChange += WeaponUpdateMagAmmo;
         playerWeapon.OnWeaponInformationChange += WeaponUpdateAmmo;
+    }
+
+    private void UpdateHealth(int health, int maxHealth)
+    {
+        currentHealthText.text = health.ToString();
+        currentMaxHealthText.text = maxHealth.ToString();
     }
 
     private void HolsterUpdateSelected(int selectedIndex, string itemName)

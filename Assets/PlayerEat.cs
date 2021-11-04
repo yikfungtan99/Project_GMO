@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Player), typeof(BuffProcessor))]
 public class PlayerEat : MonoBehaviour
 {
-
     [SerializeField] private PlayerInventory inventory;
 
-    // Start is called before the first frame update
-    void Start()
+    private Player player;
+    private BuffProcessor buffProcessor;
+
+    private void Start()
     {
-        
+        player = GetComponent<Player>();
+        buffProcessor = GetComponent<BuffProcessor>();
     }
 
     // Update is called once per frame
@@ -22,6 +25,7 @@ public class PlayerEat : MonoBehaviour
 
             if (dish != null)
             {
+                buffProcessor.AddBuff(dish.buff.InitializeBuff(gameObject));
                 inventory.RemoveSelectedItem();
             }
         }

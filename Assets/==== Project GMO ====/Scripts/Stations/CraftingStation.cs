@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Dispenser))]
 public class CraftingStation : Station, ICanPickUpItems
@@ -24,11 +25,20 @@ public class CraftingStation : Station, ICanPickUpItems
     public event CraftingStationDele OnAddItem;
     public event CraftingStationDele OnFinishCrafting;
 
+    [SerializeField] private Slider progressBar;
+
+    [SerializeField] private GameObject craftingImagePrefab;
+    [SerializeField] private Transform ingredientRack;
+
     private void OnEnable()
     {
         OnFinishCrafting += DispenseResult;
         OnFinishCrafting += ResetCraftingStation;
+        OnFinishCrafting += RemoveIngredientUI;
+        OnFinishCrafting += UpdateProgressBar;
+
         OnAddItem += GetCompatibleRecipe;
+        OnAddItem += AddIngredientUI;
     }
 
     private void Start()
@@ -64,6 +74,8 @@ public class CraftingStation : Station, ICanPickUpItems
 
                 OnFinishCrafting?.Invoke();
             }
+
+            UpdateProgressBar();
         }
     }
 
@@ -115,19 +127,45 @@ public class CraftingStation : Station, ICanPickUpItems
         {
             if (items.Count < maxItemSlot)
             {
-                items.Add(pickup.GetPickupItem().itemObject as IngredientObject);
-                print(pickup.GetPickupItem().itemObject);
-                OnAddItem?.Invoke();
+                AddIngredient(pickup);
                 Destroy(pickup.gameObject);
             }
+        }
+    }
+
+    private void AddIngredient(Pickups pickup)
+    {
+        items.Add(pickup.GetPickupItem().itemObject as IngredientObject);
+        OnAddItem?.Invoke();
+    }
+
+    public void UpdateProgressBar()
+    {
+        progressBar.value = currentCraftTime / currentCraftingDuration;
+    }
+
+    public void AddIngredientUI()
+    {
+        Instantiate(craftingImagePrefab, ingredientRack);
+    }
+
+    public void RemoveIngredientUI()
+    {
+        for (int i = ingredientRack.childCount - 1; i >= 0; i--)
+        {
+            Destroy(ingredientRack.GetChild(i).gameObject);
         }
     }
 
     private void OnDisable()
     {
         OnFinishCrafting -= DispenseResult;
-        OnAddItem -= GetCompatibleRecipe;
         OnFinishCrafting -= ResetCraftingStation;
+        OnFinishCrafting -= RemoveIngredientUI;
+        OnFinishCrafting -= UpdateProgressBar;
+
+        OnAddItem -= GetCompatibleRecipe;
+        OnAddItem -= AddIngredientUI;
     }
 
     public static bool CompareLists<T>(List<T> aListA, List<T> aListB)

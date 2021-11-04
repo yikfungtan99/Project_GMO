@@ -895,15 +895,16 @@ GameObject:
   m_Component:
   - component: {fileID: 5560082046464206874}
   - component: {fileID: 832929823}
-  - component: {fileID: 171878917344167875}
   - component: {fileID: 815407165255122008}
   - component: {fileID: 2671078534242560703}
   - component: {fileID: 8773385023328326233}
   - component: {fileID: 768610790}
   - component: {fileID: 2253867256567610173}
   - component: {fileID: 1066956700059370413}
+  - component: {fileID: 9201566608617851653}
   - component: {fileID: 5560082046464206873}
   - component: {fileID: 832929824}
+  - component: {fileID: 170537189}
   m_Layer: 6
   m_Name: Example player prefab
   m_TagString: Player
@@ -942,26 +943,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Player
-  health: 5
+  health: 10
   armor: 0
   speed: 0
---- !u!114 &171878917344167875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5560082046464206875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e66427f88d91da4c90e163fb00d3f5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meleePos: {fileID: 1533938997}
-  meleeRadius: 0.85
-  meleeWindUpTime: 0.65
-  meleeWindDownTime: 0
-  meleeDamage: 1
 --- !u!114 &815407165255122008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -974,6 +958,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc56400db22e7b4d995df44d238b8cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meleePos: {fileID: 1533938997}
+  meleeRadius: 0.75
+  meleeDamage: 1
   weaponHolder: {fileID: 995804781}
   weaponSO: {fileID: 11400000, guid: dbd5fe379e597db4fa488f4cace739f0, type: 2}
 --- !u!114 &2671078534242560703
@@ -988,6 +975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544cd6672b45ff5438f5d45a86283b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 8773385023328326233}
 --- !u!114 &8773385023328326233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1054,6 +1042,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAim: {fileID: 5560082047537537663}
   detectDistance: 15
+--- !u!114 &9201566608617851653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5560082046464206875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4a6f93bccd72e4c837439f095d3a6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5560082046464206873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1130,6 +1130,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!95 &170537189
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5560082046464206875}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4d5e740ab9c73684da4085c3b190b090, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5560082047537537656
 GameObject:
   m_ObjectHideFlags: 0

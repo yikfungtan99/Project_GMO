@@ -8,6 +8,11 @@ public interface ICanBeAttack
 
 public interface ICanBeDamage
 {
+
+    delegate void DamageCallback(int damageAmount = 0);
+
+    event DamageCallback OnReceivedDamage;
+
     void ReceiveDamage(Damage damage);
 }
 

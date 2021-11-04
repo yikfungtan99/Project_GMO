@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : Character
 {
+    public override event ICanBeDamage.DamageCallback OnReceivedDamage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +22,9 @@ public class Player : Character
     {
         //Shake Camera
         Camera.main.GetComponent<CameraShake>().ShakeCamera(damage.DamageAmount, 0.25f);
-
+        OnReceivedDamage?.Invoke(damage.DamageAmount);
         Health -= damage.DamageAmount;
+
         Death();
     }
 

@@ -46,7 +46,6 @@ public class EnemyDrop : MonoBehaviour
 
         if (dropItem != null)
         {
-            print(dropItem.itemName);
             dispenser.Dispense(dropItem);
         }
     }

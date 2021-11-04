@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2895494989221178199}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 0.85, y: 1.8, z: 0.85}
   m_Children: []
   m_Father: {fileID: 2895494989965449643}
   m_RootOrder: 0
@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2895494989965449643}
   - component: {fileID: 2895494989965449642}
-  - component: {fileID: 1498771648}
+  - component: {fileID: 1407347033}
   m_Layer: 17
   m_Name: AmmoStation
   m_TagString: Untagged
@@ -108,7 +108,7 @@ Transform:
   m_GameObject: {fileID: 2895494989965449684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.573, y: 0.206, z: -13.49}
-  m_LocalScale: {x: 0.6889, y: 1.409549, z: 0.66836}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2895494989221178198}
   - {fileID: 2895494990014980121}
@@ -128,10 +128,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stationName: Ammo Station
+  StationPrice: 150
   health: 10
   price: 30
   ammo: 30
---- !u!65 &1498771648
+--- !u!65 &1407347033
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,8 +143,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.35, y: 1.4861151, z: 1.73}
-  m_Center: {x: 0, y: 0.24305728, z: 0}
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &2895494990014980122
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,8 +171,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2895494990014980122}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.508, z: 0}
-  m_LocalScale: {x: 2.0088878, y: 1, z: 1.5832535}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 2895494989965449643}
   m_RootOrder: 1
@@ -203,7 +204,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 42626a8cd2e92504287207ead7a553ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
