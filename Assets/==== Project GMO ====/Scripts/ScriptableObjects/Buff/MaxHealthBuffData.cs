@@ -3,20 +3,20 @@
 public class MaxHealthBuffData : BuffData
 {
     private IHaveHealth health;
-    private int maxHealthIncrease;
+    private int maxHealthModifyAmount;
 
     public MaxHealthBuffData(MaxHealthBuff buff, GameObject obj) : base(buff, obj)
     {
         health = obj.GetComponent<IHaveHealth>();
-        maxHealthIncrease = buff.maxHealthIncrease;
+        maxHealthModifyAmount = buff.maxHealthModdifyAmount;
     }
     protected override void ApplyEffect()
     {
-        health.MaxHealth += maxHealthIncrease;
+        health.MaxHealth += maxHealthModifyAmount;
     }
 
     public override void End()
     {
-        health.MaxHealth -= maxHealthIncrease;
+        health.MaxHealth -= maxHealthModifyAmount;
     }
 }

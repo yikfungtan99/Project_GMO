@@ -61,9 +61,20 @@ public class GameDirector : MonoBehaviour
 
     public void StartGame()
     {
-        gameStarted = true;
-        ResetWave();
-        StartGameEvent(new EventArgs { });
+        if (!gameStarted)
+        {
+            gameStarted = true;
+            ResetWave();
+            StartGameEvent(new EventArgs { });
+        }
+        else
+        {
+            if (isPrepPhase)
+            {
+                waitTime = Time.time + 3.5f;
+            }
+        }
+       
     }
 
     private void SpawnWave()

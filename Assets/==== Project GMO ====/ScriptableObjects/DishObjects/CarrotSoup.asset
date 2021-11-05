@@ -18,4 +18,5 @@ MonoBehaviour:
   stackable: 0
   stackMaxSize: 0
   itemImage: {fileID: 0}
+  Buff: {fileID: 11400000, guid: bc9da1d72665d8941a8ca103a79c4390, type: 2}
   ingredient: []

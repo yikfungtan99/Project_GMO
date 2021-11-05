@@ -25,7 +25,11 @@ public class PlayerEat : MonoBehaviour
 
             if (dish != null)
             {
-                buffProcessor.AddBuff(dish.buff.InitializeBuff(gameObject));
+                foreach (BuffObject buff in dish.buffs)
+                {
+                    buffProcessor.AddBuff(buff.InitializeBuff(gameObject));
+                }
+
                 inventory.RemoveSelectedItem();
             }
         }

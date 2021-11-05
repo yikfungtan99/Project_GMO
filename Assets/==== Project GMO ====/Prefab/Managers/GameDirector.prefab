@@ -677,7 +677,7 @@ MonoBehaviour:
   enemy: {fileID: 2532590186090827236, guid: a9febbd3106f052409a640acfbb119e2, type: 3}
   wavePrepTime: 5
   maxWaveCount: 30
-  spawnCountGrowth: 1
+  spawnCountGrowth: 15
   spawnPaceGrowth: 1
   spawnPackGrowth: 1
 --- !u!114 &1385881070

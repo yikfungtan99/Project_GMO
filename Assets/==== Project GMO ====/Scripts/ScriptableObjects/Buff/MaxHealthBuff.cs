@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "BuffSO", menuName = "Project_GMO/Buff/MaxHealthBuff")]
+[CreateAssetMenu(fileName = "MaxHealthBuff", menuName = "Project_GMO/Buff/MaxHealthBuff")]
 public class MaxHealthBuff : BuffObject
 {
-    public int maxHealthIncrease;
+    public int maxHealthModdifyAmount;
 
     public override BuffData InitializeBuff(GameObject obj)
     {

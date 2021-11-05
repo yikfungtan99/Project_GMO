@@ -28,7 +28,14 @@ public abstract class Character : MonoBehaviour, IHaveInfoName, IHaveHealth, ICa
 
     private void SetHealth(int health)
     {
+
         currentHealth = health;
+
+        if(currentHealth >= currentMaxHealth)
+        {
+            currentHealth = currentMaxHealth;
+        }
+
         OnHealthChanged?.Invoke(currentHealth, currentMaxHealth);
     }
 

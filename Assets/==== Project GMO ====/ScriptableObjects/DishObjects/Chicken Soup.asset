@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0106b272234e076428cef03333685459, type: 3}
-  m_Name: DishChickenSoup
+  m_Name: Chicken Soup
   m_EditorClassIdentifier: 
   itemName: Chicken Soup
   itemRarity: 0
@@ -18,5 +18,7 @@ MonoBehaviour:
   stackable: 0
   stackMaxSize: 0
   itemImage: {fileID: 21300000, guid: b9549988911ba764fb4276784faa1259, type: 3}
-  Buff: {fileID: 11400000, guid: deb40525a764a3e458e71810e2eaa73a, type: 2}
+  Buffs:
+  - {fileID: 11400000, guid: bc9da1d72665d8941a8ca103a79c4390, type: 2}
+  - {fileID: 11400000, guid: deb40525a764a3e458e71810e2eaa73a, type: 2}
   ingredient: []

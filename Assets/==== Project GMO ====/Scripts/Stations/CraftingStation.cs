@@ -28,6 +28,8 @@ public class CraftingStation : Station, ICanPickUpItems
     [SerializeField] private Slider progressBar;
 
     [SerializeField] private GameObject craftingImagePrefab;
+
+    [SerializeField] private GameObject craftingUICanvas;
     [SerializeField] private Transform ingredientRack;
 
     private void OnEnable()
@@ -146,11 +148,14 @@ public class CraftingStation : Station, ICanPickUpItems
 
     public void AddIngredientUI()
     {
+        if(!craftingUICanvas.activeSelf) craftingUICanvas.SetActive(true);
         Instantiate(craftingImagePrefab, ingredientRack);
     }
 
     public void RemoveIngredientUI()
     {
+        craftingUICanvas.SetActive(false);
+
         for (int i = ingredientRack.childCount - 1; i >= 0; i--)
         {
             Destroy(ingredientRack.GetChild(i).gameObject);

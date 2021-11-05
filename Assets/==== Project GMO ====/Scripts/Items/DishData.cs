@@ -1,10 +1,12 @@
-﻿[System.Serializable]
+﻿using System.Collections.Generic;
+
+[System.Serializable]
 public class DishData : ItemData
 {
-    public BuffObject buff { get; private set; }
+    public List<BuffObject> buffs { get; private set; }
 
     public DishData(DishObject itemObject = null) : base(itemObject)
     {
-        buff = itemObject.Buff;
+        buffs = itemObject.Buffs;
     }
 }
