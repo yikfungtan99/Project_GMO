@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/==== Project GMO ====/Scene/AdditiveTest.unity
+    path: Assets/==== Project GMO ====/Scene/Depecrated/AdditiveTest.unity
     guid: 491594798a6262141a3a07e177a1eb69
   - enabled: 0
-    path: Assets/==== Project GMO ====/Scene/MapGenTest.unity
+    path: Assets/==== Project GMO ====/Scene/Depecrated/MapGenTest.unity
     guid: b4f311aa3bdf24b46b8a3992f26907ca
   - enabled: 0
-    path: Assets/==== Project GMO ====/Scene/PathFindAITest.unity
+    path: Assets/==== Project GMO ====/Scene/TestScene/PathFindAITest.unity
     guid: a21a6104e8905c24b98ec42612fb7108
   - enabled: 1
-    path: Assets/==== Project GMO ====/Scene/Main/mainLevel.unity
+    path: Assets/==== Project GMO ====/Scene/Synty/mainLevel.unity
     guid: c0bda6ac5c8236d4889fdffd5cc3c51c
   m_configObjects: {}

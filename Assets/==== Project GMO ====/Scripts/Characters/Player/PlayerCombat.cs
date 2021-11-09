@@ -28,6 +28,8 @@ public class PlayerCombat : MonoBehaviour
     private Attack primaryAttack;
     private Attack secondaryAttack;
 
+    private float primaryAttackTime = 0;
+
     public delegate void WeaponInformationChangeCallback(int mag, int ammo);
     public event WeaponInformationChangeCallback OnWeaponInformationChange;
 
@@ -40,8 +42,6 @@ public class PlayerCombat : MonoBehaviour
         this.maxAmmo = weaponSO.maxAmmo;
         this.reloadTime = weaponSO.reloadTime;
     }
-
-    private float primaryAttackTime = 0;
 
     private void Start()
     {
@@ -174,8 +174,9 @@ public class PlayerCombat : MonoBehaviour
 
     public void FillWeaponMagazine()
     {
-        currentAmmo -= ReloadAmount();
-        currentMagAmmo += ReloadAmount();
+        int amountToReload = ReloadAmount();
+        currentMagAmmo += amountToReload;
+        currentAmmo -= amountToReload;
 
         isReloading = false;
 
@@ -184,7 +185,9 @@ public class PlayerCombat : MonoBehaviour
 
     private int ReloadAmount()
     {
-        return currentAmmo < maxMagAmmo - currentMagAmmo ? currentAmmo : maxMagAmmo - currentMagAmmo;
+        int countToFullMag = maxMagAmmo - currentMagAmmo;
+
+        return currentAmmo < countToFullMag ? currentAmmo : countToFullMag;
     }
 
     public void GainAmmo(int amount)

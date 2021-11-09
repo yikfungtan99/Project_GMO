@@ -11,6 +11,7 @@ public class BuildPad : MonoBehaviour
     [SerializeField] private TextMeshProUGUI stationPriceText;
 
     [SerializeField] private GameObject buildInterface;
+    [SerializeField] private GameObject buildUI;
 
     private Station currentStation;
 
@@ -60,5 +61,21 @@ public class BuildPad : MonoBehaviour
     {
         currentStation.OnDestroyed -= BuildInterface;
         buildInterface.SetActive(true);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            buildUI.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            buildUI.SetActive(false);
+        }
     }
 }

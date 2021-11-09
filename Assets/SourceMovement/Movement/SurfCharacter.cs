@@ -200,6 +200,8 @@ namespace Fragsurf.Movement {
 
             }
 
+            _colliderObject.tag = "Player";
+
             _moveData.slopeLimit = movementConfig.slopeLimit;
 
             _moveData.rigidbodyPushForce = rigidbodyPushForce;

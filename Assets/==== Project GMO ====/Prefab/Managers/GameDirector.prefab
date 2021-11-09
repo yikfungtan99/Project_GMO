@@ -675,9 +675,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   enemy: {fileID: 2532590186090827236, guid: a9febbd3106f052409a640acfbb119e2, type: 3}
-  wavePrepTime: 5
+  wavePrepTime: 15
   maxWaveCount: 30
-  spawnCountGrowth: 15
+  spawnCountGrowth: 5
   spawnPaceGrowth: 1
   spawnPackGrowth: 1
 --- !u!114 &1385881070

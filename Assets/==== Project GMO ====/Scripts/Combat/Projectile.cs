@@ -19,7 +19,9 @@ public class Projectile : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    {
+    { 
+        if (other.isTrigger) return;
+
         Destroy(gameObject);
 
         if (damage == null) return;
