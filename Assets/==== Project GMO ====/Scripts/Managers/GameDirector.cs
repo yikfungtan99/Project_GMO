@@ -121,6 +121,8 @@ public class GameDirector : MonoBehaviour
     {
         if (enemy != null)
         {
+            enemy.OnDeath -= OnEnemyDeath;
+
             currentEnemy.Remove(enemy);
             killCount += 1;
             CheckWaveComplete();

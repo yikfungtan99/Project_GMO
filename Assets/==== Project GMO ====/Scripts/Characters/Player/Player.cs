@@ -6,18 +6,6 @@ public class Player : Character
 {
     public override event ICanBeDamage.DamageCallback OnReceivedDamage;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public override void ReceiveDamage(Damage damage)
     {
         //Shake Camera

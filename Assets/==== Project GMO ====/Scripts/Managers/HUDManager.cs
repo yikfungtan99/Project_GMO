@@ -10,6 +10,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private TextMeshProUGUI currentHealthText;
     [SerializeField] private TextMeshProUGUI currentMaxHealthText;
+    [SerializeField] private TextMeshProUGUI additionalMaxHealthText;
 
     private PlayerInventory playerInventory;
     private PlayerCombat playerWeapon;

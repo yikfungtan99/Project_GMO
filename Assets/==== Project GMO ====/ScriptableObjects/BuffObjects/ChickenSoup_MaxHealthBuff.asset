@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83fe5297d89e0e04c9df331020ce2d97, type: 3}
   m_Name: ChickenSoup_MaxHealthBuff
   m_EditorClassIdentifier: 
-  Duration: 15
+  Duration: 3
   IsDurationStacked: 0
   IsEffectStacked: 0
-  maxHealthModdifyAmount: 3
+  maxHealthModifyAmount: 3

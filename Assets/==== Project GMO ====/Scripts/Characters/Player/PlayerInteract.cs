@@ -11,27 +11,25 @@ public class PlayerInteract : MonoBehaviour
 
     GameObject hitObject = null;
 
-    // Start is called before the first frame update
-    void Start()
+    private SelectionManager selectionManager;
+    Ray ray = new Ray();
+
+    private void Start()
     {
-        
+        selectionManager = SelectionManager.Instance;
     }
 
     // Update is called once per frame
     void Update()
     {
+        ray.origin = playerAim.position;
+        ray.direction = playerAim.forward;
+
+        selectionManager.CheckInteractable(transform.position, ray);
+
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Physics.Raycast(playerAim.position, playerAim.forward, out hit, interactDistance))
-            {
-                hitObject = hit.collider.gameObject;
-
-                if (hitObject.GetComponent<ICanBeInteracted>() != null)
-                {
-                    print(hitObject.gameObject.name + " interacted.");
-                    hitObject.GetComponent<ICanBeInteracted>().ReceiveInteract(this);
-                }
-            }
+            selectionManager.Select(this);
         }
     }
 }

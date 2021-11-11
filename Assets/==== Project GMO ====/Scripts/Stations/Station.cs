@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Station : MonoBehaviour, IHaveInfoName, IHaveHealth, ICanBeAttack, ICanBeDamage
+public abstract class Station : MonoBehaviour, IHaveInfoName, IHealth, ICanBeAttack, ICanBeDamage
 {
     [SerializeField] protected string stationName;
     public int StationPrice;
@@ -13,7 +13,7 @@ public abstract class Station : MonoBehaviour, IHaveInfoName, IHaveHealth, ICanB
     protected int currentMaxHealth;
 
     public event ICanBeDamage.DamageCallback OnReceivedDamage;
-    public event IHaveHealth.HealthChangeCallback OnHealthChanged;
+    public event IHealth.HealthChangeCallback OnHealthChanged;
 
     public delegate void DestroyCallback();
     public event DestroyCallback OnDestroyed;

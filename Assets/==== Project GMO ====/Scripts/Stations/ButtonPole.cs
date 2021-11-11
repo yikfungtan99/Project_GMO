@@ -8,21 +8,33 @@ public class ButtonPole : MonoBehaviour, ICanBeInteracted
     [SerializeField] private UnityEvent activateEvent;
     [SerializeField] private Animator buttonAnimation;
 
+    private float lookPercentage;
+    public float LookPercentage { get => lookPercentage; set => lookPercentage = value; }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        SetInteractable();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetInteractable()
     {
-        
+        SelectionManager.Instance.AddInteractables(this);
     }
 
     public void ReceiveInteract(PlayerInteract interactor = null)
     {
-        buttonAnimation.Play("ButtonPole");
+        if(buttonAnimation != null) buttonAnimation.Play("ButtonPole");
         activateEvent.Invoke();
+    }
+
+    public void HighlightInteractable()
+    {
+        GetComponent<Outline>().enabled = true;
+    }
+
+    public void DeHighlightInteractable()
+    {
+        GetComponent<Outline>().enabled = false;
     }
 }

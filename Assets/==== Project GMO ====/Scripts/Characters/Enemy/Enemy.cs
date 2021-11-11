@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Enemy : Character, ICanBeDamage
 {
-    [SerializeField] private ItemObject drops;
-
     private GameDirector director;
 
     public delegate void DeathCallback(Enemy enemy = null);

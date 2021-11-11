@@ -7,7 +7,7 @@ public interface IHaveInfoName
     public string InfoName { get; set; }
 }
 
-public abstract class Character : MonoBehaviour, IHaveInfoName, IHaveHealth, ICanBeDamage
+public abstract class Character : MonoBehaviour, IHaveInfoName, IBuffableHealth, ICanBeDamage
 {
     [SerializeField] private string characterName;
     [SerializeField] private int health;
@@ -16,19 +16,22 @@ public abstract class Character : MonoBehaviour, IHaveInfoName, IHaveHealth, ICa
 
     private int currentHealth = 0;
     private int currentMaxHealth = 0;
+    private int trueMaxHealth = 0;
+    private int additionalMaxHealth = 0;
 
     protected void Awake()
     {
         currentHealth = health;
         currentMaxHealth = health;
+        trueMaxHealth = health;
     }
 
     public string CharacterName { get => characterName; set => characterName = value; }
     public int Health { get => currentHealth; set => SetHealth(value); }
+    public event IHealth.HealthChangeCallback OnHealthChanged;
 
     private void SetHealth(int health)
     {
-
         currentHealth = health;
 
         if(currentHealth >= currentMaxHealth)
@@ -40,18 +43,29 @@ public abstract class Character : MonoBehaviour, IHaveInfoName, IHaveHealth, ICa
     }
 
     public int MaxHealth { get => currentMaxHealth; set => SetMaxHealth(value); }
+    public int BaseMaxHealth { get => trueMaxHealth; set => SetTrueMaxHealth(value); }
+    public int AdditionalMaxHealth { get => additionalMaxHealth; set => SetAdditionalMaxHealth(value); }
     private void SetMaxHealth(int maxHealth)
     {
         currentMaxHealth = maxHealth;
-        OnHealthChanged?.Invoke(currentHealth, currentMaxHealth);
+        SetHealth(currentHealth);
+    }
+    
+    private void SetTrueMaxHealth(int tMaxHealth)
+    {
+        trueMaxHealth = tMaxHealth;
+        SetMaxHealth(trueMaxHealth + additionalMaxHealth);
+    }
+
+    private void SetAdditionalMaxHealth(int addMaxHealth)
+    {
+        additionalMaxHealth = addMaxHealth;
+        SetMaxHealth(trueMaxHealth + additionalMaxHealth);
     }
 
     public int Armor { get => armor; set => armor = value; }
     public float Speed { get => speed; set => speed = value; }
     public string InfoName { get => characterName; set => characterName = value; }
-    
     public abstract void ReceiveDamage(Damage damage);
     public virtual event ICanBeDamage.DamageCallback OnReceivedDamage;
-
-    public event IHaveHealth.HealthChangeCallback OnHealthChanged;
 }

@@ -15,12 +15,12 @@ public class HealBuff : BuffObject
 
 public class HealBuffData : BuffData
 {
-    private IHaveHealth health;
+    private IHealth health;
     private int healAmount;
 
     public HealBuffData(HealBuff buff, GameObject obj) : base(buff, obj)
     {
-        health = obj.GetComponent<IHaveHealth>();
+        health = obj.GetComponent<IHealth>();
         healAmount = buff.healAmount;
     }
 

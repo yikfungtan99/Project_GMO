@@ -23,6 +23,10 @@ public interface ICanPickUpItems
 
 public interface ICanBeInteracted
 {
+    Transform transform { get; }
+    void HighlightInteractable();
+    void DeHighlightInteractable();
+    void SetInteractable();
     void ReceiveInteract(PlayerInteract interactor);
 }
 

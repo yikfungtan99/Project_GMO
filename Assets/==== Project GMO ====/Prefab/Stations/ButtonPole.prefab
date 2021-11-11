@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 1709056919669742144}
   - component: {fileID: 1709056919669742146}
   - component: {fileID: 1709056919669742157}
+  - component: {fileID: 650114330}
   m_Layer: 0
   m_Name: ButtonPole
   m_TagString: Untagged
@@ -110,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 1709056919669742150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.51013464, y: 0.09, z: -11.20806}
-  m_LocalScale: {x: 0.47318, y: 1.1578755, z: 0.56722}
+  m_LocalScale: {x: 0.47318, y: 0.9172533, z: 0.56722}
   m_Children:
   - {fileID: 1709056919505200614}
   m_Father: {fileID: 0}
@@ -156,7 +157,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.27, z: 0}
 --- !u!95 &1709056919669742157
 Animator:
   serializedVersion: 3
@@ -176,6 +177,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &650114330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709056919669742150}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.46195933, g: 0.8867924, b: 0.31372374, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1709056920218921933
 GameObject:
   m_ObjectHideFlags: 0

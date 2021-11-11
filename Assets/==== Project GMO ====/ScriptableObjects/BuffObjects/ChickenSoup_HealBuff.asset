@@ -15,4 +15,4 @@ MonoBehaviour:
   Duration: 0
   IsDurationStacked: 0
   IsEffectStacked: 0
-  healAmount: 1
+  healAmount: 3
