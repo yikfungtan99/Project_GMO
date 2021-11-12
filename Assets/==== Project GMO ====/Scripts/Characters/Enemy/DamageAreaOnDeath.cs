@@ -25,4 +25,10 @@ public class DamageAreaOnDeath : DeathEffect
             }
         }
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, damageRadius);
+    }
 }

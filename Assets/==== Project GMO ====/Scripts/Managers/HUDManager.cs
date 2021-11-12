@@ -41,10 +41,31 @@ public class HUDManager : MonoBehaviour
         playerWeapon.OnWeaponInformationChange += WeaponUpdateAmmo;
     }
 
-    private void UpdateHealth(int health, int maxHealth)
+    private void UpdateHealth(int curHealth, int curMaxHealth, int addMaxHealth)
     {
-        currentHealthText.text = health.ToString();
-        currentMaxHealthText.text = maxHealth.ToString();
+        currentHealthText.text = curHealth.ToString();
+        currentMaxHealthText.text = curMaxHealth.ToString();
+
+        string addMaxHealthString;
+        Color addMaxHealthTextColor = Color.white;
+
+        if(addMaxHealth > 0)
+        {
+            addMaxHealthString = "+" + addMaxHealth;
+            addMaxHealthTextColor = Color.green;
+        }
+        else if(addMaxHealth == 0)
+        {
+            addMaxHealthString = string.Empty;
+        }
+        else
+        {
+            addMaxHealthString = addMaxHealth.ToString();
+            addMaxHealthTextColor = Color.red;
+        }
+
+        additionalMaxHealthText.text = addMaxHealthString;
+        additionalMaxHealthText.color = addMaxHealthTextColor;
     }
 
     private void HolsterUpdateSelected(int selectedIndex, string itemName)

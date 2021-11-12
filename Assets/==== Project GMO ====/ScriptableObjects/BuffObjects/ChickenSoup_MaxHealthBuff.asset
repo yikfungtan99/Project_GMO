@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ChickenSoup_MaxHealthBuff
   m_EditorClassIdentifier: 
   Duration: 3
-  IsDurationStacked: 0
-  IsEffectStacked: 0
+  IsDurationStacked: 1
+  IsEffectStacked: 1
   maxHealthModifyAmount: 3

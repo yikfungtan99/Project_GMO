@@ -13,7 +13,6 @@ public abstract class Station : MonoBehaviour, IHaveInfoName, IHealth, ICanBeAtt
     protected int currentMaxHealth;
 
     public event ICanBeDamage.DamageCallback OnReceivedDamage;
-    public event IHealth.HealthChangeCallback OnHealthChanged;
 
     public delegate void DestroyCallback();
     public event DestroyCallback OnDestroyed;
@@ -28,14 +27,12 @@ public abstract class Station : MonoBehaviour, IHaveInfoName, IHealth, ICanBeAtt
     private void SetHealth(int health)
     {
         currentHealth = health;
-        OnHealthChanged?.Invoke(currentHealth, currentMaxHealth);
     }
 
     public int MaxHealth { get => currentMaxHealth; set => SetMaxHealth(value); }
     private void SetMaxHealth(int maxHealth)
     {
         currentMaxHealth = maxHealth;
-        OnHealthChanged?.Invoke(currentHealth, currentMaxHealth);
     }
 
     public string InfoName { get => stationName; set => stationName = value; }
