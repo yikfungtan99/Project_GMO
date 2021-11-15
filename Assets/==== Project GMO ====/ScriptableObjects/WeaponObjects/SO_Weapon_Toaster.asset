@@ -20,17 +20,17 @@ MonoBehaviour:
   itemImage: {fileID: 0}
   weaponGameObject: {fileID: 5304679303708566817, guid: 9ac7e215359e4b24ab553f6ec01deed4, type: 3}
   useAmmo: 1
-  maxMagAmmo: 30
-  maxAmmo: 20
+  magAmmo: 30
+  maxAmmo: 90
   reloadTime: 0.5
   primaryAttack:
     damage:
       damageAmount: 1
     attackRange: 0
-    attackRate: 0.1
+    attackRate: 0.25
     attackLayer:
       serializedVersion: 2
-      m_Bits: 0
+      m_Bits: 2048
     fireMode: 0
     projectile: {fileID: 436761560061448651, guid: b0748489fee495847af44a53eed4c308, type: 3}
     projectileSpeed: 800

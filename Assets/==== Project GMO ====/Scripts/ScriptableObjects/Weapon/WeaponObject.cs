@@ -8,7 +8,7 @@ public class WeaponObject : ItemObject
 
     [Header("Weapon Ammo")]
     public bool useAmmo = false;
-    public int maxMagAmmo;
+    public int magAmmo;
     public int maxAmmo;
 
     [Header("Weapon Reload")]

@@ -24,7 +24,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI selectedItemText;
     private Image prevImage;
 
-    private void Start()
+    private void Awake()
     {
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         player = playerObject.GetComponent<Player>();
@@ -37,8 +37,7 @@ public class HUDManager : MonoBehaviour
         playerInventory.OnSelectionChanges += HolsterUpdateSelected;
         playerInventory.OnGainItemSlot += GainInventorySlot;
 
-        playerWeapon.OnWeaponInformationChange += WeaponUpdateMagAmmo;
-        playerWeapon.OnWeaponInformationChange += WeaponUpdateAmmo;
+        playerWeapon.OnWeaponEquipped += WeaponEquipped;
     }
 
     private void UpdateHealth(int curHealth, int curMaxHealth, int addMaxHealth)
@@ -97,6 +96,12 @@ public class HUDManager : MonoBehaviour
             }
         }
     }
+
+    private void WeaponEquipped(WeaponComponent weapon)
+    {
+        weapon.OnWeaponInformationChanged += WeaponUpdateMagAmmo;
+        weapon.OnWeaponInformationChanged += WeaponUpdateAmmo;
+    }
     private void WeaponUpdateAmmo(int mag, int ammo)
     {
         weaponMagText.text = mag.ToString();
@@ -122,8 +127,5 @@ public class HUDManager : MonoBehaviour
         playerInventory.OnInventoryChanges -= HolsterUpdateInventory;
         playerInventory.OnSelectionChanges -= HolsterUpdateSelected;
         playerInventory.OnGainItemSlot -= GainInventorySlot;
-
-        playerWeapon.OnWeaponInformationChange -= WeaponUpdateMagAmmo;
-        playerWeapon.OnWeaponInformationChange -= WeaponUpdateAmmo;
     }
 }
