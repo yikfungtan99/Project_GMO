@@ -6,8 +6,15 @@ public class PrototypeRangedWeapon : WeaponComponent
 {
     [SerializeField] private Transform weaponFireLocation;
 
+    private int currentMagAmmo;
+    private int maxMagAmmo;
+
+    private bool isReloading;
+
     private float primaryAttackTime = 0;
 
+    public delegate void WeaponInformationChangeCallback(int mag, int ammo);
+    public event WeaponInformationChangeCallback OnWeaponInformationChange;
     private void Update()
     {
         PrimaryAttack();
@@ -57,8 +64,38 @@ public class PrototypeRangedWeapon : WeaponComponent
         throw new System.NotImplementedException();
     }
 
-    protected override void Reload()
+    private void Reload()
     {
-        throw new System.NotImplementedException();
+        bool canReload = !isReloading && currentMagAmmo < maxMagAmmo && currentAmmo > 0;
+
+        if (Input.GetKeyDown(KeyCode.R) && canReload)
+        {
+            isReloading = true;
+            GetComponent<Animator>().Play("Reload");
+        }
+    }
+
+    public void FillWeaponMagazine()
+    {
+        int amountToReload = ReloadAmount();
+        currentMagAmmo += amountToReload;
+        currentAmmo -= amountToReload;
+
+        isReloading = false;
+
+        OnWeaponInformationChange?.Invoke(currentMagAmmo, currentAmmo);
+    }
+
+    private int ReloadAmount()
+    {
+        int countToFullMag = maxMagAmmo - currentMagAmmo;
+
+        return currentAmmo < countToFullMag ? currentAmmo : countToFullMag;
+    }
+
+    public void GainAmmo(int amount)
+    {
+        currentAmmo += amount;
+        OnWeaponInformationChange?.Invoke(currentMagAmmo, currentAmmo);
     }
 }

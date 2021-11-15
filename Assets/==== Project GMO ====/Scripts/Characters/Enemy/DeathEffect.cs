@@ -10,5 +10,8 @@ public abstract class DeathEffect : MonoBehaviour
         GetComponent<Enemy>().OnDeath += Effect;
     }
 
-    protected abstract void Effect(Enemy enemy);
+    protected virtual void Effect(Enemy enemy)
+    {
+        enemy.OnDeath -= Effect;
+    }
 }

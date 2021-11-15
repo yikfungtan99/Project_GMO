@@ -471,6 +471,7 @@ MonoBehaviour:
   damage:
     damageAmount: 3
   damageRadius: 2
+  explosionFX: {fileID: 130848, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
 --- !u!1 &4021549225968034836
 GameObject:
   m_ObjectHideFlags: 0
