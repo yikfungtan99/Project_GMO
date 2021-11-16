@@ -6,13 +6,17 @@ using UnityEngine;
 public abstract class WeaponComponent : ItemComponent
 {
     [SerializeField] protected Transform weaponFireLocation;
+
     [SerializeField] protected Animator anim;
+
     protected WeaponObject weaponSO;
 
     protected Attack primaryAttack;
     protected Attack secondaryAttack;
+    
     protected bool useAmmo = false;
     public bool isReloading = false;
+    protected float reloadTime;
 
     protected int currentMagAmmo;
     protected int currentMagMaxAmmo;
@@ -33,7 +37,9 @@ public abstract class WeaponComponent : ItemComponent
 
         this.primaryAttack = weaponSO.primaryAttack;
         this.secondaryAttack = weaponSO.secondaryAttack;
+
         this.useAmmo = weaponSO.useAmmo;
+        this.reloadTime = weaponSO.reloadTime;
 
         this.currentMagAmmo = weaponSO.magAmmo;
         this.currentMagMaxAmmo = weaponSO.magAmmo;
@@ -45,7 +51,6 @@ public abstract class WeaponComponent : ItemComponent
     protected void Start()
     {
         anim = GetComponent<Animator>();
-        anim.speed = 1 / primaryAttack.attackRate;
     }
     public abstract void PrimaryFireInput();
     protected virtual bool canFire()
@@ -67,6 +72,8 @@ public abstract class WeaponComponent : ItemComponent
         if (Input.GetKeyDown(KeyCode.R) && canReload)
         {
             isReloading = true;
+
+            anim.speed = 1 / reloadTime;
             anim.Play("Reload");
         }
     }
@@ -78,11 +85,14 @@ public abstract class WeaponComponent : ItemComponent
         currentAmmo -= amountToReload;
 
         isReloading = false;
+        UpdateAmmoInfo();
     }
 
     private int ReloadAmount()
     {
         int countToFullMag = currentMagMaxAmmo - currentMagAmmo;
+
+        print(countToFullMag);
 
         return currentAmmo < countToFullMag ? currentAmmo : countToFullMag;
     }

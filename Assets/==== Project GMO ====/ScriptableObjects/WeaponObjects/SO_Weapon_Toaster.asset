@@ -33,7 +33,7 @@ MonoBehaviour:
       m_Bits: 2048
     fireMode: 0
     projectile: {fileID: 436761560061448651, guid: b0748489fee495847af44a53eed4c308, type: 3}
-    projectileSpeed: 800
+    projectileSpeed: 1200
   secondaryAttack:
     damage:
       damageAmount: 0

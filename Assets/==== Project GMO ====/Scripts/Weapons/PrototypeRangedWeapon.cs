@@ -8,6 +8,7 @@ public class PrototypeRangedWeapon : WeaponComponent
     {
         if (canFire())
         {
+            anim.speed = 1 / primaryAttack.attackRate;
             anim.Play("PrimaryFire");
         }
     }
