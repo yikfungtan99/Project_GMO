@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 4677092774304714245}
   - component: {fileID: 3970078998216111643}
   m_Layer: 8
-  m_Name: Ducko
+  m_Name: Enemy_Ducko
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

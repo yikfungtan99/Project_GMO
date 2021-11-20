@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 5017746234661218985}
   - component: {fileID: 8911217958057533156}
   m_Layer: 8
-  m_Name: Burgadillo
+  m_Name: Enemy_Burgadillo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -7,20 +7,20 @@ using Pathfinding;
 public class FireProjectile : Action
 {
 	public SharedGameObject target;
-	[SerializeField] private AIPath agent;
+	[SerializeField] protected AIPath agent;
 
-	[SerializeField] private float angleThreshold;
+	[SerializeField] protected float angleThreshold;
 
-	[SerializeField] private GameObject projectilePrefab;
-	[SerializeField] private Transform projectileFireLocation;
+	[SerializeField] protected GameObject projectilePrefab;
+	[SerializeField] protected Transform projectileFireLocation;
 
-	[SerializeField] private float projectileHorizontalForce;
-	[SerializeField] private float projectileVerticalForce;
+	[SerializeField] protected float projectileHorizontalForce;
+	[SerializeField] protected float projectileVerticalForce;
 
-	[SerializeField] private float attackInterval;
-	private float attackTime;
+	[SerializeField] protected float attackInterval;
+    protected float attackTime;
 
-	private Transform targetTransform;
+    protected Transform targetTransform;
 
     public override void OnAwake()
     {
@@ -41,38 +41,48 @@ public class FireProjectile : Action
     }
 
     public override TaskStatus OnUpdate()
-	{
-		Vector3 selfXZpos = new Vector3(transform.position.x, 0, transform.position.z);
-		Vector3 targetPos = new Vector3(targetTransform.position.x, 0, targetTransform.position.z);
+    {
+        Fire();
 
-		Vector3 targetDir = targetPos - selfXZpos;
+        return TaskStatus.Running;
+    }
 
-		Quaternion newDirection = Quaternion.LookRotation(targetDir);
+    protected virtual void Fire()
+    {
+        Vector3 selfXZpos = new Vector3(transform.position.x, 0, transform.position.z);
+        Vector3 targetPos = new Vector3(targetTransform.position.x, 0, targetTransform.position.z);
 
-		transform.rotation = Quaternion.Slerp(transform.rotation, newDirection, 10 * Time.deltaTime);
+        Vector3 targetDir = targetPos - selfXZpos;
 
-		float angle = Vector3.Angle(targetDir, transform.forward);
+        Quaternion newDirection = Quaternion.LookRotation(targetDir);
 
-		if (attackTime > 0)
-		{
-			attackTime -= Time.deltaTime;
-		}
-		else
-		{
-			if (angle < angleThreshold)
-			{
-				GameObject projectile = GameObject.Instantiate(projectilePrefab, projectileFireLocation.position, Quaternion.identity);
-				projectile.GetComponent<Projectile>().SetDamage(new Damage(1, null));
-				Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
-				projectileRb.AddForce(projectileFireLocation.forward * projectileHorizontalForce);
-				projectileRb.AddForce(projectileFireLocation.up * projectileVerticalForce);
-			}
+        transform.rotation = Quaternion.Slerp(transform.rotation, newDirection, 10 * Time.deltaTime);
 
-			attackTime = attackInterval;
-		}
+        float angle = Vector3.Angle(targetDir, transform.forward);
 
-		return TaskStatus.Running;
-	}
+        if (attackTime > 0)
+        {
+            attackTime -= Time.deltaTime;
+        }
+        else
+        {
+            if (angle < angleThreshold)
+            {
+                SpawnProjectile();
+            }
+
+            attackTime = attackInterval;
+        }
+    }
+
+    protected virtual void SpawnProjectile()
+    {
+        GameObject projectile = GameObject.Instantiate(projectilePrefab, projectileFireLocation.position, Quaternion.identity);
+        projectile.GetComponent<Projectile>().SetDamage(new Damage(1, null));
+        Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
+        projectileRb.AddForce(projectileFireLocation.forward * projectileHorizontalForce);
+        projectileRb.AddForce(projectileFireLocation.up * projectileVerticalForce);
+    }
 
     public override void OnEnd()
     {
