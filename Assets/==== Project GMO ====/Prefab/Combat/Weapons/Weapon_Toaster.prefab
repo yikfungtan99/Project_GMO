@@ -4919,9 +4919,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5304679303708566818}
-  - component: {fileID: 548970208243492148}
+  - component: {fileID: 9010003051973611985}
   - component: {fileID: 5022443867314991531}
   - component: {fileID: 6702545732298092178}
+  - component: {fileID: 5043321672187210893}
   m_Layer: 6
   m_Name: Weapon_Toaster
   m_TagString: Untagged
@@ -4945,7 +4946,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &548970208243492148
+--- !u!114 &9010003051973611985
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4960,7 +4961,6 @@ MonoBehaviour:
   itemObject: {fileID: 11400000, guid: 4488def786fec014ea79f924075bb649, type: 2}
   weaponFireLocation: {fileID: 5724338728187025717}
   anim: {fileID: 5022443867314991531}
-  isReloading: 0
 --- !u!95 &5022443867314991531
 Animator:
   serializedVersion: 3
@@ -4994,6 +4994,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particles:
   - {fileID: 995919177082834990}
+--- !u!114 &5043321672187210893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5304679303708566817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922f21cebe132ea49bba5f77a33bc5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMagMaxAmmo: 30
+  maxAmmo: 30
+  reloadTime: 0.5
 --- !u!1001 &5304679304507913220
 PrefabInstance:
   m_ObjectHideFlags: 0

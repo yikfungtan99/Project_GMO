@@ -1121,6 +1121,18 @@ PrefabInstance:
       propertyPath: m_Lens.NearClipPlane
       value: 0.001
       objectReference: {fileID: 0}
+    - target: {fileID: 815407165255122008, guid: 8e592e6e044da2a4f8e70d32b5c62743, type: 3}
+      propertyPath: weaponSO.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 815407165255122008, guid: 8e592e6e044da2a4f8e70d32b5c62743, type: 3}
+      propertyPath: weaponSO.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9be8b60864d65b446a1bd165dd6af413, type: 2}
+    - target: {fileID: 815407165255122008, guid: 8e592e6e044da2a4f8e70d32b5c62743, type: 3}
+      propertyPath: weaponSO.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4488def786fec014ea79f924075bb649, type: 2}
     - target: {fileID: 5560082046464206874, guid: 8e592e6e044da2a4f8e70d32b5c62743, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1176,7 +1188,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 832929823, guid: 8e592e6e044da2a4f8e70d32b5c62743, type: 3}
   m_PrefabInstance: {fileID: 1119329163}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1915279673}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 772dd5f211b393c418f1062311cab276, type: 3}
@@ -1825,6 +1837,11 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 1709056919669742157, guid: e67e08775711fc94eb9606bf2b563ebc, type: 3}
   m_PrefabInstance: {fileID: 1709056919512012565}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1915279673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5560082046464206875, guid: 8e592e6e044da2a4f8e70d32b5c62743, type: 3}
+  m_PrefabInstance: {fileID: 1119329163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1944869407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1953,17 +1970,12 @@ Transform:
   m_Father: {fileID: 185614648}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2108013663 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6257921299447706696, guid: 752b42946f84efb418de59f3149fa165, type: 3}
-  m_PrefabInstance: {fileID: 6257921300671535952}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2108013664 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6257921299447706698, guid: 752b42946f84efb418de59f3149fa165, type: 3}
   m_PrefabInstance: {fileID: 6257921300671535952}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108013663}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b515c2ee2aed714f9a15cafd0f64877, type: 3}
@@ -2057,11 +2069,11 @@ PrefabInstance:
     - target: {fileID: 1962059795329455202, guid: 52b885de278eb3d4594d4c1132cb6f4c, type: 3}
       propertyPath: enemy
       value: 
-      objectReference: {fileID: 3612885748075289198, guid: 708d83756a1e40a4785ff6a1785a06b2, type: 3}
+      objectReference: {fileID: 2532590186090827236, guid: a9febbd3106f052409a640acfbb119e2, type: 3}
     - target: {fileID: 1962059795329455202, guid: 52b885de278eb3d4594d4c1132cb6f4c, type: 3}
       propertyPath: objectiveTarget
       value: 
-      objectReference: {fileID: 2108013663}
+      objectReference: {fileID: 1915279673}
     - target: {fileID: 1962059795329455202, guid: 52b885de278eb3d4594d4c1132cb6f4c, type: 3}
       propertyPath: spawnLocations.Array.data[0]
       value: 

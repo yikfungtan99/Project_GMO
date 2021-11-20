@@ -97,17 +97,25 @@ public class HUDManager : MonoBehaviour
         }
     }
 
-    private void WeaponEquipped(WeaponComponent weapon)
+    private void WeaponEquipped(WeaponRestrictor wr)
     {
-        weapon.OnWeaponInformationChanged += WeaponUpdateMagAmmo;
-        weapon.OnWeaponInformationChanged += WeaponUpdateAmmo;
+        if (wr == null) return;
+
+        Ammo ammo = wr as Ammo;
+
+        if(ammo != null)
+        {
+            ammo.OnMagChanged += WeaponUpdateMag;
+            ammo.OnAmmoChanged += WeaponUpdateAmmo;
+        }
     }
-    private void WeaponUpdateAmmo(int mag, int ammo)
+
+    private void WeaponUpdateMag(int mag)
     {
         weaponMagText.text = mag.ToString();
     }
 
-    private void WeaponUpdateMagAmmo(int mag, int ammo)
+    private void WeaponUpdateAmmo(int ammo)
     {
         weaponAmmoText.text = ammo.ToString();
     }

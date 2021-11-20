@@ -12,43 +12,33 @@ public class PlayerCombat : MonoBehaviour
     private bool isMeleeing = false;
 
     [SerializeField] private Transform weaponHolder;
-    [SerializeField] private WeaponObject weaponSO;
+    [SerializeField] private WeaponObject[] weaponSO = new WeaponObject[2];
 
-    public WeaponComponent equippedWeapon;
+    [HideInInspector] public List<WeaponComponent> currentWeapons = new List<WeaponComponent>();
 
-    public delegate void WeaponEquippedCallback(WeaponComponent weapon);
-    public event WeaponEquippedCallback OnWeaponEquipped;
+    public WeaponComponent currentWeapon;
+    private int currentWeaponIndex = 0;
+
+    public event Action<WeaponRestrictor> OnWeaponEquipped = delegate { };
 
     private void Start()
     {
-        EquipWeapon(weaponSO.weaponGameObject);
+        GainWeapon(weaponSO[0]);
     }
     private void Update()
     {
         Melee();
         WeaponPrimaryAttack();
         WeaponReload();
+        //SwapWeapon();
     }
-    private void EquipWeapon(GameObject weaponGameObject)
-    {
-        GameObject weaponGOInstance = Instantiate(weaponGameObject, weaponHolder);
-        WeaponComponent weapon = weaponGOInstance.GetComponent<WeaponComponent>();
 
-        equippedWeapon = weapon;
-
-        OnWeaponEquipped?.Invoke(weapon);
-    }
     private void Melee()
     {
         if (Input.GetKeyDown(KeyCode.V))
         {
-            bool canMelee = !equippedWeapon.isReloading;
-
-            if (canMelee)
-            {
-                isMeleeing = true;
-                GetComponent<Animator>().Play("Melee");
-            }
+            isMeleeing = true;
+            GetComponent<Animator>().Play("Melee");
         }
     }
 
@@ -75,31 +65,69 @@ public class PlayerCombat : MonoBehaviour
             }
         }
     }
-
     private void MeleeEnd()
     {
         isMeleeing = false;
     }
 
+    private void GainWeapon(WeaponObject weaponSO)
+    {
+        GameObject weaponGOInstance = Instantiate(weaponSO.weaponGameObject, weaponHolder);
+        WeaponComponent gainedWeapon = weaponGOInstance.GetComponent<WeaponComponent>();
+        currentWeapons.Add(gainedWeapon);
+        currentWeaponIndex += 1;
+        EquipWeapon(gainedWeapon);
+    }
+    private void EquipWeapon(WeaponComponent weapon)
+    {
+        if(currentWeapon != null) currentWeapon.gameObject.SetActive(false);
+        currentWeapon = weapon;
+        currentWeapon.gameObject.SetActive(true);
+
+        OnWeaponEquipped?.Invoke(weapon.GetComponent<WeaponRestrictor>());
+    }
+    private void SwapWeapon()
+    {
+        if (Input.GetKeyDown(KeyCode.Q) && currentWeapons.Count > 1)
+        {
+            currentWeaponIndex += 1;
+
+            if (currentWeaponIndex > 1)
+            {
+                currentWeaponIndex = 0;
+            }
+
+            EquipWeapon(currentWeapons[currentWeaponIndex]);
+        }
+    }
     private void WeaponPrimaryAttack()
     {
+        if (isMeleeing) return;
         if (Input.GetMouseButton(0))
         {
-            equippedWeapon.PrimaryFireInput();
+            currentWeapon.PrimaryFireInput();
         }
     }
 
     private void WeaponReload()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (isMeleeing) return;
+
+        WeaponRestrictor wr = currentWeapon.GetComponent<WeaponRestrictor>();
+
+        if (wr != null)
         {
-            equippedWeapon.Reload();
+            wr.ReplenishWeapon();
         }
     }
-
     public void GainAmmo(int amount)
     {
-        equippedWeapon.GainAmmo(amount);
+        Ammo wr = currentWeapon.GetComponent<WeaponRestrictor>() as Ammo;
+
+        if(wr != null)
+        {
+            wr.GainAmmo(amount);
+        }
     }
     private void OnDrawGizmosSelected()
     {

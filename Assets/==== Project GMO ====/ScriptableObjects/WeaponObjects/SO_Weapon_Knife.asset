@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9a2c4d5e60efcf4ca362f1c9790ec93, type: 3}
-  m_Name: SO_Weapon_Toaster
+  m_Name: SO_Weapon_Knife
   m_EditorClassIdentifier: 
-  itemName: Toaster
+  itemName: Knife
   itemRarity: 0
-  itemPrice: 1
+  itemPrice: 0
   stackable: 0
   stackMaxSize: 0
   itemImage: {fileID: 0}
-  weaponGameObject: {fileID: 5304679303708566817, guid: 73a58e097bc52564595d9bb23beed08b, type: 3}
+  weaponGameObject: {fileID: 4362312423435580720, guid: c26bd2caafea5834fa028b73d1f6816c, type: 3}
   primaryAttack:
     damage:
       damageAmount: 1
     attackRange: 0
-    attackRate: 0.25
+    attackRate: 0.5
     attackLayer:
       serializedVersion: 2
-      m_Bits: 2048
+      m_Bits: 0
     fireMode: 0
-    projectile: {fileID: 436761560061448651, guid: b0748489fee495847af44a53eed4c308, type: 3}
-    projectileSpeed: 1200
+    projectile: {fileID: 436761560061448651, guid: 57dbf94c7cc9ed44f9736642df843f3e, type: 3}
+    projectileSpeed: 2000
   secondaryAttack:
     damage:
       damageAmount: 0

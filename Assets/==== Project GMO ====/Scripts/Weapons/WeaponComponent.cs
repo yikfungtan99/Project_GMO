@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,56 +7,46 @@ using UnityEngine;
 public abstract class WeaponComponent : ItemComponent
 {
     [SerializeField] protected Transform weaponFireLocation;
-
     [SerializeField] protected Animator anim;
 
     protected WeaponObject weaponSO;
 
     protected Attack primaryAttack;
     protected Attack secondaryAttack;
-    
-    protected bool useAmmo = false;
-    public bool isReloading = false;
-    protected float reloadTime;
 
-    protected int currentMagAmmo;
-    protected int currentMagMaxAmmo;
+    protected WeaponRestrictor weaponRestrictor;
 
-    protected int currentAmmo;
-    protected int maxAmmo;
-
-    public delegate void WeaponInformationChangeCallback(int mag, int ammo);
-    public event WeaponInformationChangeCallback OnWeaponInformationChanged;
-    protected virtual void UpdateAmmoInfo()
-    {
-        OnWeaponInformationChanged?.Invoke(currentMagAmmo, currentAmmo);
-    }
-
-    protected void Awake()
+    private void Start()
     {
         weaponSO = (WeaponObject)itemObject;
 
-        this.primaryAttack = weaponSO.primaryAttack;
-        this.secondaryAttack = weaponSO.secondaryAttack;
+        weaponRestrictor = GetComponent<WeaponRestrictor>();
 
-        this.useAmmo = weaponSO.useAmmo;
-        this.reloadTime = weaponSO.reloadTime;
-
-        this.currentMagAmmo = weaponSO.magAmmo;
-        this.currentMagMaxAmmo = weaponSO.magAmmo;
-
-        this.currentAmmo = weaponSO.maxAmmo;
-        this.maxAmmo = weaponSO.maxAmmo;
+        primaryAttack = weaponSO.primaryAttack;
+        secondaryAttack = weaponSO.primaryAttack;
     }
 
-    protected void Start()
+    public virtual void PrimaryFireInput()
     {
-        anim = GetComponent<Animator>();
+        if (CanFire())
+        {
+            if(anim != null)
+            {
+                anim.speed = 1/ primaryAttack.attackRate;
+                anim.Play("PrimaryFire");
+            }
+        }
     }
-    public abstract void PrimaryFireInput();
-    protected virtual bool canFire()
+    protected virtual bool CanFire()
     {
-        return currentMagAmmo > 0 && !isReloading;
+        bool canFire = true;
+
+        if(weaponRestrictor != null)
+        {
+            canFire = !weaponRestrictor.RestrictFire();
+        }
+
+        return canFire;
     }
     public abstract void PrimaryFire();
     public abstract void SecondaryAttack();
@@ -63,43 +54,5 @@ public abstract class WeaponComponent : ItemComponent
     public virtual void AnimPrimaryFire()
     {
         PrimaryFire();
-    }
-    protected abstract void ConsumeAmmo();
-    public void Reload()
-    {
-        bool canReload = !isReloading && currentMagAmmo < currentMagMaxAmmo && currentAmmo > 0;
-
-        if (Input.GetKeyDown(KeyCode.R) && canReload)
-        {
-            isReloading = true;
-
-            anim.speed = 1 / reloadTime;
-            anim.Play("Reload");
-        }
-    }
-
-    public void FillWeaponMagazine()
-    {
-        int amountToReload = ReloadAmount();
-        currentMagAmmo += amountToReload;
-        currentAmmo -= amountToReload;
-
-        isReloading = false;
-        UpdateAmmoInfo();
-    }
-
-    private int ReloadAmount()
-    {
-        int countToFullMag = currentMagMaxAmmo - currentMagAmmo;
-
-        print(countToFullMag);
-
-        return currentAmmo < countToFullMag ? currentAmmo : countToFullMag;
-    }
-
-    public void GainAmmo(int amount)
-    {
-        currentAmmo += amount;
-        UpdateAmmoInfo();
     }
 }

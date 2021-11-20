@@ -15,6 +15,7 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
+        print("HI");
         Destroy(gameObject, 2f);
     }
 
@@ -22,6 +23,7 @@ public class Projectile : MonoBehaviour
     { 
         if (other.isTrigger) return;
 
+        print(other.gameObject);
         Destroy(gameObject);
 
         if (damage == null) return;
