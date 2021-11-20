@@ -9,7 +9,7 @@ public abstract class WeaponComponent : ItemComponent
     [SerializeField] protected Transform weaponFireLocation;
     [SerializeField] protected Animator anim;
 
-    protected WeaponObject weaponSO;
+    public WeaponObject weaponSO;
 
     protected Attack primaryAttack;
     protected Attack secondaryAttack;

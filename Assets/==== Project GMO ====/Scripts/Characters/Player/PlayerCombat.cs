@@ -70,17 +70,17 @@ public class PlayerCombat : MonoBehaviour
         isMeleeing = false;
     }
 
-    private void GainWeapon(WeaponObject weaponSO)
+    public void GainWeapon(WeaponObject weaponSO)
     {
         GameObject weaponGOInstance = Instantiate(weaponSO.weaponGameObject, weaponHolder);
         WeaponComponent gainedWeapon = weaponGOInstance.GetComponent<WeaponComponent>();
-        currentWeapons.Add(gainedWeapon);
-        currentWeaponIndex += 1;
+        //currentWeapons.Add(gainedWeapon);
+        //currentWeaponIndex += 1;
         EquipWeapon(gainedWeapon);
     }
     private void EquipWeapon(WeaponComponent weapon)
     {
-        if(currentWeapon != null) currentWeapon.gameObject.SetActive(false);
+        if(currentWeapon != null) Destroy(currentWeapon.gameObject);
         currentWeapon = weapon;
         currentWeapon.gameObject.SetActive(true);
 
