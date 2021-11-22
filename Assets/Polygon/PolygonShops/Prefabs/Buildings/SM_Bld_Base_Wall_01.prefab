@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33230875447935780}
   - component: {fileID: 23660294812871848}
   - component: {fileID: 65808061066717222}
-  m_Layer: 19
+  m_Layer: 20
   m_Name: SM_Bld_Base_Wall_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,8 +60,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1ceff74c5e1d9974e9ffb54c2109da3c, type: 2}
-  - {fileID: 2100000, guid: d79e8fc2eea8f534ea71deded9a396f5, type: 2}
+  - {fileID: 2100000, guid: 38f4425d2d9d4d145981a40f93bcddbc, type: 2}
+  - {fileID: 2100000, guid: 5c476b064a70c5c45b76305cc5c88875, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

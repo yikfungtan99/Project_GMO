@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 90
     OrthographicSize: 5
-    NearClipPlane: 0.01
+    NearClipPlane: 0.001
     FarClipPlane: 1000
     Dutch: 0
     LensShift: {x: 0, y: 0}
@@ -390,7 +390,10 @@ MonoBehaviour:
   meleeRadius: 0.75
   meleeDamage: 1
   weaponHolder: {fileID: 995804781}
-  weaponSO: {fileID: 11400000, guid: 4488def786fec014ea79f924075bb649, type: 2}
+  weaponSO:
+  - {fileID: 11400000, guid: 9be8b60864d65b446a1bd165dd6af413, type: 2}
+  currentWeapons: []
+  currentWeapon: {fileID: 0}
 --- !u!114 &2671078534242560703
 MonoBehaviour:
   m_ObjectHideFlags: 0

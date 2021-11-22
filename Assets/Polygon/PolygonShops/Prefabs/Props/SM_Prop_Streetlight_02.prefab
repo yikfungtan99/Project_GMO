@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64773810439788008}
   - component: {fileID: 64450601141015212}
   - component: {fileID: 64788122987304414}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: SM_Prop_Streetlight_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5226279143779478071}
   - component: {fileID: 1709360489635055226}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

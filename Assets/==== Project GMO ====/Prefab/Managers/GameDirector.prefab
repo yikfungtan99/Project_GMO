@@ -675,7 +675,7 @@ MonoBehaviour:
   spawnLocations:
   - {fileID: 0}
   - {fileID: 0}
-  enemy: {fileID: 2532590186090827236, guid: a9febbd3106f052409a640acfbb119e2, type: 3}
+  enemy: {fileID: 6077526593283802849, guid: c88aaf60d2889454291aa9d002eb869c, type: 3}
   wavePrepTime: 15
   maxWaveCount: 30
   spawnCountGrowth: 5
@@ -709,5 +709,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 244c34110d34c3b46888fca860313c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookThreshold: 0.05
+  autoSelectLookThreshold: 0
   selectRange: 3
