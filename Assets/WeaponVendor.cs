@@ -5,10 +5,12 @@ using TMPro;
 
 public class WeaponVendor : MonoBehaviour
 {
-    [SerializeField] private List<WeaponObject> weapons = new List<WeaponObject>();
+    public List<string> weaponsName = new List<string>();
+    public List<GameObject> weapons = new List<GameObject>();
+
     [SerializeField] private TextMeshProUGUI weaponName;
 
-    private WeaponObject currentWeapon;
+    private GameObject currentWeapon;
 
     private int currentSelectionIndex = 0;
 
@@ -42,7 +44,7 @@ public class WeaponVendor : MonoBehaviour
 
     private void UpdateInterface()
     {
-        weaponName.text = currentWeapon.itemName;
+        weaponName.text = weaponsName[currentSelectionIndex];
     }
 
     public void GiveWeapon()

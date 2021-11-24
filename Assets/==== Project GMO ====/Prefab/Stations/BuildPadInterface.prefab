@@ -244,8 +244,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BuildPad, Assembly-CSharp
-        m_MethodName: PrevStation
+        m_TargetAssemblyTypeName: WeaponVendor, Assembly-CSharp
+        m_MethodName: PrevWeapon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -387,8 +387,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BuildPad, Assembly-CSharp
-        m_MethodName: NextStation
+        m_TargetAssemblyTypeName: WeaponVendor, Assembly-CSharp
+        m_MethodName: NextWeapon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -625,8 +625,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BuildPad, Assembly-CSharp
-        m_MethodName: BuildStation
+        m_TargetAssemblyTypeName: WeaponVendor, Assembly-CSharp
+        m_MethodName: GiveWeapon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -662,33 +662,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2921295081661924005}
     m_Modifications:
-    - target: {fileID: 39660937539616654, guid: ffe13f43e91f5164bbc0bac04d33a87c, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 374768891474131895, guid: ffe13f43e91f5164bbc0bac04d33a87c, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
     - target: {fileID: 400307309415403546, guid: ffe13f43e91f5164bbc0bac04d33a87c, type: 3}
       propertyPath: m_Name
       value: BuildPadUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 400307309415403546, guid: ffe13f43e91f5164bbc0bac04d33a87c, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 400307309415403546, guid: ffe13f43e91f5164bbc0bac04d33a87c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2353321334427852377, guid: ffe13f43e91f5164bbc0bac04d33a87c, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 4471152157947590350, guid: ffe13f43e91f5164bbc0bac04d33a87c, type: 3}
-      propertyPath: m_Layer
-      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 6183241440595373077, guid: ffe13f43e91f5164bbc0bac04d33a87c, type: 3}
       propertyPath: m_Pivot.x

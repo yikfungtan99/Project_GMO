@@ -16,6 +16,8 @@ public abstract class WeaponComponent : ItemComponent
 
     protected WeaponRestrictor weaponRestrictor;
 
+    protected float buffedAttackRate;
+
     private void Start()
     {
         weaponSO = (WeaponObject)itemObject;
@@ -32,7 +34,7 @@ public abstract class WeaponComponent : ItemComponent
         {
             if(anim != null)
             {
-                anim.speed = 1/ primaryAttack.attackRate;
+                anim.speed = 1/ (primaryAttack.attackRate - (primaryAttack.attackRate * (buffedAttackRate / 100)));
                 anim.Play("PrimaryFire");
             }
         }
@@ -47,6 +49,11 @@ public abstract class WeaponComponent : ItemComponent
         }
 
         return canFire;
+    }
+
+    public void BuffAttackPercent(float attackPercent)
+    {
+        buffedAttackRate = attackPercent;
     }
     public abstract void PrimaryFire();
     public abstract void SecondaryAttack();

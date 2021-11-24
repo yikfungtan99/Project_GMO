@@ -15,7 +15,7 @@ public class GameDirector : MonoBehaviour
     [Tooltip("Location to spawn units")]
     [SerializeField] private List<SpawnLocation> spawnLocations = new List<SpawnLocation>();
 
-    [SerializeField] private GameObject enemy; //Change to enemy storage
+    [SerializeField] private List<GameObject> enemy = new List<GameObject>();
 
     [Header("Wave")]
     [SerializeField] private int wavePrepTime;
@@ -27,7 +27,6 @@ public class GameDirector : MonoBehaviour
     [SerializeField] private int spawnPackGrowth;
 
     private float spawnTime;
-
     public int currentWave { get; private set; }
     private int currentWaveEnemyCount = 0;
     private float currentSpawnPace = 0;
@@ -101,7 +100,7 @@ public class GameDirector : MonoBehaviour
 
         for (int i = 0; i < randomPackCount; i++)
         {
-            GameObject enemyInstance = Instantiate(enemy);
+            GameObject enemyInstance = Instantiate(enemy[UnityEngine.Random.Range(0, enemy.Count)]);
             AddCurrentEnemy(enemyInstance.GetComponent<Enemy>());
             enemyInstance.GetComponent<EnemyTarget>().SetObjective(objectiveTarget);
             spawnLocations[UnityEngine.Random.Range(0, spawnLocations.Count)].Spawn(enemyInstance);

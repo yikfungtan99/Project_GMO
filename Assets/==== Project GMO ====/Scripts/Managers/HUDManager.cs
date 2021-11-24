@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class HUDManager : MonoBehaviour
 {
+    [SerializeField] private GameObject playerObject;
     [SerializeField] private Player player;
     [SerializeField] private TextMeshProUGUI currentHealthText;
     [SerializeField] private TextMeshProUGUI currentMaxHealthText;
@@ -26,7 +27,7 @@ public class HUDManager : MonoBehaviour
 
     private void Awake()
     {
-        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        playerObject = GameObject.FindGameObjectWithTag("Player");
         player = playerObject.GetComponent<Player>();
         playerInventory = playerObject.GetComponent<PlayerInventory>();
         playerWeapon = playerObject.GetComponent<PlayerCombat>();

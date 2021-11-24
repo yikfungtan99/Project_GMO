@@ -51,13 +51,6 @@ public class Incubator : Station, ICanPickUpItems
             Destroy(pickup.gameObject);
         }
     }
-
-    public override void ReceiveDamage(Damage damage)
-    {
-        OnAttackEvent?.Invoke();
-        base.ReceiveDamage(damage);
-    }
-
     private void Death()
     {
         print("Game Over");

@@ -4961,6 +4961,7 @@ MonoBehaviour:
   itemObject: {fileID: 11400000, guid: 4488def786fec014ea79f924075bb649, type: 2}
   weaponFireLocation: {fileID: 5724338728187025717}
   anim: {fileID: 5022443867314991531}
+  weaponSO: {fileID: 0}
 --- !u!95 &5022443867314991531
 Animator:
   serializedVersion: 3
@@ -5007,7 +5008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMagMaxAmmo: 30
-  maxAmmo: 30
+  maxAmmo: 120
   reloadTime: 0.5
 --- !u!1001 &5304679304507913220
 PrefabInstance:

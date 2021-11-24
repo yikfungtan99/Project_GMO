@@ -12,7 +12,7 @@ public class PlayerCombat : MonoBehaviour
     private bool isMeleeing = false;
 
     [SerializeField] private Transform weaponHolder;
-    [SerializeField] private WeaponObject[] weaponSO = new WeaponObject[2];
+    [SerializeField] private GameObject[] weaponSO = new GameObject[2];
 
     [HideInInspector] public List<WeaponComponent> currentWeapons = new List<WeaponComponent>();
 
@@ -70,9 +70,9 @@ public class PlayerCombat : MonoBehaviour
         isMeleeing = false;
     }
 
-    public void GainWeapon(WeaponObject weaponSO)
+    public void GainWeapon(GameObject weapon)
     {
-        GameObject weaponGOInstance = Instantiate(weaponSO.weaponGameObject, weaponHolder);
+        GameObject weaponGOInstance = Instantiate(weapon, weaponHolder);
         WeaponComponent gainedWeapon = weaponGOInstance.GetComponent<WeaponComponent>();
         //currentWeapons.Add(gainedWeapon);
         //currentWeaponIndex += 1;

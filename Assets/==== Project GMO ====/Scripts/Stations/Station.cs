@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Station : MonoBehaviour, IHaveInfoName, IHealth, ICanBeAttack, ICanBeDamage
+public abstract class Station : MonoBehaviour, IHaveInfoName, IHealth
 {
     [SerializeField] protected string stationName;
     public int StationPrice;
@@ -37,19 +37,4 @@ public abstract class Station : MonoBehaviour, IHaveInfoName, IHealth, ICanBeAtt
 
     public string InfoName { get => stationName; set => stationName = value; }
 
-    public void ReceiveAttack()
-    {
-        
-    }
-
-    public virtual void ReceiveDamage(Damage damage)
-    {
-        currentHealth -= damage.DamageAmount;
-
-        if(currentHealth <= 0)
-        {
-            OnDestroyed?.Invoke();
-            Destroy(gameObject);
-        }
-    }
 }

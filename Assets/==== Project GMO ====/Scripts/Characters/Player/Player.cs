@@ -22,6 +22,8 @@ public class Player : Character
         OnReceivedDamage?.Invoke(damage.DamageAmount);
         Health -= damage.DamageAmount;
 
+        print(Health);
+
         Death();
     }
 

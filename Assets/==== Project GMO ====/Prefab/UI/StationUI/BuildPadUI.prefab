@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 33331873264781940}
   - component: {fileID: 6473066094826920234}
   - component: {fileID: 5293185654536780478}
-  m_Layer: 5
+  m_Layer: 21
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,13 +89,13 @@ GameObject:
   - component: {fileID: 7109816281926110898}
   - component: {fileID: 1108018662203984642}
   - component: {fileID: 5277362800406981194}
-  m_Layer: 5
+  m_Layer: 21
   m_Name: PriceLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7109816281926110898
 RectTransform:
   m_ObjectHideFlags: 0
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 3465830981247626739}
   - component: {fileID: 4090734660513905673}
   - component: {fileID: 4708524092273546842}
-  m_Layer: 5
+  m_Layer: 21
   m_Name: BuildPadUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400307309415403546}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.019999998, y: 0.005, z: 0.009999999}
   m_Children:
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 2328167601713299745}
   - component: {fileID: 7437502287146483781}
   - component: {fileID: 6066753472593233933}
-  m_Layer: 5
+  m_Layer: 21
   m_Name: PriceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 8186131225509103189}
   - component: {fileID: 2381088360724810518}
   - component: {fileID: 475990592083142019}
-  m_Layer: 5
+  m_Layer: 21
   m_Name: InfoNameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
