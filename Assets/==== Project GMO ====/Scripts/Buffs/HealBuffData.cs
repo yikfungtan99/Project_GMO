@@ -16,7 +16,7 @@ public class HealBuffData : BuffData
         health.Health += healAmount;
     }
 
-    public override void End()
+    protected override void End()
     {
         
     }

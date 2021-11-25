@@ -17,8 +17,8 @@ public class AttackSpeedBuffData : BuffData
     {
         weapon.BuffAttackPercent(speedAmount);
     }
-    public override void End()
+    protected override void End()
     {
-        weapon.BuffAttackPercent(0);
+        weapon.BuffAttackPercent(-speedAmount);
     }
 }

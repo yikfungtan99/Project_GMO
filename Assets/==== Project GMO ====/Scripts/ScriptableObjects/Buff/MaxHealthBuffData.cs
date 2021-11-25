@@ -16,7 +16,7 @@ public class MaxHealthBuffData : BuffData
         health.AdditionalMaxHealth += maxHealthModifyAmount;
     }
 
-    public override void End()
+    protected override void End()
     {
         health.AdditionalMaxHealth -= maxHealthModifyAmount * EffectStacks;
     }

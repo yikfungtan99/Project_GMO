@@ -42,5 +42,5 @@ public abstract class BuffData
         }
     }
     protected abstract void ApplyEffect();
-    public abstract void End();
+    protected abstract void End();
 }

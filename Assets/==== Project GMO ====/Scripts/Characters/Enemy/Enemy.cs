@@ -12,9 +12,10 @@ public class Enemy : Character, ICanBeDamage
 
     public override void ReceiveDamage(Damage damage)
     {
+        print(damage.DamageAmount);
         Health -= damage.DamageAmount;
 
-        Death();
+        //Death();
     }
 
     private void Death()

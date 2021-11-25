@@ -51,9 +51,14 @@ public abstract class WeaponComponent : ItemComponent
         return canFire;
     }
 
+    public void BuffDamageAmount(int damage)
+    {
+        primaryAttack.damage.DamageAmount += damage;
+    }
+
     public void BuffAttackPercent(float attackPercent)
     {
-        buffedAttackRate = attackPercent;
+        buffedAttackRate += attackPercent;
     }
     public abstract void PrimaryFire();
     public abstract void SecondaryAttack();

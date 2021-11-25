@@ -12,8 +12,6 @@ public abstract class Station : MonoBehaviour, IHaveInfoName, IHealth
     protected int currentHealth;
     protected int currentMaxHealth;
 
-    public event ICanBeDamage.DamageCallback OnReceivedDamage;
-
     public delegate void DestroyCallback();
     public event DestroyCallback OnDestroyed;
 
