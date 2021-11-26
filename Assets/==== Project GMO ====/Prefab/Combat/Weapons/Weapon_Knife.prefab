@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3134581566813582440}
   - component: {fileID: 3164001691554171546}
   - component: {fileID: 3153243034350104058}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: SM_Prop_Kitchen_Knife_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 584900294804914624}
   - component: {fileID: 3505845222177956282}
   - component: {fileID: 3524480016885988508}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: Weapon_Knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,6 +131,7 @@ MonoBehaviour:
   itemObject: {fileID: 11400000, guid: 9be8b60864d65b446a1bd165dd6af413, type: 2}
   weaponFireLocation: {fileID: 4207736507623377188}
   anim: {fileID: 3505845222177956282}
+  weaponSO: {fileID: 0}
 --- !u!95 &3505845222177956282
 Animator:
   serializedVersion: 3
@@ -174,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4207736507623377188}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: WeaponFireLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}

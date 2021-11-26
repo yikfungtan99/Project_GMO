@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 995919177068658984}
   - component: {fileID: 995919177082834990}
   - component: {fileID: 995919177084248560}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: Cloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4775,7 +4775,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5724338728187025717}
-  m_Layer: 6
+  m_Layer: 22
   m_Name: WeaponFireLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4807,7 +4807,7 @@ GameObject:
   - component: {fileID: 2751890999829431000}
   - component: {fileID: 7348715999479558146}
   - component: {fileID: 1392978577280131410}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4886,7 +4886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1903570145475044727}
-  m_Layer: 6
+  m_Layer: 22
   m_Name: m_Toaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4923,7 +4923,7 @@ GameObject:
   - component: {fileID: 5022443867314991531}
   - component: {fileID: 6702545732298092178}
   - component: {fileID: 5043321672187210893}
-  m_Layer: 6
+  m_Layer: 22
   m_Name: Weapon_Toaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5076,6 +5076,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1fa99562618373d4c8d96bb210dd2448, type: 3}
       propertyPath: m_Name
       value: Toaster
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1fa99562618373d4c8d96bb210dd2448, type: 3}
+      propertyPath: m_Layer
+      value: 22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fa99562618373d4c8d96bb210dd2448, type: 3}

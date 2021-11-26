@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1499715839203913759}
   - component: {fileID: 1499715839203913729}
   - component: {fileID: 1499715839203913728}
-  m_Layer: 6
+  m_Layer: 22
   m_Name: Weapon_Baguette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,6 +68,7 @@ MonoBehaviour:
   itemObject: {fileID: 11400000, guid: 71b2cfcf09c748c4998960fff108a88e, type: 2}
   weaponFireLocation: {fileID: 1499715839421237209}
   anim: {fileID: 1499715839203913729}
+  weaponSO: {fileID: 0}
   weaponHitRadius: 1
 --- !u!1 &1499715839421237208
 GameObject:
@@ -78,7 +79,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1499715839421237209}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: WeaponHitLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +111,7 @@ GameObject:
   - component: {fileID: 1495564063189122857}
   - component: {fileID: 1487741979921104137}
   - component: {fileID: 1478048920418346093}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: SM_Prop_Food_Baguette_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
