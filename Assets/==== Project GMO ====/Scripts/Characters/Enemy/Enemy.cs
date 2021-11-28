@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Enemy : Character, ICanBeDamage
 {
-    private GameDirector director;
-
     public delegate void DeathCallback(Enemy enemy = null);
     public DeathCallback OnDeath;
 
@@ -15,7 +13,7 @@ public class Enemy : Character, ICanBeDamage
         print(damage.DamageAmount);
         Health -= damage.DamageAmount;
 
-        //Death();
+        Death();
     }
 
     private void Death()
@@ -25,10 +23,5 @@ public class Enemy : Character, ICanBeDamage
             OnDeath?.Invoke(this);
             Destroy(gameObject);
         }
-    }
-
-    public void SetDirector(GameDirector dir)
-    {
-        director = dir;
     }
 }

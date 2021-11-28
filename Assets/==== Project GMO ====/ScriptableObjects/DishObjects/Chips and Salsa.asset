@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0106b272234e076428cef03333685459, type: 3}
+  m_Name: Chips and Salsa
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemRarity: 0
+  itemPrice: 0
+  stackable: 0
+  stackMaxSize: 0
+  itemImage: {fileID: 0}
+  Buffs:
+  - {fileID: 0}
+  ingredient:
+  - {fileID: 11400000, guid: b15455d8b3e5bd1468b1af5876df0faf, type: 2}
+  - {fileID: 11400000, guid: ad113faea5f00664385a32595a5254bc, type: 2}

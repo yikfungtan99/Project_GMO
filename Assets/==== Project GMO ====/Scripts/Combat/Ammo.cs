@@ -72,8 +72,6 @@ public class Ammo : WeaponRestrictor
     {
         int countToFullMag = currentMagMaxAmmo - currentMagAmmo;
 
-        print(countToFullMag);
-
         return currentAmmo < countToFullMag ? currentAmmo : countToFullMag;
     }
 

@@ -30,8 +30,6 @@ public class MoneyManager : MonoBehaviour
         money += amount;
         moneyText.text = money.ToString();
 
-        print(amount);
-
         OnAddMoney?.Invoke();
     }
 

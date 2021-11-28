@@ -15,11 +15,11 @@ G:/UnityProject/Project_GMO
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51753
+54714
 Successfully changed project path to: G:/UnityProject/Project_GMO
 G:/UnityProject/Project_GMO
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 267.78 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 298.33 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.21f1 (a38c86f6690f)
 [Subsystems] Discovering subsystems at path G:/UnityEditors/2020.3.21f1/Editor/Data/Resources/UnitySubsystems
@@ -35,49 +35,49 @@ Initialize mono
 Mono path[0] = 'G:/UnityEditors/2020.3.21f1/Editor/Data/Managed'
 Mono path[1] = 'G:/UnityEditors/2020.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'G:/UnityEditors/2020.3.21f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56312
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56592
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: G:/UnityEditors/2020.3.21f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: G:/UnityEditors/2020.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: G:/UnityEditors/2020.3.21f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.002629 seconds.
+Registered in 0.005867 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 256.89 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 307.53 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.816 seconds
+- Completed reload, in  1.967 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1816ms)
-		BeginReloadAssembly (80ms)
+	ReloadAssembly (1967ms)
+		BeginReloadAssembly (78ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (751ms)
+		EndReloadAssembly (835ms)
 			LoadAssemblies (79ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (185ms)
+			SetupTypeCache (194ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (34ms)
-			SetupLoadedEditorAssemblies (403ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (477ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (257ms)
-				BeforeProcessingInitializeOnLoad (19ms)
-				ProcessInitializeOnLoadAttributes (91ms)
-				ProcessInitializeOnLoadMethodAttributes (29ms)
+				RefreshPlugins (308ms)
+				BeforeProcessingInitializeOnLoad (33ms)
+				ProcessInitializeOnLoadAttributes (97ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.014429 seconds.
+Registered in 0.037261 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
 Error: Could not load signature of Unity.UI.Builder.BuilderTextShadow:.ctor due to: Could not resolve type with token 010000e9 (from typeref, class/assembly UnityEngine.UIElements.StyleTextShadow, UnityEngine.UIElementsModule, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null) assembly:UnityEngine.UIElementsModule, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null type:UnityEngine.UIElements.StyleTextShadow member:(null) signature:<none>
@@ -113,7 +113,7 @@ Unloading broken assembly Library/ScriptAssemblies/UnityEditor.UIBuilderModule.d
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 236.81 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 315.43 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
@@ -146,66 +146,45 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
 Mono: successfully reloaded assembly
-- Completed reload, in  1.739 seconds
+- Completed reload, in  2.166 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1740ms)
-		BeginReloadAssembly (167ms)
+	ReloadAssembly (2167ms)
+		BeginReloadAssembly (177ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (22ms)
-		EndReloadAssembly (1508ms)
-			LoadAssemblies (145ms)
+			CreateAndSetChildDomain (23ms)
+		EndReloadAssembly (1900ms)
+			LoadAssemblies (291ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (409ms)
+			SetupTypeCache (508ms)
 			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (136ms)
-			SetupLoadedEditorAssemblies (625ms)
+			RebuildScriptCaches (157ms)
+			SetupLoadedEditorAssemblies (760ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (237ms)
-				BeforeProcessingInitializeOnLoad (139ms)
-				ProcessInitializeOnLoadAttributes (168ms)
-				ProcessInitializeOnLoadMethodAttributes (69ms)
-				AfterProcessingInitializeOnLoad (4ms)
+				RefreshPlugins (316ms)
+				BeforeProcessingInitializeOnLoad (157ms)
+				ProcessInitializeOnLoadAttributes (197ms)
+				ProcessInitializeOnLoadMethodAttributes (76ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 2.41 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 2.54 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5723 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 314.6 MB.
-System memory in use after: 314.9 MB.
+System memory in use before: 314.7 MB.
+System memory in use after: 315.1 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 6202.
-Total: 4.519900 ms (FindLiveObjects: 0.614900 ms CreateObjectMapping: 0.346200 ms MarkObjects: 3.405600 ms  DeleteObjects: 0.152000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 6.17 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 190.0 MB.
-System memory in use after: 190.4 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6202.
-Total: 4.556300 ms (FindLiveObjects: 0.512100 ms CreateObjectMapping: 0.306200 ms MarkObjects: 3.630400 ms  DeleteObjects: 0.106600 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 6204.
+Total: 5.973600 ms (FindLiveObjects: 1.019800 ms CreateObjectMapping: 0.991400 ms MarkObjects: 3.783300 ms  DeleteObjects: 0.177400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -219,78 +198,78 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/==== Project GMO ====/Prefab/Combat/Weapons/Weapon_Baguette.prefab
-  artifactKey: Guid(a2e4af625feb92548a3c8d41f446bd68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/==== Project GMO ====/Prefab/Combat/Weapons/Weapon_Baguette.prefab using Guid(a2e4af625feb92548a3c8d41f446bd68) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff637d63cf2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff637d2f312 (Unity) ResolveArtifactV2
-0x00007ff637cf52fd (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff63656f2d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff63656e815 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff63657419e (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff6365748b9 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff63657466a (Unity) PersistentManager::ReadObject
-0x00007ff635ec79ed (Unity) UnityPropertySheet::AssignDefinedPropertiesTo
-0x00007ff635f1936e (Unity) Material::BuildProperties
-0x00007ff635f1714f (Unity) Material::AcquireSharedMaterialData
-0x00007ff63566d9cc (Unity) BaseRenderer::FlattenSharedMaterialData<0>
-0x00007ff635b65398 (Unity) PrepareMeshRenderNodes<0>
-0x00007ff6356ff3ea (Unity) ExtractSceneRenderNodeQueue
-0x00007ff63575a074 (Unity) CullResults::GetOrCreateSharedRendererScene
-0x00007ff635c41f17 (Unity) CullScriptable
-0x00007ff6366ab643 (Unity) ScriptableRenderContext_CUSTOM_Internal_Cull_Injected
-0x0000025c6533fde3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull_Injected (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext&,intptr)
-0x0000025c6734ff13 (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
-0x0000025c6734fe6b (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
-0x0000025c6739ddeb (Mono JIT Code) [UniversalRenderPipeline.cs:377] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) 
-0x0000025c67398bbb (Mono JIT Code) [UniversalRenderPipeline.cs:301] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) 
-0x0000025c673546cb (Mono JIT Code) [UniversalRenderPipeline.cs:257] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) 
-0x0000025c67353b99 (Mono JIT Code) UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
-0x0000025c6533ae5b (Mono JIT Code) UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-0x0000025c6533b020 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
+  path: Assets/==== Project GMO ====/Prefab/Combat/Weapons/Weapon_Test.prefab
+  artifactKey: Guid(9ac7e215359e4b24ab553f6ec01deed4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/==== Project GMO ====/Prefab/Combat/Weapons/Weapon_Test.prefab using Guid(9ac7e215359e4b24ab553f6ec01deed4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff7b5f33cf2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff7b5eff312 (Unity) ResolveArtifactV2
+0x00007ff7b5ec52fd (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
+0x00007ff7b473f2d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
+0x00007ff7b473e815 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
+0x00007ff7b474419e (Unity) PersistentManager::ReadAndActivateObjectThreaded
+0x00007ff7b47448b9 (Unity) PersistentManager::ReadObjectThreaded
+0x00007ff7b474466a (Unity) PersistentManager::ReadObject
+0x00007ff7b40979ed (Unity) UnityPropertySheet::AssignDefinedPropertiesTo
+0x00007ff7b40e936e (Unity) Material::BuildProperties
+0x00007ff7b40e714f (Unity) Material::AcquireSharedMaterialData
+0x00007ff7b383d9cc (Unity) BaseRenderer::FlattenSharedMaterialData<0>
+0x00007ff7b3d35398 (Unity) PrepareMeshRenderNodes<0>
+0x00007ff7b38cf3ea (Unity) ExtractSceneRenderNodeQueue
+0x00007ff7b392a074 (Unity) CullResults::GetOrCreateSharedRendererScene
+0x00007ff7b3e11f17 (Unity) CullScriptable
+0x00007ff7b487b643 (Unity) ScriptableRenderContext_CUSTOM_Internal_Cull_Injected
+0x000001e65eaf0c43 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull_Injected (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext&,intptr)
+0x000001e65eaf0b93 (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
+0x000001e65eaf0aeb (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
+0x000001e65eaeddeb (Mono JIT Code) [UniversalRenderPipeline.cs:377] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) 
+0x000001e65eae8bbb (Mono JIT Code) [UniversalRenderPipeline.cs:301] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) 
+0x000001e65eaa490b (Mono JIT Code) [UniversalRenderPipeline.cs:257] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) 
+0x000001e65eacff69 (Mono JIT Code) UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+0x000001e65ea8ddcb (Mono JIT Code) UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+0x000001e65ea8df90 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
 0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
 0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
 0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
-0x00007ff6364e29c4 (Unity) scripting_method_invoke
-0x00007ff6364daeb5 (Unity) ScriptingInvocation::Invoke
-0x00007ff635c27faf (Unity) ScriptableRenderContext::ExtractAndExecuteRenderPipeline
-0x00007ff635729fa6 (Unity) Camera::CustomRenderWithPipeline
-0x00007ff635740676 (Unity) Camera::StandaloneCustomRender
-0x00007ff6357408c8 (Unity) Camera::StandaloneRender
-0x00007ff6357379e6 (Unity) CameraScripting::Render
-0x00007ff6366c5c24 (Unity) Camera_CUSTOM_Render
-0x0000025c6533ab90 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
-0x0000025c6533a153 (Mono JIT Code) UnityEditor.PreviewRenderUtility:Render (bool,bool)
-0x0000025c65339243 (Mono JIT Code) UnityEditor.GameObjectInspector:DoRenderPreview ()
-0x0000025a43bf8243 (Mono JIT Code) UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-0x0000025c1e37ed8a (Mono JIT Code) UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-0x0000025c1e37ee78 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_object_object_object_object (object,intptr,intptr,intptr)
+0x00007ff7b46b29c4 (Unity) scripting_method_invoke
+0x00007ff7b46aaeb5 (Unity) ScriptingInvocation::Invoke
+0x00007ff7b3df7faf (Unity) ScriptableRenderContext::ExtractAndExecuteRenderPipeline
+0x00007ff7b38f9fa6 (Unity) Camera::CustomRenderWithPipeline
+0x00007ff7b3910676 (Unity) Camera::StandaloneCustomRender
+0x00007ff7b39108c8 (Unity) Camera::StandaloneRender
+0x00007ff7b39079e6 (Unity) CameraScripting::Render
+0x00007ff7b4895c24 (Unity) Camera_CUSTOM_Render
+0x000001e65ea8db00 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
+0x000001e65ea8d0c3 (Mono JIT Code) UnityEditor.PreviewRenderUtility:Render (bool,bool)
+0x000001e65ea8c1b3 (Mono JIT Code) UnityEditor.GameObjectInspector:DoRenderPreview ()
+0x000001e638a3ae53 (Mono JIT Code) UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+0x000001e638a3217a (Mono JIT Code) UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+0x000001e638a32268 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_object_object_object_object (object,intptr,intptr,intptr)
 0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
 0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
 0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
-0x00007ff6364e29c4 (Unity) scripting_method_invoke
-0x00007ff6364daeb5 (Unity) ScriptingInvocation::Invoke
-0x00007ff637c5b6a0 (Unity) MonoCreateAssetPreview
-0x00007ff637c5fc5e (Unity) WriteAssetPreviewToFile
-0x00007ff637c603cc (Unity) WritePreviews
-0x00007ff637c5a0ce (Unity) PreviewImporter::GenerateAssetData
-0x00007ff637d4f099 (Unity) ImportToObjects
-0x00007ff637d4e0d8 (Unity) ImportAsset
-0x00007ff637cafe38 (Unity) AssetImportWorker::Import
-0x00007ff637d031ca (Unity) <lambda_7448d646502792db0127dc89657ec83e>::operator()
-0x00007ff637da78a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff637da9a00 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff637dad18e (Unity) asio::io_service::run
-0x00007ff637d3002b (Unity) RunAssetImportWorkerClientV2
-0x00007ff637d30080 (Unity) RunAssetImporterV2
-0x00007ff6371eb046 (Unity) Application::InitializeProject
-0x00007ff637b9f212 (Unity) WinMain
-0x00007ff6399fdef6 (Unity) __scrt_common_main_seh
+0x00007ff7b46b29c4 (Unity) scripting_method_invoke
+0x00007ff7b46aaeb5 (Unity) ScriptingInvocation::Invoke
+0x00007ff7b5e2b6a0 (Unity) MonoCreateAssetPreview
+0x00007ff7b5e2fc5e (Unity) WriteAssetPreviewToFile
+0x00007ff7b5e303cc (Unity) WritePreviews
+0x00007ff7b5e2a0ce (Unity) PreviewImporter::GenerateAssetData
+0x00007ff7b5f1f099 (Unity) ImportToObjects
+0x00007ff7b5f1e0d8 (Unity) ImportAsset
+0x00007ff7b5e7fe38 (Unity) AssetImportWorker::Import
+0x00007ff7b5ed31ca (Unity) <lambda_7448d646502792db0127dc89657ec83e>::operator()
+0x00007ff7b5f778a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff7b5f79a00 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff7b5f7d18e (Unity) asio::io_service::run
+0x00007ff7b5f0002b (Unity) RunAssetImportWorkerClientV2
+0x00007ff7b5f00080 (Unity) RunAssetImporterV2
+0x00007ff7b53bb046 (Unity) Application::InitializeProject
+0x00007ff7b5d6f212 (Unity) WinMain
+0x00007ff7b7bcdef6 (Unity) __scrt_common_main_seh
 0x00007ffe89d67034 (KERNEL32) BaseThreadInitThunk
 0x00007ffe8a6a2651 (ntdll) RtlUserThreadStart
 
-Requesting import of Guid(d840dcd6a76098d40b6c4b73cb0bfbb5) Importer(-1,00000000000000000000000000000000), Assets/Polygon/PolygonShops/Textures/PolygonShops_Texture_01_A.png from editor
-Resuming Guid(d840dcd6a76098d40b6c4b73cb0bfbb5) Importer(-1,00000000000000000000000000000000) -> 656b95c1fa833dc4e5aee4f419b8ca8c 
+Requesting import of Guid(7474c63c5c65b1b4fa45a47bd1bf528f) Importer(-1,00000000000000000000000000000000), Assets/Nokobot/Modern Guns - Handgun/Textures/M1911_Handgun_Albedo_Steel.png from editor
+Resuming Guid(7474c63c5c65b1b4fa45a47bd1bf528f) Importer(-1,00000000000000000000000000000000) -> 2c46565f105636a9f2a46df255883ff4 
 Assertion failed on expression: 'state.state == kUpToDate'
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
@@ -324,185 +303,75 @@ UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityE
 [C:\buildslave\unity\build\Modules/AssetDatabase/Editor/V2/ImporterAssetResolver.cpp line 59]
 
 Diagnostics callstack to track who triggered the sub-import:
-0x00007ff637d63cf2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff637d2f312 (Unity) ResolveArtifactV2
-0x00007ff637cf52fd (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff63656f2d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff63656e815 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff63657419e (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff6365748b9 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff63657466a (Unity) PersistentManager::ReadObject
-0x00007ff635ec79ed (Unity) UnityPropertySheet::AssignDefinedPropertiesTo
-0x00007ff635f1936e (Unity) Material::BuildProperties
-0x00007ff635f1714f (Unity) Material::AcquireSharedMaterialData
-0x00007ff63566d9cc (Unity) BaseRenderer::FlattenSharedMaterialData<0>
-0x00007ff635b65398 (Unity) PrepareMeshRenderNodes<0>
-0x00007ff6356ff3ea (Unity) ExtractSceneRenderNodeQueue
-0x00007ff63575a074 (Unity) CullResults::GetOrCreateSharedRendererScene
-0x00007ff635c41f17 (Unity) CullScriptable
-0x00007ff6366ab643 (Unity) ScriptableRenderContext_CUSTOM_Internal_Cull_Injected
-0x0000025c6533fde3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull_Injected (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext&,intptr)
-0x0000025c6734ff13 (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
-0x0000025c6734fe6b (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
-0x0000025c6739ddeb (Mono JIT Code) [UniversalRenderPipeline.cs:377] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) 
-0x0000025c67398bbb (Mono JIT Code) [UniversalRenderPipeline.cs:301] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) 
-0x0000025c673546cb (Mono JIT Code) [UniversalRenderPipeline.cs:257] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) 
-0x0000025c67353b99 (Mono JIT Code) UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
-0x0000025c6533ae5b (Mono JIT Code) UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-0x0000025c6533b020 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
+0x00007ff7b5f33cf2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff7b5eff312 (Unity) ResolveArtifactV2
+0x00007ff7b5ec52fd (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
+0x00007ff7b473f2d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
+0x00007ff7b473e815 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
+0x00007ff7b474419e (Unity) PersistentManager::ReadAndActivateObjectThreaded
+0x00007ff7b47448b9 (Unity) PersistentManager::ReadObjectThreaded
+0x00007ff7b474466a (Unity) PersistentManager::ReadObject
+0x00007ff7b40979ed (Unity) UnityPropertySheet::AssignDefinedPropertiesTo
+0x00007ff7b40e936e (Unity) Material::BuildProperties
+0x00007ff7b40e714f (Unity) Material::AcquireSharedMaterialData
+0x00007ff7b383d9cc (Unity) BaseRenderer::FlattenSharedMaterialData<0>
+0x00007ff7b3d35398 (Unity) PrepareMeshRenderNodes<0>
+0x00007ff7b38cf3ea (Unity) ExtractSceneRenderNodeQueue
+0x00007ff7b392a074 (Unity) CullResults::GetOrCreateSharedRendererScene
+0x00007ff7b3e11f17 (Unity) CullScriptable
+0x00007ff7b487b643 (Unity) ScriptableRenderContext_CUSTOM_Internal_Cull_Injected
+0x000001e65eaf0c43 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull_Injected (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext&,intptr)
+0x000001e65eaf0b93 (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
+0x000001e65eaf0aeb (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
+0x000001e65eaeddeb (Mono JIT Code) [UniversalRenderPipeline.cs:377] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) 
+0x000001e65eae8bbb (Mono JIT Code) [UniversalRenderPipeline.cs:301] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) 
+0x000001e65eaa490b (Mono JIT Code) [UniversalRenderPipeline.cs:257] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) 
+0x000001e65eacff69 (Mono JIT Code) UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+0x000001e65ea8ddcb (Mono JIT Code) UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+0x000001e65ea8df90 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
 0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
 0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
 0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
-0x00007ff6364e29c4 (Unity) scripting_method_invoke
-0x00007ff6364daeb5 (Unity) ScriptingInvocation::Invoke
-0x00007ff635c27faf (Unity) ScriptableRenderContext::ExtractAndExecuteRenderPipeline
-0x00007ff635729fa6 (Unity) Camera::CustomRenderWithPipeline
-0x00007ff635740676 (Unity) Camera::StandaloneCustomRender
-0x00007ff6357408c8 (Unity) Camera::StandaloneRender
-0x00007ff6357379e6 (Unity) CameraScripting::Render
-0x00007ff6366c5c24 (Unity) Camera_CUSTOM_Render
-0x0000025c6533ab90 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
-0x0000025c6533a153 (Mono JIT Code) UnityEditor.PreviewRenderUtility:Render (bool,bool)
-0x0000025c65339243 (Mono JIT Code) UnityEditor.GameObjectInspector:DoRenderPreview ()
-0x0000025a43bf8243 (Mono JIT Code) UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-0x0000025c1e37ed8a (Mono JIT Code) UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-0x0000025c1e37ee78 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_object_object_object_object (object,intptr,intptr,intptr)
+0x00007ff7b46b29c4 (Unity) scripting_method_invoke
+0x00007ff7b46aaeb5 (Unity) ScriptingInvocation::Invoke
+0x00007ff7b3df7faf (Unity) ScriptableRenderContext::ExtractAndExecuteRenderPipeline
+0x00007ff7b38f9fa6 (Unity) Camera::CustomRenderWithPipeline
+0x00007ff7b3910676 (Unity) Camera::StandaloneCustomRender
+0x00007ff7b39108c8 (Unity) Camera::StandaloneRender
+0x00007ff7b39079e6 (Unity) CameraScripting::Render
+0x00007ff7b4895c24 (Unity) Camera_CUSTOM_Render
+0x000001e65ea8db00 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
+0x000001e65ea8d0c3 (Mono JIT Code) UnityEditor.PreviewRenderUtility:Render (bool,bool)
+0x000001e65ea8c1b3 (Mono JIT Code) UnityEditor.GameObjectInspector:DoRenderPreview ()
+0x000001e638a3ae53 (Mono JIT Code) UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+0x000001e638a3217a (Mono JIT Code) UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+0x000001e638a32268 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_object_object_object_object (object,intptr,intptr,intptr)
 0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
 0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
 0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
-0x00007ff6364e29c4 (Unity) scripting_method_invoke
-0x00007ff6364daeb5 (Unity) ScriptingInvocation::Invoke
-0x00007ff637c5b6a0 (Unity) MonoCreateAssetPreview
-0x00007ff637c5fc5e (Unity) WriteAssetPreviewToFile
-0x00007ff637c603cc (Unity) WritePreviews
-0x00007ff637c5a0ce (Unity) PreviewImporter::GenerateAssetData
-0x00007ff637d4f099 (Unity) ImportToObjects
-0x00007ff637d4e0d8 (Unity) ImportAsset
-0x00007ff637cafe38 (Unity) AssetImportWorker::Import
-0x00007ff637d031ca (Unity) <lambda_7448d646502792db0127dc89657ec83e>::operator()
-0x00007ff637da78a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff637da9a00 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff637dad18e (Unity) asio::io_service::run
-0x00007ff637d3002b (Unity) RunAssetImportWorkerClientV2
-0x00007ff637d30080 (Unity) RunAssetImporterV2
-0x00007ff6371eb046 (Unity) Application::InitializeProject
-0x00007ff637b9f212 (Unity) WinMain
-0x00007ff6399fdef6 (Unity) __scrt_common_main_seh
+0x00007ff7b46b29c4 (Unity) scripting_method_invoke
+0x00007ff7b46aaeb5 (Unity) ScriptingInvocation::Invoke
+0x00007ff7b5e2b6a0 (Unity) MonoCreateAssetPreview
+0x00007ff7b5e2fc5e (Unity) WriteAssetPreviewToFile
+0x00007ff7b5e303cc (Unity) WritePreviews
+0x00007ff7b5e2a0ce (Unity) PreviewImporter::GenerateAssetData
+0x00007ff7b5f1f099 (Unity) ImportToObjects
+0x00007ff7b5f1e0d8 (Unity) ImportAsset
+0x00007ff7b5e7fe38 (Unity) AssetImportWorker::Import
+0x00007ff7b5ed31ca (Unity) <lambda_7448d646502792db0127dc89657ec83e>::operator()
+0x00007ff7b5f778a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff7b5f79a00 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff7b5f7d18e (Unity) asio::io_service::run
+0x00007ff7b5f0002b (Unity) RunAssetImportWorkerClientV2
+0x00007ff7b5f00080 (Unity) RunAssetImporterV2
+0x00007ff7b53bb046 (Unity) Application::InitializeProject
+0x00007ff7b5d6f212 (Unity) WinMain
+0x00007ff7b7bcdef6 (Unity) __scrt_common_main_seh
 0x00007ffe89d67034 (KERNEL32) BaseThreadInitThunk
 0x00007ffe8a6a2651 (ntdll) RtlUserThreadStart
 
-Requesting import of Guid(71e35032b96013e40bf67b26f9f739c4) Importer(-1,00000000000000000000000000000000), Assets/Polygon/PolygonShops/Textures/PolygonShops_Texture_01_Emissive.png from editor
-Resuming Guid(71e35032b96013e40bf67b26f9f739c4) Importer(-1,00000000000000000000000000000000) -> b09e22e594fd89f5aa1a062b6f98ed74 
-Assertion failed on expression: 'state.state == kUpToDate'
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
-UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:376)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:300)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:255)
-UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-UnityEditor.PreviewRenderUtility:Render (bool,bool)
-UnityEditor.GameObjectInspector:DoRenderPreview ()
-UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/V2/ImporterAssetResolver.cpp line 58]
-
-Assertion failed on expression: 'state.artifactID == result'
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
-UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:376)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:300)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:255)
-UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-UnityEditor.PreviewRenderUtility:Render (bool,bool)
-UnityEditor.GameObjectInspector:DoRenderPreview ()
-UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/V2/ImporterAssetResolver.cpp line 59]
-
- -> (artifact id: '605be8d844c819e7ce4c3f0f22870b4a') in 3.077167 seconds 
-  Import took 3.095423 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000268 seconds.
-  path: Assets/==== Project GMO ====/Prefab/Combat/Weapons/Weapon_Knife.prefab
-  artifactKey: Guid(c26bd2caafea5834fa028b73d1f6816c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/==== Project GMO ====/Prefab/Combat/Weapons/Weapon_Knife.prefab using Guid(c26bd2caafea5834fa028b73d1f6816c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff637d63cf2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff637d2f312 (Unity) ResolveArtifactV2
-0x00007ff637cf52fd (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff63656f2d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff63656e815 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff63657419e (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff6365748b9 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff63657466a (Unity) PersistentManager::ReadObject
-0x00007ff635ec79ed (Unity) UnityPropertySheet::AssignDefinedPropertiesTo
-0x00007ff635f1936e (Unity) Material::BuildProperties
-0x00007ff635f1714f (Unity) Material::AcquireSharedMaterialData
-0x00007ff63566d9cc (Unity) BaseRenderer::FlattenSharedMaterialData<0>
-0x00007ff635b65398 (Unity) PrepareMeshRenderNodes<0>
-0x00007ff6356ff3ea (Unity) ExtractSceneRenderNodeQueue
-0x00007ff63575a074 (Unity) CullResults::GetOrCreateSharedRendererScene
-0x00007ff635c41f17 (Unity) CullScriptable
-0x00007ff6366ab643 (Unity) ScriptableRenderContext_CUSTOM_Internal_Cull_Injected
-0x0000025c6533fde3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull_Injected (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext&,intptr)
-0x0000025c6734ff13 (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
-0x0000025c6734fe6b (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
-0x0000025c6739ddeb (Mono JIT Code) [UniversalRenderPipeline.cs:377] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) 
-0x0000025c67398bbb (Mono JIT Code) [UniversalRenderPipeline.cs:301] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) 
-0x0000025c673546cb (Mono JIT Code) [UniversalRenderPipeline.cs:257] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) 
-0x0000025c67353b99 (Mono JIT Code) UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
-0x0000025c6533ae5b (Mono JIT Code) UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-0x0000025c6533b020 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
-0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
-0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
-0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
-0x00007ff6364e29c4 (Unity) scripting_method_invoke
-0x00007ff6364daeb5 (Unity) ScriptingInvocation::Invoke
-0x00007ff635c27faf (Unity) ScriptableRenderContext::ExtractAndExecuteRenderPipeline
-0x00007ff635729fa6 (Unity) Camera::CustomRenderWithPipeline
-0x00007ff635740676 (Unity) Camera::StandaloneCustomRender
-0x00007ff6357408c8 (Unity) Camera::StandaloneRender
-0x00007ff6357379e6 (Unity) CameraScripting::Render
-0x00007ff6366c5c24 (Unity) Camera_CUSTOM_Render
-0x0000025c6533ab90 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
-0x0000025c6533a153 (Mono JIT Code) UnityEditor.PreviewRenderUtility:Render (bool,bool)
-0x0000025c65339243 (Mono JIT Code) UnityEditor.GameObjectInspector:DoRenderPreview ()
-0x0000025a43bf8243 (Mono JIT Code) UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-0x0000025c1e37ed8a (Mono JIT Code) UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-0x0000025c1e37ee78 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_object_object_object_object (object,intptr,intptr,intptr)
-0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
-0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
-0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
-0x00007ff6364e29c4 (Unity) scripting_method_invoke
-0x00007ff6364daeb5 (Unity) ScriptingInvocation::Invoke
-0x00007ff637c5b6a0 (Unity) MonoCreateAssetPreview
-0x00007ff637c5fc5e (Unity) WriteAssetPreviewToFile
-0x00007ff637c603cc (Unity) WritePreviews
-0x00007ff637c5a0ce (Unity) PreviewImporter::GenerateAssetData
-0x00007ff637d4f099 (Unity) ImportToObjects
-0x00007ff637d4e0d8 (Unity) ImportAsset
-0x00007ff637cafe38 (Unity) AssetImportWorker::Import
-0x00007ff637d031ca (Unity) <lambda_7448d646502792db0127dc89657ec83e>::operator()
-0x00007ff637da78a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff637da9a00 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff637dad18e (Unity) asio::io_service::run
-0x00007ff637d3002b (Unity) RunAssetImportWorkerClientV2
-0x00007ff637d30080 (Unity) RunAssetImporterV2
-0x00007ff6371eb046 (Unity) Application::InitializeProject
-0x00007ff637b9f212 (Unity) WinMain
-0x00007ff6399fdef6 (Unity) __scrt_common_main_seh
-0x00007ffe89d67034 (KERNEL32) BaseThreadInitThunk
-0x00007ffe8a6a2651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(d840dcd6a76098d40b6c4b73cb0bfbb5) Importer(-1,00000000000000000000000000000000), Assets/Polygon/PolygonShops/Textures/PolygonShops_Texture_01_A.png from editor
-Resuming Guid(d840dcd6a76098d40b6c4b73cb0bfbb5) Importer(-1,00000000000000000000000000000000) -> 656b95c1fa833dc4e5aee4f419b8ca8c 
+Requesting import of Guid(476d8958242d6014fb5ae5916a7e9815) Importer(-1,00000000000000000000000000000000), Assets/Nokobot/Modern Guns - Handgun/Textures/M1911_Handgun_Normal.png from editor
+Resuming Guid(476d8958242d6014fb5ae5916a7e9815) Importer(-1,00000000000000000000000000000000) -> 45f4aa443b50434fda65d3d42a926fd0 
 Assertion failed on expression: 'state.state == kUpToDate'
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
@@ -536,185 +405,75 @@ UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityE
 [C:\buildslave\unity\build\Modules/AssetDatabase/Editor/V2/ImporterAssetResolver.cpp line 59]
 
 Diagnostics callstack to track who triggered the sub-import:
-0x00007ff637d63cf2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff637d2f312 (Unity) ResolveArtifactV2
-0x00007ff637cf52fd (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff63656f2d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff63656e815 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff63657419e (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff6365748b9 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff63657466a (Unity) PersistentManager::ReadObject
-0x00007ff635ec79ed (Unity) UnityPropertySheet::AssignDefinedPropertiesTo
-0x00007ff635f1936e (Unity) Material::BuildProperties
-0x00007ff635f1714f (Unity) Material::AcquireSharedMaterialData
-0x00007ff63566d9cc (Unity) BaseRenderer::FlattenSharedMaterialData<0>
-0x00007ff635b65398 (Unity) PrepareMeshRenderNodes<0>
-0x00007ff6356ff3ea (Unity) ExtractSceneRenderNodeQueue
-0x00007ff63575a074 (Unity) CullResults::GetOrCreateSharedRendererScene
-0x00007ff635c41f17 (Unity) CullScriptable
-0x00007ff6366ab643 (Unity) ScriptableRenderContext_CUSTOM_Internal_Cull_Injected
-0x0000025c6533fde3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull_Injected (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext&,intptr)
-0x0000025c6734ff13 (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
-0x0000025c6734fe6b (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
-0x0000025c6739ddeb (Mono JIT Code) [UniversalRenderPipeline.cs:377] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) 
-0x0000025c67398bbb (Mono JIT Code) [UniversalRenderPipeline.cs:301] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) 
-0x0000025c673546cb (Mono JIT Code) [UniversalRenderPipeline.cs:257] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) 
-0x0000025c67353b99 (Mono JIT Code) UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
-0x0000025c6533ae5b (Mono JIT Code) UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-0x0000025c6533b020 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
+0x00007ff7b5f33cf2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff7b5eff312 (Unity) ResolveArtifactV2
+0x00007ff7b5ec52fd (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
+0x00007ff7b473f2d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
+0x00007ff7b473e815 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
+0x00007ff7b474419e (Unity) PersistentManager::ReadAndActivateObjectThreaded
+0x00007ff7b47448b9 (Unity) PersistentManager::ReadObjectThreaded
+0x00007ff7b474466a (Unity) PersistentManager::ReadObject
+0x00007ff7b40979ed (Unity) UnityPropertySheet::AssignDefinedPropertiesTo
+0x00007ff7b40e936e (Unity) Material::BuildProperties
+0x00007ff7b40e714f (Unity) Material::AcquireSharedMaterialData
+0x00007ff7b383d9cc (Unity) BaseRenderer::FlattenSharedMaterialData<0>
+0x00007ff7b3d35398 (Unity) PrepareMeshRenderNodes<0>
+0x00007ff7b38cf3ea (Unity) ExtractSceneRenderNodeQueue
+0x00007ff7b392a074 (Unity) CullResults::GetOrCreateSharedRendererScene
+0x00007ff7b3e11f17 (Unity) CullScriptable
+0x00007ff7b487b643 (Unity) ScriptableRenderContext_CUSTOM_Internal_Cull_Injected
+0x000001e65eaf0c43 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull_Injected (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext&,intptr)
+0x000001e65eaf0b93 (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
+0x000001e65eaf0aeb (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
+0x000001e65eaeddeb (Mono JIT Code) [UniversalRenderPipeline.cs:377] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) 
+0x000001e65eae8bbb (Mono JIT Code) [UniversalRenderPipeline.cs:301] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) 
+0x000001e65eaa490b (Mono JIT Code) [UniversalRenderPipeline.cs:257] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) 
+0x000001e65eacff69 (Mono JIT Code) UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+0x000001e65ea8ddcb (Mono JIT Code) UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+0x000001e65ea8df90 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
 0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
 0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
 0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
-0x00007ff6364e29c4 (Unity) scripting_method_invoke
-0x00007ff6364daeb5 (Unity) ScriptingInvocation::Invoke
-0x00007ff635c27faf (Unity) ScriptableRenderContext::ExtractAndExecuteRenderPipeline
-0x00007ff635729fa6 (Unity) Camera::CustomRenderWithPipeline
-0x00007ff635740676 (Unity) Camera::StandaloneCustomRender
-0x00007ff6357408c8 (Unity) Camera::StandaloneRender
-0x00007ff6357379e6 (Unity) CameraScripting::Render
-0x00007ff6366c5c24 (Unity) Camera_CUSTOM_Render
-0x0000025c6533ab90 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
-0x0000025c6533a153 (Mono JIT Code) UnityEditor.PreviewRenderUtility:Render (bool,bool)
-0x0000025c65339243 (Mono JIT Code) UnityEditor.GameObjectInspector:DoRenderPreview ()
-0x0000025a43bf8243 (Mono JIT Code) UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-0x0000025c1e37ed8a (Mono JIT Code) UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-0x0000025c1e37ee78 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_object_object_object_object (object,intptr,intptr,intptr)
+0x00007ff7b46b29c4 (Unity) scripting_method_invoke
+0x00007ff7b46aaeb5 (Unity) ScriptingInvocation::Invoke
+0x00007ff7b3df7faf (Unity) ScriptableRenderContext::ExtractAndExecuteRenderPipeline
+0x00007ff7b38f9fa6 (Unity) Camera::CustomRenderWithPipeline
+0x00007ff7b3910676 (Unity) Camera::StandaloneCustomRender
+0x00007ff7b39108c8 (Unity) Camera::StandaloneRender
+0x00007ff7b39079e6 (Unity) CameraScripting::Render
+0x00007ff7b4895c24 (Unity) Camera_CUSTOM_Render
+0x000001e65ea8db00 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
+0x000001e65ea8d0c3 (Mono JIT Code) UnityEditor.PreviewRenderUtility:Render (bool,bool)
+0x000001e65ea8c1b3 (Mono JIT Code) UnityEditor.GameObjectInspector:DoRenderPreview ()
+0x000001e638a3ae53 (Mono JIT Code) UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+0x000001e638a3217a (Mono JIT Code) UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+0x000001e638a32268 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_object_object_object_object (object,intptr,intptr,intptr)
 0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
 0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
 0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
-0x00007ff6364e29c4 (Unity) scripting_method_invoke
-0x00007ff6364daeb5 (Unity) ScriptingInvocation::Invoke
-0x00007ff637c5b6a0 (Unity) MonoCreateAssetPreview
-0x00007ff637c5fc5e (Unity) WriteAssetPreviewToFile
-0x00007ff637c603cc (Unity) WritePreviews
-0x00007ff637c5a0ce (Unity) PreviewImporter::GenerateAssetData
-0x00007ff637d4f099 (Unity) ImportToObjects
-0x00007ff637d4e0d8 (Unity) ImportAsset
-0x00007ff637cafe38 (Unity) AssetImportWorker::Import
-0x00007ff637d031ca (Unity) <lambda_7448d646502792db0127dc89657ec83e>::operator()
-0x00007ff637da78a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff637da9a00 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff637dad18e (Unity) asio::io_service::run
-0x00007ff637d3002b (Unity) RunAssetImportWorkerClientV2
-0x00007ff637d30080 (Unity) RunAssetImporterV2
-0x00007ff6371eb046 (Unity) Application::InitializeProject
-0x00007ff637b9f212 (Unity) WinMain
-0x00007ff6399fdef6 (Unity) __scrt_common_main_seh
+0x00007ff7b46b29c4 (Unity) scripting_method_invoke
+0x00007ff7b46aaeb5 (Unity) ScriptingInvocation::Invoke
+0x00007ff7b5e2b6a0 (Unity) MonoCreateAssetPreview
+0x00007ff7b5e2fc5e (Unity) WriteAssetPreviewToFile
+0x00007ff7b5e303cc (Unity) WritePreviews
+0x00007ff7b5e2a0ce (Unity) PreviewImporter::GenerateAssetData
+0x00007ff7b5f1f099 (Unity) ImportToObjects
+0x00007ff7b5f1e0d8 (Unity) ImportAsset
+0x00007ff7b5e7fe38 (Unity) AssetImportWorker::Import
+0x00007ff7b5ed31ca (Unity) <lambda_7448d646502792db0127dc89657ec83e>::operator()
+0x00007ff7b5f778a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff7b5f79a00 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff7b5f7d18e (Unity) asio::io_service::run
+0x00007ff7b5f0002b (Unity) RunAssetImportWorkerClientV2
+0x00007ff7b5f00080 (Unity) RunAssetImporterV2
+0x00007ff7b53bb046 (Unity) Application::InitializeProject
+0x00007ff7b5d6f212 (Unity) WinMain
+0x00007ff7b7bcdef6 (Unity) __scrt_common_main_seh
 0x00007ffe89d67034 (KERNEL32) BaseThreadInitThunk
 0x00007ffe8a6a2651 (ntdll) RtlUserThreadStart
 
-Requesting import of Guid(71e35032b96013e40bf67b26f9f739c4) Importer(-1,00000000000000000000000000000000), Assets/Polygon/PolygonShops/Textures/PolygonShops_Texture_01_Emissive.png from editor
-Resuming Guid(71e35032b96013e40bf67b26f9f739c4) Importer(-1,00000000000000000000000000000000) -> b09e22e594fd89f5aa1a062b6f98ed74 
-Assertion failed on expression: 'state.state == kUpToDate'
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
-UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:376)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:300)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:255)
-UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-UnityEditor.PreviewRenderUtility:Render (bool,bool)
-UnityEditor.GameObjectInspector:DoRenderPreview ()
-UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/V2/ImporterAssetResolver.cpp line 58]
-
-Assertion failed on expression: 'state.artifactID == result'
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
-UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:376)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:300)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:255)
-UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-UnityEditor.PreviewRenderUtility:Render (bool,bool)
-UnityEditor.GameObjectInspector:DoRenderPreview ()
-UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/V2/ImporterAssetResolver.cpp line 59]
-
- -> (artifact id: '357ee825445628d099d4d9038c495b68') in 0.054282 seconds 
-  Import took 0.067738 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.868877 seconds.
-  path: Assets/==== Project GMO ====/Prefab/Combat/Weapons/Weapon_Knife.prefab
-  artifactKey: Guid(c26bd2caafea5834fa028b73d1f6816c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/==== Project GMO ====/Prefab/Combat/Weapons/Weapon_Knife.prefab using Guid(c26bd2caafea5834fa028b73d1f6816c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff637d63cf2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff637d2f312 (Unity) ResolveArtifactV2
-0x00007ff637cf52fd (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff63656f2d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff63656e815 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff63657419e (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff6365748b9 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff63657466a (Unity) PersistentManager::ReadObject
-0x00007ff635ec79ed (Unity) UnityPropertySheet::AssignDefinedPropertiesTo
-0x00007ff635f1936e (Unity) Material::BuildProperties
-0x00007ff635f1714f (Unity) Material::AcquireSharedMaterialData
-0x00007ff63566d9cc (Unity) BaseRenderer::FlattenSharedMaterialData<0>
-0x00007ff635b65398 (Unity) PrepareMeshRenderNodes<0>
-0x00007ff6356ff3ea (Unity) ExtractSceneRenderNodeQueue
-0x00007ff63575a074 (Unity) CullResults::GetOrCreateSharedRendererScene
-0x00007ff635c41f17 (Unity) CullScriptable
-0x00007ff6366ab643 (Unity) ScriptableRenderContext_CUSTOM_Internal_Cull_Injected
-0x0000025c6533fde3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull_Injected (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext&,intptr)
-0x0000025c6734ff13 (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
-0x0000025c6734fe6b (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
-0x0000025c6739ddeb (Mono JIT Code) [UniversalRenderPipeline.cs:377] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) 
-0x0000025c67398bbb (Mono JIT Code) [UniversalRenderPipeline.cs:301] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) 
-0x0000025c673546cb (Mono JIT Code) [UniversalRenderPipeline.cs:257] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) 
-0x0000025c67353b99 (Mono JIT Code) UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
-0x0000025c6533ae5b (Mono JIT Code) UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-0x0000025c6533b020 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
-0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
-0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
-0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
-0x00007ff6364e29c4 (Unity) scripting_method_invoke
-0x00007ff6364daeb5 (Unity) ScriptingInvocation::Invoke
-0x00007ff635c27faf (Unity) ScriptableRenderContext::ExtractAndExecuteRenderPipeline
-0x00007ff635729fa6 (Unity) Camera::CustomRenderWithPipeline
-0x00007ff635740676 (Unity) Camera::StandaloneCustomRender
-0x00007ff6357408c8 (Unity) Camera::StandaloneRender
-0x00007ff6357379e6 (Unity) CameraScripting::Render
-0x00007ff6366c5c24 (Unity) Camera_CUSTOM_Render
-0x0000025c6533ab90 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
-0x0000025c6533a153 (Mono JIT Code) UnityEditor.PreviewRenderUtility:Render (bool,bool)
-0x0000025c65339243 (Mono JIT Code) UnityEditor.GameObjectInspector:DoRenderPreview ()
-0x0000025a43bf8243 (Mono JIT Code) UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-0x0000025c1e37ed8a (Mono JIT Code) UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-0x0000025c1e37ee78 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_object_object_object_object (object,intptr,intptr,intptr)
-0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
-0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
-0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
-0x00007ff6364e29c4 (Unity) scripting_method_invoke
-0x00007ff6364daeb5 (Unity) ScriptingInvocation::Invoke
-0x00007ff637c5b6a0 (Unity) MonoCreateAssetPreview
-0x00007ff637c5fc5e (Unity) WriteAssetPreviewToFile
-0x00007ff637c603cc (Unity) WritePreviews
-0x00007ff637c5a0ce (Unity) PreviewImporter::GenerateAssetData
-0x00007ff637d4f099 (Unity) ImportToObjects
-0x00007ff637d4e0d8 (Unity) ImportAsset
-0x00007ff637cafe38 (Unity) AssetImportWorker::Import
-0x00007ff637d031ca (Unity) <lambda_7448d646502792db0127dc89657ec83e>::operator()
-0x00007ff637da78a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff637da9a00 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff637dad18e (Unity) asio::io_service::run
-0x00007ff637d3002b (Unity) RunAssetImportWorkerClientV2
-0x00007ff637d30080 (Unity) RunAssetImporterV2
-0x00007ff6371eb046 (Unity) Application::InitializeProject
-0x00007ff637b9f212 (Unity) WinMain
-0x00007ff6399fdef6 (Unity) __scrt_common_main_seh
-0x00007ffe89d67034 (KERNEL32) BaseThreadInitThunk
-0x00007ffe8a6a2651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(d840dcd6a76098d40b6c4b73cb0bfbb5) Importer(-1,00000000000000000000000000000000), Assets/Polygon/PolygonShops/Textures/PolygonShops_Texture_01_A.png from editor
-Resuming Guid(d840dcd6a76098d40b6c4b73cb0bfbb5) Importer(-1,00000000000000000000000000000000) -> 656b95c1fa833dc4e5aee4f419b8ca8c 
+Requesting import of Guid(1ed6c1c5fa7989e4597a77c8148b0876) Importer(-1,00000000000000000000000000000000), Assets/Nokobot/Modern Guns - Handgun/Textures/M1911_Handgun_MetallicSmoothness.png from editor
+Resuming Guid(1ed6c1c5fa7989e4597a77c8148b0876) Importer(-1,00000000000000000000000000000000) -> 4370557a149494db4ddc91f4f4645adf 
 Assertion failed on expression: 'state.state == kUpToDate'
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
@@ -748,185 +507,75 @@ UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityE
 [C:\buildslave\unity\build\Modules/AssetDatabase/Editor/V2/ImporterAssetResolver.cpp line 59]
 
 Diagnostics callstack to track who triggered the sub-import:
-0x00007ff637d63cf2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff637d2f312 (Unity) ResolveArtifactV2
-0x00007ff637cf52fd (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff63656f2d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff63656e815 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff63657419e (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff6365748b9 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff63657466a (Unity) PersistentManager::ReadObject
-0x00007ff635ec79ed (Unity) UnityPropertySheet::AssignDefinedPropertiesTo
-0x00007ff635f1936e (Unity) Material::BuildProperties
-0x00007ff635f1714f (Unity) Material::AcquireSharedMaterialData
-0x00007ff63566d9cc (Unity) BaseRenderer::FlattenSharedMaterialData<0>
-0x00007ff635b65398 (Unity) PrepareMeshRenderNodes<0>
-0x00007ff6356ff3ea (Unity) ExtractSceneRenderNodeQueue
-0x00007ff63575a074 (Unity) CullResults::GetOrCreateSharedRendererScene
-0x00007ff635c41f17 (Unity) CullScriptable
-0x00007ff6366ab643 (Unity) ScriptableRenderContext_CUSTOM_Internal_Cull_Injected
-0x0000025c6533fde3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull_Injected (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext&,intptr)
-0x0000025c6734ff13 (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
-0x0000025c6734fe6b (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
-0x0000025c6739ddeb (Mono JIT Code) [UniversalRenderPipeline.cs:377] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) 
-0x0000025c67398bbb (Mono JIT Code) [UniversalRenderPipeline.cs:301] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) 
-0x0000025c673546cb (Mono JIT Code) [UniversalRenderPipeline.cs:257] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) 
-0x0000025c67353b99 (Mono JIT Code) UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
-0x0000025c6533ae5b (Mono JIT Code) UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-0x0000025c6533b020 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
+0x00007ff7b5f33cf2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff7b5eff312 (Unity) ResolveArtifactV2
+0x00007ff7b5ec52fd (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
+0x00007ff7b473f2d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
+0x00007ff7b473e815 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
+0x00007ff7b474419e (Unity) PersistentManager::ReadAndActivateObjectThreaded
+0x00007ff7b47448b9 (Unity) PersistentManager::ReadObjectThreaded
+0x00007ff7b474466a (Unity) PersistentManager::ReadObject
+0x00007ff7b40979ed (Unity) UnityPropertySheet::AssignDefinedPropertiesTo
+0x00007ff7b40e936e (Unity) Material::BuildProperties
+0x00007ff7b40e714f (Unity) Material::AcquireSharedMaterialData
+0x00007ff7b383d9cc (Unity) BaseRenderer::FlattenSharedMaterialData<0>
+0x00007ff7b3d35398 (Unity) PrepareMeshRenderNodes<0>
+0x00007ff7b38cf3ea (Unity) ExtractSceneRenderNodeQueue
+0x00007ff7b392a074 (Unity) CullResults::GetOrCreateSharedRendererScene
+0x00007ff7b3e11f17 (Unity) CullScriptable
+0x00007ff7b487b643 (Unity) ScriptableRenderContext_CUSTOM_Internal_Cull_Injected
+0x000001e65eaf0c43 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull_Injected (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext&,intptr)
+0x000001e65eaf0b93 (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
+0x000001e65eaf0aeb (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
+0x000001e65eaeddeb (Mono JIT Code) [UniversalRenderPipeline.cs:377] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) 
+0x000001e65eae8bbb (Mono JIT Code) [UniversalRenderPipeline.cs:301] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) 
+0x000001e65eaa490b (Mono JIT Code) [UniversalRenderPipeline.cs:257] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) 
+0x000001e65eacff69 (Mono JIT Code) UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+0x000001e65ea8ddcb (Mono JIT Code) UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+0x000001e65ea8df90 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
 0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
 0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
 0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
-0x00007ff6364e29c4 (Unity) scripting_method_invoke
-0x00007ff6364daeb5 (Unity) ScriptingInvocation::Invoke
-0x00007ff635c27faf (Unity) ScriptableRenderContext::ExtractAndExecuteRenderPipeline
-0x00007ff635729fa6 (Unity) Camera::CustomRenderWithPipeline
-0x00007ff635740676 (Unity) Camera::StandaloneCustomRender
-0x00007ff6357408c8 (Unity) Camera::StandaloneRender
-0x00007ff6357379e6 (Unity) CameraScripting::Render
-0x00007ff6366c5c24 (Unity) Camera_CUSTOM_Render
-0x0000025c6533ab90 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
-0x0000025c6533a153 (Mono JIT Code) UnityEditor.PreviewRenderUtility:Render (bool,bool)
-0x0000025c65339243 (Mono JIT Code) UnityEditor.GameObjectInspector:DoRenderPreview ()
-0x0000025a43bf8243 (Mono JIT Code) UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-0x0000025c1e37ed8a (Mono JIT Code) UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-0x0000025c1e37ee78 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_object_object_object_object (object,intptr,intptr,intptr)
+0x00007ff7b46b29c4 (Unity) scripting_method_invoke
+0x00007ff7b46aaeb5 (Unity) ScriptingInvocation::Invoke
+0x00007ff7b3df7faf (Unity) ScriptableRenderContext::ExtractAndExecuteRenderPipeline
+0x00007ff7b38f9fa6 (Unity) Camera::CustomRenderWithPipeline
+0x00007ff7b3910676 (Unity) Camera::StandaloneCustomRender
+0x00007ff7b39108c8 (Unity) Camera::StandaloneRender
+0x00007ff7b39079e6 (Unity) CameraScripting::Render
+0x00007ff7b4895c24 (Unity) Camera_CUSTOM_Render
+0x000001e65ea8db00 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
+0x000001e65ea8d0c3 (Mono JIT Code) UnityEditor.PreviewRenderUtility:Render (bool,bool)
+0x000001e65ea8c1b3 (Mono JIT Code) UnityEditor.GameObjectInspector:DoRenderPreview ()
+0x000001e638a3ae53 (Mono JIT Code) UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+0x000001e638a3217a (Mono JIT Code) UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+0x000001e638a32268 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_object_object_object_object (object,intptr,intptr,intptr)
 0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
 0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
 0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
-0x00007ff6364e29c4 (Unity) scripting_method_invoke
-0x00007ff6364daeb5 (Unity) ScriptingInvocation::Invoke
-0x00007ff637c5b6a0 (Unity) MonoCreateAssetPreview
-0x00007ff637c5fc5e (Unity) WriteAssetPreviewToFile
-0x00007ff637c603cc (Unity) WritePreviews
-0x00007ff637c5a0ce (Unity) PreviewImporter::GenerateAssetData
-0x00007ff637d4f099 (Unity) ImportToObjects
-0x00007ff637d4e0d8 (Unity) ImportAsset
-0x00007ff637cafe38 (Unity) AssetImportWorker::Import
-0x00007ff637d031ca (Unity) <lambda_7448d646502792db0127dc89657ec83e>::operator()
-0x00007ff637da78a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff637da9a00 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff637dad18e (Unity) asio::io_service::run
-0x00007ff637d3002b (Unity) RunAssetImportWorkerClientV2
-0x00007ff637d30080 (Unity) RunAssetImporterV2
-0x00007ff6371eb046 (Unity) Application::InitializeProject
-0x00007ff637b9f212 (Unity) WinMain
-0x00007ff6399fdef6 (Unity) __scrt_common_main_seh
+0x00007ff7b46b29c4 (Unity) scripting_method_invoke
+0x00007ff7b46aaeb5 (Unity) ScriptingInvocation::Invoke
+0x00007ff7b5e2b6a0 (Unity) MonoCreateAssetPreview
+0x00007ff7b5e2fc5e (Unity) WriteAssetPreviewToFile
+0x00007ff7b5e303cc (Unity) WritePreviews
+0x00007ff7b5e2a0ce (Unity) PreviewImporter::GenerateAssetData
+0x00007ff7b5f1f099 (Unity) ImportToObjects
+0x00007ff7b5f1e0d8 (Unity) ImportAsset
+0x00007ff7b5e7fe38 (Unity) AssetImportWorker::Import
+0x00007ff7b5ed31ca (Unity) <lambda_7448d646502792db0127dc89657ec83e>::operator()
+0x00007ff7b5f778a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff7b5f79a00 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff7b5f7d18e (Unity) asio::io_service::run
+0x00007ff7b5f0002b (Unity) RunAssetImportWorkerClientV2
+0x00007ff7b5f00080 (Unity) RunAssetImporterV2
+0x00007ff7b53bb046 (Unity) Application::InitializeProject
+0x00007ff7b5d6f212 (Unity) WinMain
+0x00007ff7b7bcdef6 (Unity) __scrt_common_main_seh
 0x00007ffe89d67034 (KERNEL32) BaseThreadInitThunk
 0x00007ffe8a6a2651 (ntdll) RtlUserThreadStart
 
-Requesting import of Guid(71e35032b96013e40bf67b26f9f739c4) Importer(-1,00000000000000000000000000000000), Assets/Polygon/PolygonShops/Textures/PolygonShops_Texture_01_Emissive.png from editor
-Resuming Guid(71e35032b96013e40bf67b26f9f739c4) Importer(-1,00000000000000000000000000000000) -> b09e22e594fd89f5aa1a062b6f98ed74 
-Assertion failed on expression: 'state.state == kUpToDate'
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
-UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:376)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:300)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:255)
-UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-UnityEditor.PreviewRenderUtility:Render (bool,bool)
-UnityEditor.GameObjectInspector:DoRenderPreview ()
-UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/V2/ImporterAssetResolver.cpp line 58]
-
-Assertion failed on expression: 'state.artifactID == result'
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
-UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:376)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:300)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:255)
-UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-UnityEditor.PreviewRenderUtility:Render (bool,bool)
-UnityEditor.GameObjectInspector:DoRenderPreview ()
-UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/V2/ImporterAssetResolver.cpp line 59]
-
- -> (artifact id: '4427acc062213cc2f0e7ffdf6822c699') in 0.051123 seconds 
-  Import took 0.071542 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.468646 seconds.
-  path: Assets/==== Project GMO ====/Prefab/Combat/Weapons/Weapon_Knife.prefab
-  artifactKey: Guid(c26bd2caafea5834fa028b73d1f6816c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/==== Project GMO ====/Prefab/Combat/Weapons/Weapon_Knife.prefab using Guid(c26bd2caafea5834fa028b73d1f6816c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff637d63cf2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff637d2f312 (Unity) ResolveArtifactV2
-0x00007ff637cf52fd (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff63656f2d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff63656e815 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff63657419e (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff6365748b9 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff63657466a (Unity) PersistentManager::ReadObject
-0x00007ff635ec79ed (Unity) UnityPropertySheet::AssignDefinedPropertiesTo
-0x00007ff635f1936e (Unity) Material::BuildProperties
-0x00007ff635f1714f (Unity) Material::AcquireSharedMaterialData
-0x00007ff63566d9cc (Unity) BaseRenderer::FlattenSharedMaterialData<0>
-0x00007ff635b65398 (Unity) PrepareMeshRenderNodes<0>
-0x00007ff6356ff3ea (Unity) ExtractSceneRenderNodeQueue
-0x00007ff63575a074 (Unity) CullResults::GetOrCreateSharedRendererScene
-0x00007ff635c41f17 (Unity) CullScriptable
-0x00007ff6366ab643 (Unity) ScriptableRenderContext_CUSTOM_Internal_Cull_Injected
-0x0000025c6533fde3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull_Injected (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext&,intptr)
-0x0000025c6734ff13 (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
-0x0000025c6734fe6b (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
-0x0000025c6739ddeb (Mono JIT Code) [UniversalRenderPipeline.cs:377] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) 
-0x0000025c67398bbb (Mono JIT Code) [UniversalRenderPipeline.cs:301] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) 
-0x0000025c673546cb (Mono JIT Code) [UniversalRenderPipeline.cs:257] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) 
-0x0000025c67353b99 (Mono JIT Code) UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
-0x0000025c6533ae5b (Mono JIT Code) UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-0x0000025c6533b020 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
-0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
-0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
-0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
-0x00007ff6364e29c4 (Unity) scripting_method_invoke
-0x00007ff6364daeb5 (Unity) ScriptingInvocation::Invoke
-0x00007ff635c27faf (Unity) ScriptableRenderContext::ExtractAndExecuteRenderPipeline
-0x00007ff635729fa6 (Unity) Camera::CustomRenderWithPipeline
-0x00007ff635740676 (Unity) Camera::StandaloneCustomRender
-0x00007ff6357408c8 (Unity) Camera::StandaloneRender
-0x00007ff6357379e6 (Unity) CameraScripting::Render
-0x00007ff6366c5c24 (Unity) Camera_CUSTOM_Render
-0x0000025c6533ab90 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
-0x0000025c6533a153 (Mono JIT Code) UnityEditor.PreviewRenderUtility:Render (bool,bool)
-0x0000025c65339243 (Mono JIT Code) UnityEditor.GameObjectInspector:DoRenderPreview ()
-0x0000025a43bf8243 (Mono JIT Code) UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-0x0000025c1e37ed8a (Mono JIT Code) UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-0x0000025c1e37ee78 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_object_object_object_object (object,intptr,intptr,intptr)
-0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
-0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
-0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
-0x00007ff6364e29c4 (Unity) scripting_method_invoke
-0x00007ff6364daeb5 (Unity) ScriptingInvocation::Invoke
-0x00007ff637c5b6a0 (Unity) MonoCreateAssetPreview
-0x00007ff637c5fc5e (Unity) WriteAssetPreviewToFile
-0x00007ff637c603cc (Unity) WritePreviews
-0x00007ff637c5a0ce (Unity) PreviewImporter::GenerateAssetData
-0x00007ff637d4f099 (Unity) ImportToObjects
-0x00007ff637d4e0d8 (Unity) ImportAsset
-0x00007ff637cafe38 (Unity) AssetImportWorker::Import
-0x00007ff637d031ca (Unity) <lambda_7448d646502792db0127dc89657ec83e>::operator()
-0x00007ff637da78a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff637da9a00 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff637dad18e (Unity) asio::io_service::run
-0x00007ff637d3002b (Unity) RunAssetImportWorkerClientV2
-0x00007ff637d30080 (Unity) RunAssetImporterV2
-0x00007ff6371eb046 (Unity) Application::InitializeProject
-0x00007ff637b9f212 (Unity) WinMain
-0x00007ff6399fdef6 (Unity) __scrt_common_main_seh
-0x00007ffe89d67034 (KERNEL32) BaseThreadInitThunk
-0x00007ffe8a6a2651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(d840dcd6a76098d40b6c4b73cb0bfbb5) Importer(-1,00000000000000000000000000000000), Assets/Polygon/PolygonShops/Textures/PolygonShops_Texture_01_A.png from editor
-Resuming Guid(d840dcd6a76098d40b6c4b73cb0bfbb5) Importer(-1,00000000000000000000000000000000) -> 656b95c1fa833dc4e5aee4f419b8ca8c 
+Requesting import of Guid(7714950642003ee488bdddb49dd229e0) Importer(-1,00000000000000000000000000000000), Assets/Nokobot/Modern Guns - Handgun/Textures/M1911_Magazine_Albedo_Steel.png from editor
+Resuming Guid(7714950642003ee488bdddb49dd229e0) Importer(-1,00000000000000000000000000000000) -> 71b18e959a3a3f3c710baa641cc2c1df 
 Assertion failed on expression: 'state.state == kUpToDate'
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
@@ -960,75 +609,75 @@ UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityE
 [C:\buildslave\unity\build\Modules/AssetDatabase/Editor/V2/ImporterAssetResolver.cpp line 59]
 
 Diagnostics callstack to track who triggered the sub-import:
-0x00007ff637d63cf2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff637d2f312 (Unity) ResolveArtifactV2
-0x00007ff637cf52fd (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff63656f2d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff63656e815 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff63657419e (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff6365748b9 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff63657466a (Unity) PersistentManager::ReadObject
-0x00007ff635ec79ed (Unity) UnityPropertySheet::AssignDefinedPropertiesTo
-0x00007ff635f1936e (Unity) Material::BuildProperties
-0x00007ff635f1714f (Unity) Material::AcquireSharedMaterialData
-0x00007ff63566d9cc (Unity) BaseRenderer::FlattenSharedMaterialData<0>
-0x00007ff635b65398 (Unity) PrepareMeshRenderNodes<0>
-0x00007ff6356ff3ea (Unity) ExtractSceneRenderNodeQueue
-0x00007ff63575a074 (Unity) CullResults::GetOrCreateSharedRendererScene
-0x00007ff635c41f17 (Unity) CullScriptable
-0x00007ff6366ab643 (Unity) ScriptableRenderContext_CUSTOM_Internal_Cull_Injected
-0x0000025c6533fde3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull_Injected (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext&,intptr)
-0x0000025c6734ff13 (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
-0x0000025c6734fe6b (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
-0x0000025c6739ddeb (Mono JIT Code) [UniversalRenderPipeline.cs:377] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) 
-0x0000025c67398bbb (Mono JIT Code) [UniversalRenderPipeline.cs:301] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) 
-0x0000025c673546cb (Mono JIT Code) [UniversalRenderPipeline.cs:257] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) 
-0x0000025c67353b99 (Mono JIT Code) UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
-0x0000025c6533ae5b (Mono JIT Code) UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-0x0000025c6533b020 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
+0x00007ff7b5f33cf2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff7b5eff312 (Unity) ResolveArtifactV2
+0x00007ff7b5ec52fd (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
+0x00007ff7b473f2d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
+0x00007ff7b473e815 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
+0x00007ff7b474419e (Unity) PersistentManager::ReadAndActivateObjectThreaded
+0x00007ff7b47448b9 (Unity) PersistentManager::ReadObjectThreaded
+0x00007ff7b474466a (Unity) PersistentManager::ReadObject
+0x00007ff7b40979ed (Unity) UnityPropertySheet::AssignDefinedPropertiesTo
+0x00007ff7b40e936e (Unity) Material::BuildProperties
+0x00007ff7b40e714f (Unity) Material::AcquireSharedMaterialData
+0x00007ff7b383d9cc (Unity) BaseRenderer::FlattenSharedMaterialData<0>
+0x00007ff7b3d35398 (Unity) PrepareMeshRenderNodes<0>
+0x00007ff7b38cf3ea (Unity) ExtractSceneRenderNodeQueue
+0x00007ff7b392a074 (Unity) CullResults::GetOrCreateSharedRendererScene
+0x00007ff7b3e11f17 (Unity) CullScriptable
+0x00007ff7b487b643 (Unity) ScriptableRenderContext_CUSTOM_Internal_Cull_Injected
+0x000001e65eaf0c43 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull_Injected (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext&,intptr)
+0x000001e65eaf0b93 (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
+0x000001e65eaf0aeb (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
+0x000001e65eaeddeb (Mono JIT Code) [UniversalRenderPipeline.cs:377] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) 
+0x000001e65eae8bbb (Mono JIT Code) [UniversalRenderPipeline.cs:301] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) 
+0x000001e65eaa490b (Mono JIT Code) [UniversalRenderPipeline.cs:257] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) 
+0x000001e65eacff69 (Mono JIT Code) UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+0x000001e65ea8ddcb (Mono JIT Code) UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+0x000001e65ea8df90 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
 0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
 0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
 0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
-0x00007ff6364e29c4 (Unity) scripting_method_invoke
-0x00007ff6364daeb5 (Unity) ScriptingInvocation::Invoke
-0x00007ff635c27faf (Unity) ScriptableRenderContext::ExtractAndExecuteRenderPipeline
-0x00007ff635729fa6 (Unity) Camera::CustomRenderWithPipeline
-0x00007ff635740676 (Unity) Camera::StandaloneCustomRender
-0x00007ff6357408c8 (Unity) Camera::StandaloneRender
-0x00007ff6357379e6 (Unity) CameraScripting::Render
-0x00007ff6366c5c24 (Unity) Camera_CUSTOM_Render
-0x0000025c6533ab90 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
-0x0000025c6533a153 (Mono JIT Code) UnityEditor.PreviewRenderUtility:Render (bool,bool)
-0x0000025c65339243 (Mono JIT Code) UnityEditor.GameObjectInspector:DoRenderPreview ()
-0x0000025a43bf8243 (Mono JIT Code) UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-0x0000025c1e37ed8a (Mono JIT Code) UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-0x0000025c1e37ee78 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_object_object_object_object (object,intptr,intptr,intptr)
+0x00007ff7b46b29c4 (Unity) scripting_method_invoke
+0x00007ff7b46aaeb5 (Unity) ScriptingInvocation::Invoke
+0x00007ff7b3df7faf (Unity) ScriptableRenderContext::ExtractAndExecuteRenderPipeline
+0x00007ff7b38f9fa6 (Unity) Camera::CustomRenderWithPipeline
+0x00007ff7b3910676 (Unity) Camera::StandaloneCustomRender
+0x00007ff7b39108c8 (Unity) Camera::StandaloneRender
+0x00007ff7b39079e6 (Unity) CameraScripting::Render
+0x00007ff7b4895c24 (Unity) Camera_CUSTOM_Render
+0x000001e65ea8db00 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
+0x000001e65ea8d0c3 (Mono JIT Code) UnityEditor.PreviewRenderUtility:Render (bool,bool)
+0x000001e65ea8c1b3 (Mono JIT Code) UnityEditor.GameObjectInspector:DoRenderPreview ()
+0x000001e638a3ae53 (Mono JIT Code) UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+0x000001e638a3217a (Mono JIT Code) UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+0x000001e638a32268 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_object_object_object_object (object,intptr,intptr,intptr)
 0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
 0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
 0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
-0x00007ff6364e29c4 (Unity) scripting_method_invoke
-0x00007ff6364daeb5 (Unity) ScriptingInvocation::Invoke
-0x00007ff637c5b6a0 (Unity) MonoCreateAssetPreview
-0x00007ff637c5fc5e (Unity) WriteAssetPreviewToFile
-0x00007ff637c603cc (Unity) WritePreviews
-0x00007ff637c5a0ce (Unity) PreviewImporter::GenerateAssetData
-0x00007ff637d4f099 (Unity) ImportToObjects
-0x00007ff637d4e0d8 (Unity) ImportAsset
-0x00007ff637cafe38 (Unity) AssetImportWorker::Import
-0x00007ff637d031ca (Unity) <lambda_7448d646502792db0127dc89657ec83e>::operator()
-0x00007ff637da78a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff637da9a00 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff637dad18e (Unity) asio::io_service::run
-0x00007ff637d3002b (Unity) RunAssetImportWorkerClientV2
-0x00007ff637d30080 (Unity) RunAssetImporterV2
-0x00007ff6371eb046 (Unity) Application::InitializeProject
-0x00007ff637b9f212 (Unity) WinMain
-0x00007ff6399fdef6 (Unity) __scrt_common_main_seh
+0x00007ff7b46b29c4 (Unity) scripting_method_invoke
+0x00007ff7b46aaeb5 (Unity) ScriptingInvocation::Invoke
+0x00007ff7b5e2b6a0 (Unity) MonoCreateAssetPreview
+0x00007ff7b5e2fc5e (Unity) WriteAssetPreviewToFile
+0x00007ff7b5e303cc (Unity) WritePreviews
+0x00007ff7b5e2a0ce (Unity) PreviewImporter::GenerateAssetData
+0x00007ff7b5f1f099 (Unity) ImportToObjects
+0x00007ff7b5f1e0d8 (Unity) ImportAsset
+0x00007ff7b5e7fe38 (Unity) AssetImportWorker::Import
+0x00007ff7b5ed31ca (Unity) <lambda_7448d646502792db0127dc89657ec83e>::operator()
+0x00007ff7b5f778a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff7b5f79a00 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff7b5f7d18e (Unity) asio::io_service::run
+0x00007ff7b5f0002b (Unity) RunAssetImportWorkerClientV2
+0x00007ff7b5f00080 (Unity) RunAssetImporterV2
+0x00007ff7b53bb046 (Unity) Application::InitializeProject
+0x00007ff7b5d6f212 (Unity) WinMain
+0x00007ff7b7bcdef6 (Unity) __scrt_common_main_seh
 0x00007ffe89d67034 (KERNEL32) BaseThreadInitThunk
 0x00007ffe8a6a2651 (ntdll) RtlUserThreadStart
 
-Requesting import of Guid(71e35032b96013e40bf67b26f9f739c4) Importer(-1,00000000000000000000000000000000), Assets/Polygon/PolygonShops/Textures/PolygonShops_Texture_01_Emissive.png from editor
-Resuming Guid(71e35032b96013e40bf67b26f9f739c4) Importer(-1,00000000000000000000000000000000) -> b09e22e594fd89f5aa1a062b6f98ed74 
+Requesting import of Guid(9700d9e5832c89944afd7ef24f4d919e) Importer(-1,00000000000000000000000000000000), Assets/Nokobot/Modern Guns - Handgun/Textures/M1911_Magazine_Normal.png from editor
+Resuming Guid(9700d9e5832c89944afd7ef24f4d919e) Importer(-1,00000000000000000000000000000000) -> db7b191aaec408c5b3555b54aabbbf55 
 Assertion failed on expression: 'state.state == kUpToDate'
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
@@ -1061,13 +710,115 @@ UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityE
 
 [C:\buildslave\unity\build\Modules/AssetDatabase/Editor/V2/ImporterAssetResolver.cpp line 59]
 
- -> (artifact id: '793f8876e158638b8e9e74f015f8d1ca') in 0.049516 seconds 
-  Import took 0.064707 seconds .
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff7b5f33cf2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff7b5eff312 (Unity) ResolveArtifactV2
+0x00007ff7b5ec52fd (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
+0x00007ff7b473f2d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
+0x00007ff7b473e815 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
+0x00007ff7b474419e (Unity) PersistentManager::ReadAndActivateObjectThreaded
+0x00007ff7b47448b9 (Unity) PersistentManager::ReadObjectThreaded
+0x00007ff7b474466a (Unity) PersistentManager::ReadObject
+0x00007ff7b40979ed (Unity) UnityPropertySheet::AssignDefinedPropertiesTo
+0x00007ff7b40e936e (Unity) Material::BuildProperties
+0x00007ff7b40e714f (Unity) Material::AcquireSharedMaterialData
+0x00007ff7b383d9cc (Unity) BaseRenderer::FlattenSharedMaterialData<0>
+0x00007ff7b3d35398 (Unity) PrepareMeshRenderNodes<0>
+0x00007ff7b38cf3ea (Unity) ExtractSceneRenderNodeQueue
+0x00007ff7b392a074 (Unity) CullResults::GetOrCreateSharedRendererScene
+0x00007ff7b3e11f17 (Unity) CullScriptable
+0x00007ff7b487b643 (Unity) ScriptableRenderContext_CUSTOM_Internal_Cull_Injected
+0x000001e65eaf0c43 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull_Injected (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext&,intptr)
+0x000001e65eaf0b93 (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
+0x000001e65eaf0aeb (Mono JIT Code) UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
+0x000001e65eaeddeb (Mono JIT Code) [UniversalRenderPipeline.cs:377] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) 
+0x000001e65eae8bbb (Mono JIT Code) [UniversalRenderPipeline.cs:301] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) 
+0x000001e65eaa490b (Mono JIT Code) [UniversalRenderPipeline.cs:257] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) 
+0x000001e65eacff69 (Mono JIT Code) UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+0x000001e65ea8ddcb (Mono JIT Code) UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+0x000001e65ea8df90 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
+0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
+0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
+0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
+0x00007ff7b46b29c4 (Unity) scripting_method_invoke
+0x00007ff7b46aaeb5 (Unity) ScriptingInvocation::Invoke
+0x00007ff7b3df7faf (Unity) ScriptableRenderContext::ExtractAndExecuteRenderPipeline
+0x00007ff7b38f9fa6 (Unity) Camera::CustomRenderWithPipeline
+0x00007ff7b3910676 (Unity) Camera::StandaloneCustomRender
+0x00007ff7b39108c8 (Unity) Camera::StandaloneRender
+0x00007ff7b39079e6 (Unity) CameraScripting::Render
+0x00007ff7b4895c24 (Unity) Camera_CUSTOM_Render
+0x000001e65ea8db00 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
+0x000001e65ea8d0c3 (Mono JIT Code) UnityEditor.PreviewRenderUtility:Render (bool,bool)
+0x000001e65ea8c1b3 (Mono JIT Code) UnityEditor.GameObjectInspector:DoRenderPreview ()
+0x000001e638a3ae53 (Mono JIT Code) UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+0x000001e638a3217a (Mono JIT Code) UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+0x000001e638a32268 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_object_object_object_object (object,intptr,intptr,intptr)
+0x00007ffe1289f280 (mono-2.0-bdwgc) [mini-runtime.c:2827] mono_jit_runtime_invoke 
+0x00007ffe12822ac2 (mono-2.0-bdwgc) [object.c:2921] do_runtime_invoke 
+0x00007ffe1282bb1f (mono-2.0-bdwgc) [object.c:2968] mono_runtime_invoke 
+0x00007ff7b46b29c4 (Unity) scripting_method_invoke
+0x00007ff7b46aaeb5 (Unity) ScriptingInvocation::Invoke
+0x00007ff7b5e2b6a0 (Unity) MonoCreateAssetPreview
+0x00007ff7b5e2fc5e (Unity) WriteAssetPreviewToFile
+0x00007ff7b5e303cc (Unity) WritePreviews
+0x00007ff7b5e2a0ce (Unity) PreviewImporter::GenerateAssetData
+0x00007ff7b5f1f099 (Unity) ImportToObjects
+0x00007ff7b5f1e0d8 (Unity) ImportAsset
+0x00007ff7b5e7fe38 (Unity) AssetImportWorker::Import
+0x00007ff7b5ed31ca (Unity) <lambda_7448d646502792db0127dc89657ec83e>::operator()
+0x00007ff7b5f778a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff7b5f79a00 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff7b5f7d18e (Unity) asio::io_service::run
+0x00007ff7b5f0002b (Unity) RunAssetImportWorkerClientV2
+0x00007ff7b5f00080 (Unity) RunAssetImporterV2
+0x00007ff7b53bb046 (Unity) Application::InitializeProject
+0x00007ff7b5d6f212 (Unity) WinMain
+0x00007ff7b7bcdef6 (Unity) __scrt_common_main_seh
+0x00007ffe89d67034 (KERNEL32) BaseThreadInitThunk
+0x00007ffe8a6a2651 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(0b3650749f4c1b045bc33f08bb4f2f62) Importer(-1,00000000000000000000000000000000), Assets/Nokobot/Modern Guns - Handgun/Textures/M1911_Magazine_MetallicSmoothness.png from editor
+Resuming Guid(0b3650749f4c1b045bc33f08bb4f2f62) Importer(-1,00000000000000000000000000000000) -> 9ad34dfdd9a38d45ba28a88dfc9df251 
+Assertion failed on expression: 'state.state == kUpToDate'
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
+UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:376)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:300)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:255)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/V2/ImporterAssetResolver.cpp line 58]
+
+Assertion failed on expression: 'state.artifactID == result'
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
+UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:376)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:300)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at Library/PackageCache/com.unity.render-pipelines.universal@10.6.0/Runtime/UniversalRenderPipeline.cs:255)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/V2/ImporterAssetResolver.cpp line 59]
+
+ -> (artifact id: '53814ee47aacb8296e8e5bbaf61eff8c') in 3.006741 seconds 
+  Import took 3.026560 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.012911 seconds.
+Registered in 0.011751 seconds.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
 Begin MonoManager ReloadAssembly
@@ -1095,7 +846,7 @@ Unloading broken assembly Library/ScriptAssemblies/UnityEditor.UIBuilderModule.d
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 2.61 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 3.86 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
@@ -1138,42 +889,42 @@ UnityEngine.Logger:LogException(Exception, Object)
 UnityEngine.Debug:LogException(Exception)
 UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
 
-- Completed reload, in  1.359 seconds
+- Completed reload, in  1.382 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1360ms)
-		BeginReloadAssembly (173ms)
+	ReloadAssembly (1382ms)
+		BeginReloadAssembly (161ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (53ms)
-		EndReloadAssembly (1121ms)
-			LoadAssemblies (132ms)
+			CreateAndSetChildDomain (46ms)
+		EndReloadAssembly (1154ms)
+			LoadAssemblies (137ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (415ms)
+			SetupTypeCache (424ms)
 			ReleaseScriptCaches (2ms)
 			RebuildScriptCaches (58ms)
-			SetupLoadedEditorAssemblies (360ms)
+			SetupLoadedEditorAssemblies (365ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (119ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (4ms)
+				BeforeProcessingInitializeOnLoad (123ms)
 				ProcessInitializeOnLoadAttributes (185ms)
-				ProcessInitializeOnLoadMethodAttributes (41ms)
+				ProcessInitializeOnLoadMethodAttributes (42ms)
 				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (15ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.43 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 2.44 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5524 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 304.3 MB.
-System memory in use after: 304.7 MB.
+System memory in use before: 304.5 MB.
+System memory in use after: 304.9 MB.
 
-Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 6255.
-Total: 6.812900 ms (FindLiveObjects: 0.870700 ms CreateObjectMapping: 0.715000 ms MarkObjects: 5.069900 ms  DeleteObjects: 0.156200 ms)
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 6257.
+Total: 4.160700 ms (FindLiveObjects: 0.494400 ms CreateObjectMapping: 0.274800 ms MarkObjects: 3.255200 ms  DeleteObjects: 0.135400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -1187,48 +938,16 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 205.978446 seconds.
-  path: Assets/==== Project GMO ====/RenderPipeline/UniversalRenderPipelineAsset.asset
-  artifactKey: Guid(c7d19a1a7edcb59429a9b991f1d2aa35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/==== Project GMO ====/RenderPipeline/UniversalRenderPipelineAsset.asset using Guid(c7d19a1a7edcb59429a9b991f1d2aa35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2142f5ccbe5fa0b0fb41250bd4ace2ca') in 0.043129 seconds 
-  Import took 0.056708 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 208.948546 seconds.
-  path: Assets/Behavior Designer/Runtime/Tasks/Unity/Renderer
-  artifactKey: Guid(b7bee06bd6fde844784243b656f96db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Behavior Designer/Runtime/Tasks/Unity/Renderer using Guid(b7bee06bd6fde844784243b656f96db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbee5a4fc4c5e7ad6078aacea496fd9f') in 0.008346 seconds 
-  Import took 0.024779 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.136585 seconds.
-  path: Assets/==== Project GMO ====/RenderPipeline/UniversalRenderPipelineAsset_Renderer.asset
-  artifactKey: Guid(0f883bbe18d408644824d538e112e867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/==== Project GMO ====/RenderPipeline/UniversalRenderPipelineAsset_Renderer.asset using Guid(0f883bbe18d408644824d538e112e867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '188f1081dbb20439cbdaec571285e776') in 0.014034 seconds 
-  Import took 0.027256 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 33.661357 seconds.
-  path: Assets/==== Project GMO ====/RenderPipeline/UniversalRenderPipelineAsset_Renderer.asset
-  artifactKey: Guid(0f883bbe18d408644824d538e112e867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/==== Project GMO ====/RenderPipeline/UniversalRenderPipelineAsset_Renderer.asset using Guid(0f883bbe18d408644824d538e112e867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '475adc2ed97508f91c99e1a5af765c5b') in 0.005294 seconds 
-  Import took 0.018046 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 45.781645 seconds.
-  path: Assets/==== Project GMO ====/RenderPipeline/UniversalRenderPipelineAsset_Renderer.asset
-  artifactKey: Guid(0f883bbe18d408644824d538e112e867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/==== Project GMO ====/RenderPipeline/UniversalRenderPipelineAsset_Renderer.asset using Guid(0f883bbe18d408644824d538e112e867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34b761a84605d97fa18f1be9ac83c811') in 0.003800 seconds 
-  Import took 0.017255 seconds .
+  Time since last request: 491.537636 seconds.
+  path: Assets/==== Project GMO ====/Prefab/HUD/PausePanel.prefab
+  artifactKey: Guid(591cea043ff5dc84c800ed650a8e5031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/==== Project GMO ====/Prefab/HUD/PausePanel.prefab using Guid(591cea043ff5dc84c800ed650a8e5031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b83a461f1781cac3a552724db9a586e') in 0.149279 seconds 
+  Import took 0.164961 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.011603 seconds.
+Registered in 0.017403 seconds.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
 Begin MonoManager ReloadAssembly
@@ -1256,7 +975,7 @@ Unloading broken assembly Library/ScriptAssemblies/UnityEditor.UIBuilderModule.d
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 2.38 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 2.73 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
@@ -1299,42 +1018,42 @@ UnityEngine.Logger:LogException(Exception, Object)
 UnityEngine.Debug:LogException(Exception)
 UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
 
-- Completed reload, in  1.338 seconds
+- Completed reload, in  1.805 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1338ms)
-		BeginReloadAssembly (147ms)
+	ReloadAssembly (1810ms)
+		BeginReloadAssembly (338ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
+			DisableScriptedObjects (24ms)
 			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (49ms)
-		EndReloadAssembly (1125ms)
-			LoadAssemblies (131ms)
+			ReleaseScriptingObjects (1ms)
+			CreateAndSetChildDomain (129ms)
+		EndReloadAssembly (1376ms)
+			LoadAssemblies (197ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (410ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (61ms)
-			SetupLoadedEditorAssemblies (354ms)
+			SetupTypeCache (509ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (68ms)
+			SetupLoadedEditorAssemblies (434ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (124ms)
-				ProcessInitializeOnLoadAttributes (174ms)
-				ProcessInitializeOnLoadMethodAttributes (41ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (168ms)
+				ProcessInitializeOnLoadAttributes (204ms)
+				ProcessInitializeOnLoadMethodAttributes (46ms)
 				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (17ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.89 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 2.60 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5526 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5525 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 304.6 MB.
-System memory in use after: 304.9 MB.
+System memory in use after: 305.0 MB.
 
-Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 6267.
-Total: 4.191500 ms (FindLiveObjects: 0.513400 ms CreateObjectMapping: 0.286400 ms MarkObjects: 3.271900 ms  DeleteObjects: 0.118900 ms)
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 6266.
+Total: 10.229700 ms (FindLiveObjects: 1.403700 ms CreateObjectMapping: 0.659600 ms MarkObjects: 6.599100 ms  DeleteObjects: 1.565800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -1349,7 +1068,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.023051 seconds.
+Registered in 0.011886 seconds.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
 Begin MonoManager ReloadAssembly
@@ -1377,7 +1096,7 @@ Unloading broken assembly Library/ScriptAssemblies/UnityEditor.UIBuilderModule.d
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 3.38 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 2.72 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
@@ -1420,284 +1139,163 @@ UnityEngine.Logger:LogException(Exception, Object)
 UnityEngine.Debug:LogException(Exception)
 UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
 
-- Completed reload, in  1.441 seconds
+- Completed reload, in  1.471 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1442ms)
-		BeginReloadAssembly (154ms)
+	ReloadAssembly (1472ms)
+		BeginReloadAssembly (145ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (43ms)
-		EndReloadAssembly (1200ms)
-			LoadAssemblies (155ms)
+		EndReloadAssembly (1254ms)
+			LoadAssemblies (138ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (394ms)
+			SetupTypeCache (428ms)
 			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (62ms)
-			SetupLoadedEditorAssemblies (402ms)
+			RebuildScriptCaches (67ms)
+			SetupLoadedEditorAssemblies (413ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (153ms)
-				ProcessInitializeOnLoadAttributes (184ms)
-				ProcessInitializeOnLoadMethodAttributes (48ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (23ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.78 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5524 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 304.6 MB.
-System memory in use after: 305.0 MB.
-
-Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 6275.
-Total: 7.404200 ms (FindLiveObjects: 0.826100 ms CreateObjectMapping: 0.742900 ms MarkObjects: 5.665100 ms  DeleteObjects: 0.168800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.014924 seconds.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Error: Could not load signature of Unity.UI.Builder.BuilderTextShadow:.ctor due to: Could not resolve type with token 010000e9 (from typeref, class/assembly UnityEngine.UIElements.StyleTextShadow, UnityEngine.UIElementsModule, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null) assembly:UnityEngine.UIElementsModule, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null type:UnityEngine.UIElements.StyleTextShadow member:(null) signature:<none>
-The scripted importer 'UIElementsViewImporter' attempted to register file type '.uxml', which is handled by a native Unity importer. Registration rejected.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/Public/ImporterRegistry.cpp line 245]
-
-The scripted importer 'StyleSheetImporter' attempted to register file type '.uss', which is handled by a native Unity importer. Registration rejected.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/Public/ImporterRegistry.cpp line 245]
-
-The scripted importer 'ThemeStyleSheetImporter' attempted to register file type '.tss', which is handled by a native Unity importer. Registration rejected.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/Public/ImporterRegistry.cpp line 245]
-
-Unloading broken assembly Library/ScriptAssemblies/UnityEditor.UIBuilderModule.dll, this assembly can cause crashes in the runtime
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 2.68 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-[com.unity.burst] Burst is disabled entirely, either from the command line or because this is not the main Unity process
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-Unity.Burst.Editor.BurstLoader:.cctor () (at Library/PackageCache/com.unity.burst@1.6.0-pre.2/Editor/BurstLoader.cs:107)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: Library/PackageCache/com.unity.burst@1.6.0-pre.2/Editor/BurstLoader.cs Line: 107)
-
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> UnityEngine.UnityException: The MakeClientFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DragAndDropUtility.RegisterMakeClientFunc (System.Func`1[TResult] makeClient) [0x00017] in <4c8a9874288b4fb78fa7fdbcd8065b00>:0 
-  at UnityEditor.UIElements.EditorDragAndDrop.RegisterEditorClient () [0x0000a] in <1ada6c7052bb42378c5ec1bd01fc4723>:0 
-  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
-  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <695d1cc93cca45069c528c15c9fdd749>:0 
-   --- End of inner exception stack trace ---
-  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00048] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00047] in <208f92fc783546f9abbe643bfc23920c>:0 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Mono: successfully reloaded assembly
-ArgumentException: An item with the same key has already been added. Key: UnityEditor.UIElements.EditorAtlasMonitorInjector
-Parameter name: key
-  at System.Collections.Generic.SortedList`2[TKey,TValue].Add (TKey key, TValue value) [0x00041] in <0463b2ef957545c0a51b42f372cd4fbb>:0 
-  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x000a2] in <208f92fc783546f9abbe643bfc23920c>:0 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
-
-- Completed reload, in  1.523 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1524ms)
-		BeginReloadAssembly (190ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (11ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (62ms)
-		EndReloadAssembly (1251ms)
-			LoadAssemblies (170ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (445ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (64ms)
-			SetupLoadedEditorAssemblies (392ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (132ms)
-				ProcessInitializeOnLoadAttributes (195ms)
-				ProcessInitializeOnLoadMethodAttributes (48ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (21ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.54 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5524 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 304.6 MB.
-System memory in use after: 305.0 MB.
-
-Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 6283.
-Total: 4.579700 ms (FindLiveObjects: 0.512200 ms CreateObjectMapping: 0.301900 ms MarkObjects: 3.645400 ms  DeleteObjects: 0.118800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011159 seconds.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Error: Could not load signature of Unity.UI.Builder.BuilderTextShadow:.ctor due to: Could not resolve type with token 010000e9 (from typeref, class/assembly UnityEngine.UIElements.StyleTextShadow, UnityEngine.UIElementsModule, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null) assembly:UnityEngine.UIElementsModule, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null type:UnityEngine.UIElements.StyleTextShadow member:(null) signature:<none>
-The scripted importer 'UIElementsViewImporter' attempted to register file type '.uxml', which is handled by a native Unity importer. Registration rejected.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/Public/ImporterRegistry.cpp line 245]
-
-The scripted importer 'StyleSheetImporter' attempted to register file type '.uss', which is handled by a native Unity importer. Registration rejected.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/Public/ImporterRegistry.cpp line 245]
-
-The scripted importer 'ThemeStyleSheetImporter' attempted to register file type '.tss', which is handled by a native Unity importer. Registration rejected.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/Public/ImporterRegistry.cpp line 245]
-
-Unloading broken assembly Library/ScriptAssemblies/UnityEditor.UIBuilderModule.dll, this assembly can cause crashes in the runtime
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 2.77 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-[com.unity.burst] Burst is disabled entirely, either from the command line or because this is not the main Unity process
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-Unity.Burst.Editor.BurstLoader:.cctor () (at Library/PackageCache/com.unity.burst@1.6.0-pre.2/Editor/BurstLoader.cs:107)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: Library/PackageCache/com.unity.burst@1.6.0-pre.2/Editor/BurstLoader.cs Line: 107)
-
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> UnityEngine.UnityException: The MakeClientFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DragAndDropUtility.RegisterMakeClientFunc (System.Func`1[TResult] makeClient) [0x00017] in <4c8a9874288b4fb78fa7fdbcd8065b00>:0 
-  at UnityEditor.UIElements.EditorDragAndDrop.RegisterEditorClient () [0x0000a] in <1ada6c7052bb42378c5ec1bd01fc4723>:0 
-  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
-  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <695d1cc93cca45069c528c15c9fdd749>:0 
-   --- End of inner exception stack trace ---
-  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00048] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00047] in <208f92fc783546f9abbe643bfc23920c>:0 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Mono: successfully reloaded assembly
-ArgumentException: An item with the same key has already been added. Key: UnityEditor.UIElements.EditorAtlasMonitorInjector
-Parameter name: key
-  at System.Collections.Generic.SortedList`2[TKey,TValue].Add (TKey key, TValue value) [0x00041] in <0463b2ef957545c0a51b42f372cd4fbb>:0 
-  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x000a2] in <208f92fc783546f9abbe643bfc23920c>:0 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
-
-- Completed reload, in  1.412 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1413ms)
-		BeginReloadAssembly (172ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (42ms)
-		EndReloadAssembly (1163ms)
-			LoadAssemblies (161ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (427ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (66ms)
-			SetupLoadedEditorAssemblies (349ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (120ms)
-				ProcessInitializeOnLoadAttributes (174ms)
-				ProcessInitializeOnLoadMethodAttributes (40ms)
+				BeforeProcessingInitializeOnLoad (141ms)
+				ProcessInitializeOnLoadAttributes (203ms)
+				ProcessInitializeOnLoadMethodAttributes (53ms)
 				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (19ms)
+			AwakeInstancesAfterBackupRestoration (26ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.40 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 2.62 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5524 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5525 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 304.7 MB.
-System memory in use after: 305.0 MB.
+System memory in use after: 305.1 MB.
 
-Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 6291.
-Total: 7.411900 ms (FindLiveObjects: 0.575700 ms CreateObjectMapping: 0.409800 ms MarkObjects: 6.293300 ms  DeleteObjects: 0.131600 ms)
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 6274.
+Total: 5.762900 ms (FindLiveObjects: 0.827400 ms CreateObjectMapping: 0.774500 ms MarkObjects: 4.004300 ms  DeleteObjects: 0.155400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012866 seconds.
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Error: Could not load signature of Unity.UI.Builder.BuilderTextShadow:.ctor due to: Could not resolve type with token 010000e9 (from typeref, class/assembly UnityEngine.UIElements.StyleTextShadow, UnityEngine.UIElementsModule, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null) assembly:UnityEngine.UIElementsModule, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null type:UnityEngine.UIElements.StyleTextShadow member:(null) signature:<none>
+The scripted importer 'UIElementsViewImporter' attempted to register file type '.uxml', which is handled by a native Unity importer. Registration rejected.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
+
+[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/Public/ImporterRegistry.cpp line 245]
+
+The scripted importer 'StyleSheetImporter' attempted to register file type '.uss', which is handled by a native Unity importer. Registration rejected.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
+
+[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/Public/ImporterRegistry.cpp line 245]
+
+The scripted importer 'ThemeStyleSheetImporter' attempted to register file type '.tss', which is handled by a native Unity importer. Registration rejected.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
+
+[C:\buildslave\unity\build\Modules/AssetDatabase/Editor/Public/ImporterRegistry.cpp line 245]
+
+Unloading broken assembly Library/ScriptAssemblies/UnityEditor.UIBuilderModule.dll, this assembly can cause crashes in the runtime
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 2.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
+[com.unity.burst] Burst is disabled entirely, either from the command line or because this is not the main Unity process
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Unity.Burst.Editor.BurstLoader:.cctor () (at Library/PackageCache/com.unity.burst@1.6.0-pre.2/Editor/BurstLoader.cs:107)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Library/PackageCache/com.unity.burst@1.6.0-pre.2/Editor/BurstLoader.cs Line: 107)
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> UnityEngine.UnityException: The MakeClientFunc has already been registered. Registration denied.
+  at UnityEngine.UIElements.DragAndDropUtility.RegisterMakeClientFunc (System.Func`1[TResult] makeClient) [0x00017] in <4c8a9874288b4fb78fa7fdbcd8065b00>:0 
+  at UnityEditor.UIElements.EditorDragAndDrop.RegisterEditorClient () [0x0000a] in <1ada6c7052bb42378c5ec1bd01fc4723>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <695d1cc93cca45069c528c15c9fdd749>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00048] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00047] in <208f92fc783546f9abbe643bfc23920c>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
+Mono: successfully reloaded assembly
+ArgumentException: An item with the same key has already been added. Key: UnityEditor.UIElements.EditorAtlasMonitorInjector
+Parameter name: key
+  at System.Collections.Generic.SortedList`2[TKey,TValue].Add (TKey key, TValue value) [0x00041] in <0463b2ef957545c0a51b42f372cd4fbb>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x000a2] in <208f92fc783546f9abbe643bfc23920c>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
+
+- Completed reload, in  1.297 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1297ms)
+		BeginReloadAssembly (140ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1091ms)
+			LoadAssemblies (130ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (383ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (359ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (125ms)
+				ProcessInitializeOnLoadAttributes (179ms)
+				ProcessInitializeOnLoadMethodAttributes (41ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5525 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 304.8 MB.
+System memory in use after: 305.1 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 6282.
+Total: 6.074000 ms (FindLiveObjects: 1.114000 ms CreateObjectMapping: 0.898700 ms MarkObjects: 3.926700 ms  DeleteObjects: 0.133700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 

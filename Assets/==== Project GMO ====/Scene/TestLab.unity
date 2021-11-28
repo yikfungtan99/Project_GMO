@@ -1350,7 +1350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 031446dac5b795343b7dd04c05a072e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemInside: {fileID: 11400000, guid: d3ce2a554d37e4d49880a4903178b336, type: 2}
+  itemInside: {fileID: 11400000, guid: 3c7aad79886b30149a5ba7a4117bf549, type: 2}
 --- !u!114 &1539262835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1931,6 +1931,10 @@ PrefabInstance:
       propertyPath: objectiveTarget
       value: 
       objectReference: {fileID: 1915279673}
+    - target: {fileID: 1962059795329455202, guid: 52b885de278eb3d4594d4c1132cb6f4c, type: 3}
+      propertyPath: enemy.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1962059795329455202, guid: 52b885de278eb3d4594d4c1132cb6f4c, type: 3}
       propertyPath: spawnLocations.Array.data[0]
       value: 

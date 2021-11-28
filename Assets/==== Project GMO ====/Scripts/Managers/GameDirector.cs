@@ -111,7 +111,6 @@ public class GameDirector : MonoBehaviour
 
     public void AddCurrentEnemy(Enemy enemy)
     {
-        enemy.SetDirector(this);
         currentEnemy.Add(enemy);
         enemy.OnDeath += OnEnemyDeath;
     }
@@ -125,10 +124,6 @@ public class GameDirector : MonoBehaviour
             currentEnemy.Remove(enemy);
             killCount += 1;
             CheckWaveComplete();
-        }
-        else
-        {
-            Debug.LogError("Non Enemy Found!");
         }
     }
 
