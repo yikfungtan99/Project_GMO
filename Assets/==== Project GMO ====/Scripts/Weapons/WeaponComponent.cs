@@ -8,6 +8,7 @@ public abstract class WeaponComponent : ItemComponent
 {
     [SerializeField] protected Transform weaponFireLocation;
     [SerializeField] protected Animator anim;
+    protected AudioSource audioSource;
 
     public WeaponObject weaponSO;
 
@@ -18,11 +19,14 @@ public abstract class WeaponComponent : ItemComponent
 
     protected float buffedAttackRate;
 
+    public AudioClip attackAudio;
+
     private void Start()
     {
         weaponSO = (WeaponObject)itemObject;
 
         weaponRestrictor = GetComponent<WeaponRestrictor>();
+        audioSource = GetComponent<AudioSource>();
 
         primaryAttack = weaponSO.primaryAttack;
         secondaryAttack = weaponSO.primaryAttack;
@@ -65,6 +69,18 @@ public abstract class WeaponComponent : ItemComponent
     protected abstract void SpawnAttack(GameObject attackObject, Transform attackPosition, float projectileSpeed);
     public virtual void AnimPrimaryFire()
     {
+        PlayAttackAudio();
         PrimaryFire();
+    }
+
+    protected void PlayAttackAudio()
+    {
+        if(audioSource == null)
+        {
+            Debug.LogWarning(name + " do not have an audio source!");
+            return;
+        }
+
+        audioSource.PlayOneShot(attackAudio);
     }
 }

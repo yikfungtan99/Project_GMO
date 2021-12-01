@@ -26,16 +26,19 @@ public class AudioManager : MonoBehaviour
 
     private void HandleMasterVolumeChanged(float vol)
     {
+        if (vol <= -9.99f) vol = -80;
         masterMixer.SetFloat(masterVolumeParameter, vol);
     }
     
     private void HandleEffectsVolumeChanged(float vol)
     {
+        if (vol <= -9.99f) vol = -80;
         masterMixer.SetFloat(effectsVolumeParameter, vol);
     }
     
     private void HandleMusicVolumeChanged(float vol)
     {
+        if (vol <= -9.99f) vol = -80;
         masterMixer.SetFloat(musicVolumeParameter, vol);
     }
 }

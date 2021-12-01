@@ -18,9 +18,13 @@ public class Ammo : WeaponRestrictor
     public event Action<int> OnMagChanged = delegate { };
     public event Action<int> OnAmmoChanged = delegate { };
 
+    protected AudioSource audioSource;
+    [SerializeField] private AudioClip reloadAudio;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         currentMagAmmo = currentMagMaxAmmo;
         currentAmmo = maxAmmo;
@@ -37,7 +41,20 @@ public class Ammo : WeaponRestrictor
         {
             anim.speed = 1 / reloadTime;
             anim.Play("Reload");
+            PlayReloadAudio();
         }
+    }
+
+    protected void PlayReloadAudio()
+    {
+        if (audioSource == null)
+        {
+            Debug.LogWarning(name + " do not have an audio source!");
+            return;
+        }
+
+        audioSource.clip = reloadAudio;
+        audioSource.Play();
     }
 
     public void ConsumeAmmo()
