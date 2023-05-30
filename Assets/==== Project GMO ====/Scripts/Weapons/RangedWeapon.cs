@@ -18,6 +18,6 @@ public class RangedWeapon : WeaponComponent
 
     public override void SecondaryAttack()
     {
-        throw new System.NotImplementedException();
+
     }
 }

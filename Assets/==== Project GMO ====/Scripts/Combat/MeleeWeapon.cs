@@ -21,7 +21,6 @@ public class MeleeWeapon : WeaponComponent
                 {
                     if (!hitted.Contains(canBeDamage))
                     {
-                        print(canBeDamage);
                         canBeDamage.ReceiveDamage(primaryAttack.damage);
                         hitted.Add(canBeDamage);
                     }
@@ -32,7 +31,7 @@ public class MeleeWeapon : WeaponComponent
 
     public override void SecondaryAttack()
     {
-        throw new NotImplementedException();
+
     }
 
     protected override void SpawnAttack(GameObject attackObject, Transform attackPosition, float projectileSpeed)
